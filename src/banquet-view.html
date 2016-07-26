@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+      <div class="brand-box">
+        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
+      </div>
+      <div class="nav-box">
+        <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
+        <ul class="top-menu">
+          <li><a href="javascript:void(0)">刘强</a></li>
+          <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+      <ul class="main-menu">
+        <li class="item-menu ">
+          <a href="javascript:void(0)">系统管理</a>
+          <ul>
+            <li><a href="./user-view.html">用户管理</a></li>
+            <li><a href="./role-view.html">角色管理</a></li>
+            <li><a href="./store-view.html">门店管理</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a href="javascript:void(0)">客户管理</a>
+          <ul>
+            <li><a href="./client-view.html">客户列表</a></li>
+            <li class="active"><a href="./banquet-view.html">宴会跟踪记录</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view  ">
+
+
+      <div class="u-sift-box form-inline">
+        <div class="sift-box multi-input">
+          <div class="u-text-list  ">
+            <h4 >客户基本信息</h4>
+            <ul>
+              <li>
+                <span class="title">姓名:</span>
+                <span class="text">小胖</span>
+              </li>
+              <li>
+                <span class="title">性别:</span>
+                <span class="text">男</span>
+              </li>
+              <li>
+                <span class="title">联系电话:</span>
+                <span class="text">13650550165</span>
+              </li>
+              <li>
+                <span class="title">桌数:</span>
+                <span class="text">40-50桌</span>
+              </li>
+              <li>
+                <span class="title">姓名:</span>
+                <span class="text">小胖</span>
+              </li>
+            </ul>
+            <div class="form-group ">
+              <div class="input-group ">
+                <div class="input-group-addon"  >宴会状态</div>
+                <div class="form-control">
+                  <div class="radio-group">
+                    <label ><input type="radio" name="yhzt" checked>未定</label>
+                    <label ><input type="radio" name="yhzt">待定</label>
+                    <label ><input type="radio" name="yhzt">已定</label>
+                  </div>
+                </div>
+                <div class="input-group-btn">
+                  <button class="btn btn-info "><span>保存</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group ">
+              <div class="input-group ">
+                <div class="input-group-addon"  >庆典状态</div>
+                <div class="form-control">
+                  <div class="radio-group">
+                    <label ><input type="radio" name="yhzt" checked>未定</label>
+                    <label ><input type="radio" name="yhzt">待定</label>
+                    <label ><input type="radio" name="yhzt">已定</label>
+                  </div>
+                </div>
+                <div class="input-group-btn">
+                  <button class="btn btn-info "><span>保存</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title">
+            表格标题
+          </span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#newRole">新增角色</div>
+          </div>
+        </div>
+        <table class="grid-table ">
+          <thead class="grid-thead">
+          <tr class="row">
+            <th class="col col-xs-6">跟踪编号</th>
+            <th class="col col-xs-6">跟踪时间</th>
+            <th class="col col-xs-6">推荐人</th>
+            <th class="col col-xs-6">推荐门店</th>
+            <th class="col col-xs-6">跟踪记录</th>
+            <th class="col col-xs-6">编辑</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪编号:</span><span class="col-text">jsbnlqq</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记时间:</span><span class="col-text">2016年7月10日</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记人:</span><span class="col-text">统筹师</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">登记门店:</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+              <p><span class="col-text">九龙滨江芭菲门店</span></p>
+            </td>
+            <td class="col  col-xs-6">
+              <p><span class="col-title">跟踪记录:</span><span class="col-text">跟踪记录开始跟踪记录开始跟踪记录开始跟踪记录开始</span></p>
+            </td>
+            <td class="col  col-xs-6 ">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#myModal"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="100">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text">
+                    <span class="text-warning">共5页,当前第1页</span>
+                  </div>
+                  <ul class="pagination ">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="modal  fade bs-example-modal-sm  " id="newRole" tabindex="-1"   >
+        <div class="modal-dialog " style="max-width: 400px" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><h4 class="glyphicon glyphicon-remove" aria-hidden="true"></h4></button>
+              <h4 class="modal-title"  >增加记录</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="input-group ">
+                  <div class="input-group-addon">跟踪记录</div>
+                  <textarea class="form-control " placeholder="请输入筛选条件"></textarea>
+                </div>
+              </div>
+              <div class="u-menu-select">
+                <div class="u-space-smail ">
+                  <h5>推荐门店</h5>
+                </div>
+                <div class="menu-select">
+                    <ul class="main-menu">
+                      <li class="item-menu unfold">
+                        <!--<a href="javascript:void(0)">芭菲门店</a>-->
+                        <ul>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店1</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店2</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店3</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店4</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店5</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店6</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal  fade bs-example-modal-sm  " id="myModal" tabindex="-1"   >
+        <div class="modal-dialog " style="max-width: 400px" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><h4 class="glyphicon glyphicon-remove" aria-hidden="true"></h4></button>
+              <h4 class="modal-title"  >修改记录</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <fieldset disabled>
+                  <div class="input-group ">
+                    <div class="input-group-addon">跟踪编号</div>
+                    <input type="text" class="form-control " placeholder="请输入筛选条件" value="1234567">
+                  </div>
+                  <div class="input-group ">
+                    <div class="input-group-addon">跟踪时间</div>
+                    <input type="text" class="form-control " placeholder="请输入筛选条件" value="接待员">
+                  </div>
+                  <div class="input-group ">
+                    <div class="input-group-addon" style="min-width: 81px">推荐人</div>
+                    <input type="text" class="form-control " placeholder="请输入筛选条件" value="abfds">
+                  </div>
+                </fieldset>
+                <div class="input-group ">
+                  <div class="input-group-addon">跟踪记录</div>
+                  <textarea class="form-control " placeholder="请输入筛选条件"></textarea>
+                </div>
+              </div>
+              <div class="u-menu-select">
+                <div class="u-space-smail ">
+                  <h5>推荐门店</h5>
+                </div>
+                <div class="menu-select">
+                    <ul class="main-menu">
+                      <li class="item-menu unfold">
+                        <a href="javascript:void(0)">芭菲门店</a>
+                        <ul>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店1</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店2</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店3</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店4</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店5</a></li>
+                          <li class="select-item" onclick="$(this).toggleClass('active')"><a href="javascript:void(0)">芭菲门店6</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+</body>
+</html>

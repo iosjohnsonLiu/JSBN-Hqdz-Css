@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+    <div class="g-content fullshow">
+      <div class="m-view m-login-view">
+        <div class="login-model ">
+          <form class="form-login " action="home.html">
+            <span class="input-title">用户名:</span>
+            <div class="form-group ">
+              <div class="user-box">
+                <input type="text" class="form-control" placeholder="用户名 "/>
+              </div>
+            </div>
+            <span class="input-title">密码:</span>
+            <div class="form-group ">
+              <div class="password-box">
+                <input type="password" class="form-control" placeholder="密码 "/>
+              </div>
+            </div>
+            <!--<div class="form-group ">-->
+              <!--<div class="checkbox">-->
+                <!--<label> <input type="checkbox">记住密码</label>-->
+              <!--</div>-->
+            <!--</div>-->
+            <div class="form-group">
+              <div class="login-box" >
+                <button class="btn btn-primary  btn-group-justified"  onclick="openhome();">登 录 </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script type="application/javascript">
+  function openhome(){
+//    location.href='home.html';
+  }
+</script>
+</body>
+</html>

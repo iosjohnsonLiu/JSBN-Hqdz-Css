@@ -1,0 +1,45 @@
+.m-login-page(){
+  height: 100vh;
+  .res-login-bg();
+
+
+  .input-title{
+    color: @state-info-text;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .login-title{
+    font-size: @font-size-h3;
+    display: block;
+    color: @state-info-text;
+    text-align: center;
+  }
+  .login-model {
+    width: 280px;
+    border:1px solid fade(#f0f0f0,50%);
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: fade(#fff,10%);
+    .login-box{
+      margin-top: 30px;
+    }
+  }
+  //pad端与pc端
+  @media screen and (min-width: @screen-sm-min){
+    .login-model {
+      position: absolute;
+      top:30%;
+      right: 20%;
+    }
+  }
+  //手机端
+  @media screen and (max-width: @screen-xs-max){
+    .login-model {
+      margin: auto;
+      position: relative;
+      top:20%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+//初始化
+*{outline:none;
+  font-family: @font-family-sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select:auto;
+  -moz-user-select:text;
+}
+body,div,ul,dl,li,ol,h1,h2,h3,h4,h5,h6,dt,dd,img,a,span,p,table,td,i,input,button,textarea,form{padding:0;margin:0;border:none;}
+ul,li,dl,dt,dd,ol{list-style:none;}
+h1,h2,h3,h4{color:#333;}
+a,span,p,font,b,i,strong{font-size:1rem;font-weight: normal;}
+em{font-style:normal;}
+i{font-style:normal;}
+a{color:#333;text-decoration:none;}
+//a:hover{text-decoration:none;}
+
+
+a:link { text-decoration: none;}
+a:active { text-decoration:blink}
+a:hover { text-decoration:none;}
+a:visited { text-decoration: none;}
+
+img{width: 100%}
+html{width: 100%;height: 100%;}
+body{width: 100%;height: 100%;}
+
+
+
+@media screen and (min-width: @screen-sm-min){
+
+  .table-sm-max-1200{max-width: 1200px;}
+  .table-sm-max-900{max-width: 900px;}
+  .table-sm-max-600{max-width: 600px;}
+
+  .table-sm-min-1200{min-width: 1200px;}
+  .table-sm-min-900{min-width: 900px;}
+  .table-sm-min-600{min-width: 600px;}
+}
+@media screen and (max-width: @screen-xs-max){
+
+}
