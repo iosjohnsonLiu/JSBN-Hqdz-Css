@@ -6,6 +6,24 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
+  //code creator is johnson
+  &.carousel-responsive{
+    .square(100%);
+    .carousel-inner{
+      .square(100%);
+      >.item{
+        .square(100%);
+        img{max-width: 100%;max-height: 100%;.square(auto);}
+        &.active,
+        &.next,
+        &.prev {
+          justify-content: center;
+          align-content: center;
+          display: flex;
+        }
+      }
+    }
+  }
 }
 
 .carousel-inner {

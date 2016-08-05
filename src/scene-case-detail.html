@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+      <div class="brand-box">
+        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
+      </div>
+      <div class="nav-box">
+        <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
+        <ul class="top-menu">
+          <li><a href="javascript:void(0)">刘强</a></li>
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
+          <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+      <ul class="main-menu">
+        <li class="item-menu unfold">
+          <a href="javascript:void(0)">部门业务</a>
+          <ul>
+            <li class="active"><a href="./scene-case-view.html">策划</a></li>
+            <li ><a href="./scene-case-view.html">工程</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a href="javascript:void(0)">仓库系统</a>
+          <ul>
+            <li ><a href="./ck-prop-view.html">道具管理</a></li>
+            <li ><a href="./ck-material-view.html">物料管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+
+
+      <div class="u-case-edit">
+        <div class="case-detail-box">
+          <div class="header">
+            <span>场景方案详情</span>
+            <div class="ctl-btn-box">
+              <div class="btn ">保存</div>
+              <div class="btn ">提交</div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="case-info-list">
+              <ul>
+                <li>
+                  <span class="title">订单号:</span>
+                  <span class="text">cd123456</span>
+                </li>
+                <li>
+                  <span class="title">新郎名:</span>
+                  <span class="text">小胖</span>
+                </li>
+                <li>
+                  <span class="title">新娘名:</span>
+                  <span class="text">如花</span>
+                </li>
+                <li>
+                  <span class="title">婚期:</span>
+                  <span class="text">2016月10日10</span>
+                </li>
+                <li>
+                  <span class="title">酒店:</span>
+                  <span class="text">芭菲家宴3号厅</span>
+                </li>
+                <li>
+                  <span class="title">风格:</span>
+                  <span class="text">森系</span>
+                </li>
+                <li>
+                  <span class="title">色系:</span>
+                  <span class="text">红,紫</span>
+                </li>
+                <li>
+                  <span class="title">提交状态:</span>
+                  <span class="text">等待提交</span>
+                </li>
+                <li>
+                  <span class="title">备注:</span>
+                  <span class="text">客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注</span>
+                </li>
+              </ul>
+            </div>
+            <div class="case-photo-group">
+              <div id="carousel-example-generic" class="carousel carousel-responsive slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="http://img2.jsbn.com/venus/cases/20160615/14659827667118718_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://img2.jsbn.com/venus/cases/20160615/14659827664172674_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://img2.jsbn.com/venus/cases/20160615/14659827675882042_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://img2.jsbn.com/venus/cases/20160615/14659827670977204_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://img2.jsbn.com/venus/cases/20160615/14659827676960313_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://img2.jsbn.com/venus/cases/20160721/14690913281428652_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10">
+                    <div class="carousel-caption">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="workaround-box">
+          <div class="item-detail-box">
+            <div class="header">
+              <span>道具详情</span>
+            </div>
+            <div class="body">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">订单号</div>
+                  <input type="text" class="form-control" value="cd123456"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">名称</div>
+                  <input type="text" class="form-control" value="水母塔"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">风格</div>
+                  <input type="text" class="form-control" value="RP"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">色系</div>
+                  <input type="text" class="form-control" value="白色"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">部门属性</div>
+                  <input type="text" class="form-control" value="工程部"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">子部门</div>
+                  <input type="text" class="form-control" value="场地组"  readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">尺寸</div>
+                  <input type="text" class="form-control" value="80*30"/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">成本价</div>
+                  <input type="text" class="form-control" value="8"/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">报价</div>
+                  <input type="text" class="form-control" value="16"/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">功能描述</div>
+                  <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-list-box">
+            <div class="header">
+              <span>道具列表</span>
+            </div>
+            <div class="body">
+              <div class="menu-select">
+                <ul class="main-menu">
+                  <li class="item-menu">
+                    <span>门把花</span>
+                    <ul>
+                      <li ><span>白洋兰</span></li>
+                      <li ><span>白桔梗</span></li>
+                      <li ><span>紫桔梗</span></li>
+                    </ul>
+                  </li>
+                  <li class="item-menu">
+                    <span>门把花</span>
+                    <ul>
+                      <li ><span>白玫瑰</span></li>
+                      <li ><span>红豆</span></li>
+                      <li ><span>白色小菊花</span></li>
+                    </ul>
+                  </li>
+                  <li class="item-menu">
+                    <span>香槟塔</span>
+                    <ul>
+                      <li ><span>白玫瑰</span></li>
+                      <li ><span>白洋兰</span></li>
+                      <li ><span>巴西叶</span></li>
+                      <li ><span>深紫桔梗</span></li>
+                      <li ><span>黄玫瑰</span></li>
+                    </ul>
+                  </li>
+                  <li class="item-menu">
+                    <span>香槟塔</span>
+                    <ul>
+                      <li ><span>白百合</span></li>
+                      <li ><span>白洋兰</span></li>
+                      <li ><span>深紫桔梗</span></li>
+                    </ul>
+                  </li>
+                  <li class="item-menu">
+                    <span>迎宾牌</span>
+                    <ul>
+                      <li ><span>粉佳人</span></li>
+                      <li ><span>戴安娜</span></li>
+                      <li ><span>粉金鱼草</span></li>
+                      <li ><span>粉桔梗</span></li>
+                      <li ><span>栀子叶</span></li>
+                    </ul>
+                  </li>
+                  <li class="item-menu">
+                    <span>迎宾牌</span>
+                    <ul>
+                      <li ><span>白玫瑰</span></li>
+                      <li ><span>白蝴蝶兰</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="photo-box">
+            <div class="header">
+              <span>道具图片</span>
+            </div>
+            <div class="body">
+              <div class="prop-photo">
+                <img src="http://img2.imgtn.bdimg.com/it/u=3372274736,3568618697&fm=21&gp=0.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="component-box">
+            <div class="header">
+              <span>道具材料明细详情</span>
+            </div>
+            <div class="body">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>名称</th>
+                  <th>编号</th>
+                  <th>尺寸</th>
+                  <th>材质</th>
+                  <th>成本价</th>
+                  <th>报价</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                  <td>水母灯</td>
+                  <td>B004</td>
+                  <td><input  class="size" type="text" value="80*120" /></td>
+                  <td>铁艺+蕾丝</td>
+                  <td><input class="price" type="number" value="10" /></td>
+                  <td><input class="price" type="number" value="15" /></td>
+                </tr>
+                <tr>
+                  <td>水母灯</td>
+                  <td>B004</td>
+                  <td><input  class="size" type="text" value="80*120" /></td>
+                  <td>铁艺+蕾丝</td>
+                  <td><input class="price" type="number" value="10" /></td>
+                  <td><input class="price" type="number" value="15" /></td>
+                </tr>
+                <tr>
+                  <td>水母灯</td>
+                  <td>B004</td>
+                  <td><input  class="size" type="text" value="80*120" /></td>
+                  <td>铁艺+蕾丝</td>
+                  <td><input class="price" type="number" value="10" /></td>
+                  <td><input class="price" type="number" value="15" /></td>
+                </tr>
+                <!--<tr>-->
+                <!--<td><input type="text" value="水母灯" readonly/></td>-->
+                <!--<td><input type="text" value="B004" readonly/></td>-->
+                <!--<td><input type="text" value="80*120" /></td>-->
+                <!--<td><input type="text" value="铁艺+蕾丝" readonly/></td>-->
+                <!--<td><input type="text" value="10" /></td>-->
+                <!--<td><input type="text" value="15" /></td>-->
+                <!--</tr>-->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  fade bs-example-modal-sm " id="modPasswd" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog modal-sm"  role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">密码修改</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="input-group ">
+                  <div class="input-group-addon">原密码</div>
+                  <input type="password" class="form-control "  placeholder="请输入原密码"  >
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码"  >
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码"  >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  $(document).ready(function(){
+    $('.carousel').carousel()
+    if($(".menu-select").length > 0){
+      $(".menu-select li>span").bind("click", function (){
+        if ($(this).siblings("ul").length > 0){
+          $(this).parent().toggleClass("unfold");
+        }else {
+          $(".menu-select").find(".active").removeClass("active");
+          $(this).parent().addClass("active");
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

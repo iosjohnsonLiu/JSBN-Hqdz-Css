@@ -5987,7 +5987,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 400px;
     margin: 30px auto;
   }
   .modal-content {
@@ -5996,6 +5996,18 @@ button.close {
   }
   .modal-sm {
     width: 300px;
+  }
+  .modal-md-sm {
+    width: 400px;
+  }
+  .modal-md {
+    width: 600px;
+  }
+  .modal-md-lg {
+    width: 750px;
+  }
+  .modal-lg {
+    width: 900px;
   }
 }
 @media (min-width: 992px) {
@@ -6250,6 +6262,31 @@ button.close {
 }
 .carousel {
   position: relative;
+}
+.carousel.carousel-responsive {
+  width: 100%;
+  height: 100%;
+}
+.carousel.carousel-responsive .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.carousel.carousel-responsive .carousel-inner > .item {
+  width: 100%;
+  height: 100%;
+}
+.carousel.carousel-responsive .carousel-inner > .item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.carousel.carousel-responsive .carousel-inner > .item.active,
+.carousel.carousel-responsive .carousel-inner > .item.next,
+.carousel.carousel-responsive .carousel-inner > .item.prev {
+  justify-content: center;
+  align-content: center;
+  display: flex;
 }
 .carousel-inner {
   position: relative;

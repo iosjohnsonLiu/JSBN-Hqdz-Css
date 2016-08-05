@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+      <div class="brand-box">
+        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
+      </div>
+      <div class="nav-box">
+        <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
+        <ul class="top-menu">
+          <li><a href="javascript:void(0)">刘强</a></li>
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
+          <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+      <ul class="main-menu">
+        <li class="item-menu unfold">
+          <a href="javascript:void(0)">部门业务</a>
+          <ul>
+            <li class="active"><a href="./scene-case-view.html">策划</a></li>
+            <li ><a href="./scene-case-view.html">工程</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a href="javascript:void(0)">仓库系统</a>
+          <ul>
+            <li ><a href="./ck-prop-view.html">道具管理</a></li>
+            <li ><a href="./ck-material-view.html">物料管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title">
+            场景方案列表
+          </span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#newModel">读取方案</div>
+          </div>
+        </div>
+        <table class="grid-table ">
+          <thead class="grid-thead">
+          <tr class="row">
+            <th class="col  ">订单号</th>
+            <th class="col  ">新郎名</th>
+            <th class="col  ">新娘名</th>
+            <th class="col  ">婚期</th>
+            <th class="col  ">酒店</th>
+            <th class="col  ">风格</th>
+            <th class="col  ">色系</th>
+            <th class="col  ">提交状态</th>
+            <th class="col  ">备注</th>
+            <th class="col  ">操作</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">ASDSD</span>
+            </td>
+            <td class="col">
+              <span class="col-text">小胖</span>
+            </td>
+            <td class="col">
+              <span class="col-text">如花</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016年10月10日</span>
+            </td>
+            <td class="col">
+              <span class="col-text">芭菲家宴3号厅</span>
+            </td>
+            <td class="col">
+              <span class="col-text">森系</span>
+            </td>
+            <td class="col">
+              <span class="col-text">红,紫</span>
+            </td>
+            <td class="col">
+              <span class="col-text">等待提交</span>
+            </td>
+            <td class="col">
+              <span class="col-text">客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注</span>
+            </td>
+            <td class="col">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " onclick="location.href='./scene-case-detail.html'"></span>
+                <span class="ctl-btn submit " data-toggle="modal" data-target="#delModel"></span>
+                <span class="ctl-btn photo "  ></span>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="100">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text">
+                    <span class="text-warning">共10页,当前第5页</span>
+                  </div>
+                  <ul class="pagination ">
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-backward"></span>x5</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-forward"></span>x5</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="modal fade bs-example-modal-sm " id="newModel" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog modal-md-sm"  role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" >密码修改</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group addon-length-3">
+                <div class="input-group ">
+                  <div class="input-group-addon">方案ID</div>
+                  <input type="password" class="form-control "  placeholder="请输入方案ID"  />
+                  <div class="input-group-btn">
+                    <div class="btn btn-info">确定</div>
+                  </div>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新郎名</div>
+                  <input type="text" class="form-control " readonly value="小胖" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新娘名</div>
+                  <input type="text" class="form-control " readonly value="如花" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">婚期</div>
+                  <input type="text" class="form-control " readonly value="2016年10月10日" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">酒店</div>
+                  <input type="text" class="form-control " readonly value="芭菲家宴3号厅" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">风格</div>
+                  <input type="text" class="form-control " readonly value="森系" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">色系</div>
+                  <input type="text" class="form-control " readonly value="红,紫" />
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">备注</div>
+                  <textarea class="form-control remark-textarea" readonly >客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注客户有什么要求,备注</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade bs-example-modal-sm " id="modPasswd" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog "  role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">密码修改</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="input-group ">
+                  <div class="input-group-addon">原密码</div>
+                  <input type="password" class="form-control "  placeholder="请输入原密码"  >
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码"  >
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码"  >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+</body>
+</html>
