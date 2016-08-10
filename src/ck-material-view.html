@@ -15,38 +15,10 @@
 <div id="root" class="adaption-auto">
   <div class="g-topnav">
     <nav class="u-topnav">
-      <div class="brand-box">
-        <a class="text" href="javascript:void(0)"
-           onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
-      </div>
-      <div class="nav-box">
-        <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
-        <ul class="top-menu">
-          <li><a href="javascript:void(0)">刘强</a></li>
-          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
-          <li><a href="javascript:void(0)">退出</a></li>
-        </ul>
-      </div>
     </nav>
   </div>
   <div class="g-mainnav">
     <nav class="u-mainnav">
-      <ul class="main-menu">
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">部门业务</a>
-          <ul>
-            <li><a href="./scene-case-view.html">策划</a></li>
-            <li><a href="./scene-case-view.html">工程</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">仓库系统</a>
-          <ul>
-            <li><a href="./ck-prop-view.html">道具管理</a></li>
-            <li class="active"><a href="./ck-material-view.html">物料管理</a></li>
-          </ul>
-        </li>
-      </ul>
     </nav>
   </div>
   <div class="g-content ">
@@ -59,9 +31,8 @@
             <div class="btn ">搜索</div>
           </div>
         </div>
-
         <div class="body">
-          <div class="form-group form-inline">
+          <div class="form-group form-inline addon-length-4">
             <div class="input-group ">
               <div class="input-group-addon">
                 <span>物料编码</span>
@@ -74,6 +45,64 @@
                 <span>名称</span>
               </div>
               <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">单位</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly placeholder="请输入筛选条件"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-info  " data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                      <li><a href="javascript:void(0)">根</a></li>
+                      <li><a href="javascript:void(0)">个</a></li>
+                      <li><a href="javascript:void(0)">斤</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">类别</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly placeholder="请输入筛选条件"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-info  " data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">花</a></li>
+                      <li><a href="javascript:void(0)">地板</a></li>
+                      <li><a href="javascript:void(0)">灯</a></li>
+                      <li><a href="javascript:void(0)">地毯</a></li>
+                      <li><a href="javascript:void(0)">装饰</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="input-group ">
               <div class="input-group-addon">
@@ -122,8 +151,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="input-group">
+            <div class="input-group ">
               <div class="form-control-group">
                 <div class="input-group">
                   <div class="input-group-addon" >
@@ -132,7 +160,7 @@
                   <input type="text" class="form-control  form_datetime" value="2016年10月1日" readonly="readonly"
                          placeholder="请输入宴会时间">
                   <div class="input-group-btn">
-                    <button class="btn btn-info dropdown-toggle btn-right-angle"
+                    <button class="btn btn-info dropdown-toggle"
                             data-toggle="collapse" data-target="#collapseSiftDate" aria-expanded="false">
                       <span class="size-base glyphicon glyphicon-calendar">日期</span>
                     </button>
@@ -216,12 +244,9 @@
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
-
       <div class="u-grid-table ">
         <div class="grid-top">
           <span class="grid-title"> 物料列表</span>
@@ -235,6 +260,7 @@
             <th class="col  ">物料编码</th>
             <th class="col  ">物料名称</th>
             <th class="col  ">单位</th>
+            <th class="col  ">类别</th>
             <th class="col  ">风格</th>
             <th class="col  ">色系</th>
             <th class="col  ">材质</th>
@@ -262,7 +288,10 @@
               <span class="col-text">枝</span>
             </td>
             <td class="col">
-              <span class="col-text"></span>
+              <span class="col-text">花</span>
+            </td>
+            <td class="col">
+              <span class="col-text">森系</span>
             </td>
             <td class="col">
               <span class="col-text">白色</span>
@@ -334,8 +363,9 @@
         <div class="modal-dialog modal-md-sm" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
               <h4 class="modal-title">新增物料</h4>
             </div>
             <div class="modal-body">
@@ -357,7 +387,7 @@
                     <div class="input-group">
                       <input type="text" class="form-control " readonly placeholder="请选择单位"/>
                       <div class="input-group-btn">
-                        <button type="button" class="btn btn-info  btn-right-angle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-info  " data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                           <span class="caret"></span>
                         </button>
@@ -389,6 +419,27 @@
                   </div>
                 </div>
                 <div class="input-group ">
+                  <div class="input-group-addon">类别</div>
+                  <div class="form-control-group">
+                    <div class="input-group">
+                      <input type="text" class="form-control " readonly placeholder="请选择类别"/>
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-info  " data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="javascript:void(0)">花</a></li>
+                          <li><a href="javascript:void(0)">地板</a></li>
+                          <li><a href="javascript:void(0)">灯</a></li>
+                          <li><a href="javascript:void(0)">地毯</a></li>
+                          <li><a href="javascript:void(0)">装饰</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group ">
                   <div class="input-group-addon">风格</div>
                   <input type="text" class="form-control" placeholder="请输入风格"/>
                 </div>
@@ -406,7 +457,7 @@
                     <div class="input-group">
                       <input type="text" class="form-control " readonly placeholder="请选择部门"/>
                       <div class="input-group-btn">
-                        <button type="button" class="btn btn-info  btn-right-angle" data-toggle="dropdown"
+                        <button type="button" class="btn btn-info " data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                           <span class="caret"></span>
                         </button>

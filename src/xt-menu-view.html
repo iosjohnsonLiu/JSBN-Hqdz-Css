@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年婚庆管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+      <div class="u-sift-box">
+        <div class="header">
+          <span>筛选</span>
+          <div class="ctl-btn-box">
+            <div class="btn ">重置</div>
+            <div class="btn ">搜索</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="form-group form-inline addon-length-5">
+            <div class="input-group ">
+              <div class="input-group-addon"><span>菜单ID</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>菜单名称</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>上级菜单ID</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">菜单类型</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly placeholder="请选择菜单类型"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-info " data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">系统菜单</a></li>
+                      <li><a href="javascript:void(0)">功能菜单</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title"> 菜单列表</span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#newModel">新增菜单</div>
+          </div>
+        </div>
+        <table class="grid-table ">
+          <thead class="grid-thead">
+          <tr class="row">
+            <th class="col  ">菜单ID</th>
+            <th class="col  ">菜单名称</th>
+            <th class="col  ">菜单路由</th>
+            <th class="col  ">上级菜单ID</th>
+            <th class="col  ">菜单类型</th>
+            <th class="col  ">创建人</th>
+            <th class="col  ">操作员</th>
+            <th class="col  ">创建时间</th>
+            <th class="col  ">修改时间</th>
+            <th class="col  ">操作</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">M1005</span>
+            </td>
+            <td class="col">
+              <span class="col-text">门店系统</span>
+            </td>
+            <td class="col">
+              <span class="col-text">hqxt.jsbn.com/scene.html</span>
+            </td>
+            <td class="col">
+              <span class="col-text">M0001</span>
+            </td>
+            <td class="col">
+              <span class="col-text">系统菜单</span>
+            </td>
+            <td class="col">
+              <span class="col-text">U01234</span>
+            </td>
+            <td class="col">
+              <span class="col-text">U21321</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016-6-6</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016-7-8</span>
+            </td>
+            <td class="col">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="100">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text">
+                    <span class="text-warning">共10页,当前第5页</span>
+                  </div>
+                  <ul class="pagination">
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="modal fade bs-example-modal-sm " id="newModel" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+              <h4 class="modal-title">新增菜单</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group addon-length-5">
+                <div class="input-group not-null">
+                  <div class="input-group-addon">菜单名称</div>
+                  <input type="text" class="form-control " placeholder="请输入菜单名称"/>
+                </div>
+                <div class="input-group not-null">
+                  <div class="input-group-addon">菜单路由</div>
+                  <input type="text" class="form-control" placeholder="请输入菜单路由"/>
+                </div>
+                <div class="input-group not-null">
+                  <div class="input-group-addon">上级菜单ID</div>
+                  <input type="text" class="form-control" placeholder="请输入上级菜单ID"/>
+                </div>
+                <div class="input-group not-null">
+                  <div class="input-group-addon">菜单类型</div>
+                  <div class="form-control-group">
+                    <div class="input-group">
+                      <input type="text" class="form-control " readonly placeholder="请选择菜单类型"/>
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-info " data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="javascript:void(0)">系统菜单</a></li>
+                          <li><a href="javascript:void(0)">功能菜单</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+</body>
+</html>

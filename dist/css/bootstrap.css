@@ -5955,6 +5955,9 @@ button.close {
 .modal-header .close {
   margin-top: -2px;
 }
+.modal-header .close span {
+  font-size: 18px;
+}
 .modal-title {
   margin: 0;
   line-height: 1.42857143;

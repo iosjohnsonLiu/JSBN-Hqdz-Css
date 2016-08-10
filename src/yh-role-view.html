@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view m-role-view">
+      <div class="u-sift-box">
+        <div class="header">
+          <span> 筛选</span>
+          <div class="ctl-btn-box">
+            <div class="btn ">重置</div>
+            <div class="btn ">搜索</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="form-group form-inline addon-length-4">
+            <div class="input-group ">
+              <div class="input-group-addon"><span>角色ID</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>角色名称</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title"> 角色列表</span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#newModel">新增角色</div>
+          </div>
+        </div>
+        <table class="grid-table ">
+          <thead class="grid-thead">
+          <tr class="row">
+            <th class="col  ">角色ID</th>
+            <th class="col  ">角色名称</th>
+            <th class="col  ">创建时间</th>
+            <th class="col  ">创建者</th>
+            <th class="col  ">操作</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">Y00022</span>
+            </td>
+            <td class="col">
+              <span class="col-text">白玫瑰</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016-6-6</span>
+            </td>
+            <td class="col">
+              <span class="col-text">小金</span>
+            </td>
+            <td class="col">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                <span class="ctl-btn detail " data-toggle="modal" data-target="#modModel"></span>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="100">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text">
+                    <span class="text-warning">共10页,当前第5页</span>
+                  </div>
+                  <ul class="pagination ">
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal  fade bs-example-modal-sm  " id="newModel" tabindex="-1"   >
+        <div class="modal-dialog" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+              <h4 class="modal-title"  >角色</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="input-group ">
+                  <div class="input-group-addon">角色id</div>
+                  <input type="text" class="form-control " readonly value="1234567">
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">角色名</div>
+                  <input type="text" class="form-control " placeholder="请输入筛选条件" value="接待员">
+                </div>
+            </div>
+              <div class="u-menu-select ">
+                <div class="menu-title">
+                  <span class="title">配置菜单</span>
+                </div>
+                <div class="menu-select">
+                  <ul class="main-menu">
+                    <li class="item-menu unfold">
+                      <span class="select-btn"></span>
+                      <span class="title">系统管理</span>
+                      <ul>
+                        <li>
+                          <span class="select-btn"></span>
+                          <span class="title">用户管理</span>
+                        </li>
+                        <li>
+                          <span class="select-btn"></span>
+                          <span class="title">角色管理</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="item-menu">
+                      <span class="select-btn"></span>
+                      <span class="title">客户管理</span>
+                      <ul>
+                        <li>
+                          <span class="select-btn"></span>
+                          <span class="title">用户管理</span>
+                        </li>
+                        <li>
+                          <span class="select-btn"></span>
+                          <span class="title">角色管理</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade bs-example-modal-sm " id="delModel" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">删除提示</h4>
+            </div>
+            <div class="modal-body">
+              <h5 class="text-center">
+                删除统筹师角色,请确定是否删除.
+              </h5>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group col-xs-6 col-sm-6">
+                  <button type="button" class="btn btn-group-justified btn-default " data-dismiss="modal">取消</button>
+                </div>
+                <div class="btn-group  col-xs-6 col-sm-6">
+                  <button type="button" class="btn btn-group-justified btn-danger ">删除</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  $(document).ready(function () {
+    $(".u-menu-select .main-menu li>.select-btn").bind("click",function(){
+      console.log($(this).parent());
+      $(this).parent().toggleClass("active");
+      if ($(this).parent().hasClass("item-menu")){
+       if ($(this).parent().hasClass("active")){
+         $(this).parent().find(".select-btn").parent().addClass("active")
+       }else {
+         $(this).parent().find(".select-btn").parent().removeClass("active")
+       }
+      }
+    });
+  });
+</script>
+</body>
+
+
+<!--<div class="u-menu-select ">-->
+<!--<div class="menu-title">-->
+<!--<span class="title">配置菜单</span>-->
+<!--</div>-->
+<!--<div class="menu-select">-->
+<!--<ul class="main-menu">-->
+<!--<li class="item-menu unfold">-->
+<!--<span class="title">系统管理</span>-->
+<!--<ul>-->
+<!--<li class="select-item" onclick="$(this).toggleClass('active')"><span class="title">用户管理</span></li>-->
+<!--<li onclick="$(this).toggleClass('active')"><span class="title">角色管理</span></li>-->
+<!--<li class="select-item" onclick="$(this).toggleClass('active')"><span class="title">权限管理</span></li>-->
+<!--<li class="select-item" onclick="$(this).toggleClass('active')"><span class="title">门店管理</span></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li class="item-menu  ">-->
+<!--<span class="title">客户管理</span>-->
+<!--<ul>-->
+<!--<li onclick="$(this).toggleClass('active')"><span class="title">客户列表</span></li>-->
+<!--<li class="select-item" onclick="$(this).toggleClass('active')"><span class="title">宴会跟踪记录</span></li>-->
+<!--<li class="select-item" onclick="$(this).toggleClass('active')"><span class="title">庆典跟踪记录</span></li>-->
+<!--<li onclick="$(this).toggleClass('active')"><span class="title">统计报表</span></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->

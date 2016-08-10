@@ -9,98 +9,59 @@
   <!-- Bootstrap -->
   <link href="../dist/css/bootstrap.css" rel="stylesheet">
   <link href="../dist/css/app.css" rel="stylesheet">
+  <script src="../testjs/insetHtml.js"></script>
 </head>
 
 <body>
 <div id="root" class="adaption-auto">
-    <div class="g-topnav">
-      <nav class="u-topnav">
-          <div class="brand-box">
-            <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
-          </div>
-          <div class="nav-box">
-            <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
-            <ul class="top-menu">
-              <li><a href="javascript:void(0)">刘强</a></li>
-              <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
-              <li><a href="javascript:void(0)">退出</a></li>
-            </ul>
-          </div>
-      </nav>
-    </div>
-  <div class="g-mainnav">
-    <nav class="u-mainnav">
-      <ul class="main-menu">
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">城市管理</a>
-          <ul>
-            <li><a href="city-view.html">城市管理</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">用户管理</a>
-          <ul>
-            <li><a href="./role-view.html">角色管理</a></li>
-            <li><a href="./user-view.html">用户管理</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">部门业务</a>
-          <ul>
-            <li><a href="./scene-case-view.html">策划</a></li>
-            <li><a href="./scene-case-view.html">工程</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">仓库系统</a>
-          <ul>
-            <li><a href="./ck-prop-view.html">道具管理</a></li>
-            <li><a href="./ck-material-view.html">物料管理</a></li>
-          </ul>
-        </li>
-
-      </ul>
+  <div class="g-topnav">
+    <nav class="u-topnav">
     </nav>
   </div>
-    <div class="g-content ">
-      <div class="m-view m-welcome-view">
-        <div class="welcome-box">
-          <div class="welcome-text">
-            <span>欢迎<strong>小胖</strong>进入,芭菲餐饮订单个跟踪系统</span>
-          </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view m-welcome-view">
+      <div class="welcome-box">
+        <div class="welcome-text">
+          <span>欢迎<strong>小胖</strong>进入,芭菲餐饮订单个跟踪系统</span>
         </div>
-        <div class="modal fade bs-example-modal-sm " id="modPasswd" tabindex="-1" role="dialog"  >
-          <div class="modal-dialog "  role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">密码修改</h4>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                    <div class="input-group ">
-                      <div class="input-group-addon">原密码</div>
-                      <input type="password" class="form-control "  placeholder="请输入原密码"  >
-                    </div>
-                  <div class="input-group ">
-                    <div class="input-group-addon">新密码</div>
-                    <input type="password" class="form-control " placeholder="请输入新密码"  >
-                  </div>
-                  <div class="input-group ">
-                    <div class="input-group-addon">新密码</div>
-                    <input type="password" class="form-control " placeholder="请输入新密码"  >
-                  </div>
+      </div>
+      <div class="modal fade bs-example-modal-sm " id="modPasswd" tabindex="-1" role="dialog">
+        <div class="modal-dialog " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">密码修改</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="input-group ">
+                  <div class="input-group-addon">原密码</div>
+                  <input type="password" class="form-control " placeholder="请输入原密码">
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码">
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">新密码</div>
+                  <input type="password" class="form-control " placeholder="请输入新密码">
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">保存</button>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

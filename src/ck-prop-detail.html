@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年婚庆管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+      <div class="brand-box">
+        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">
+          订单系统
+        </a>
+      </div>
+      <div class="nav-box">
+        <ul class="top-menu">
+          <li><a href="javascript:void(0)">刘强</a></li>
+          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
+          <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+      <ul class="main-menu">
+        <li class="item-menu unfold">
+          <a class="title" href="javascript:void(0)">系统管理</a>
+          <ul>
+            <li><a class="title" href="xt-menu-view.html">菜单管理</a></li>
+            <li><a class="title" href="xt-city-view.html">城市管理</a></li>
+            <li><a class="title" href="xt-section-view.html">部门管理</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a class="title" href="javascript:void(0)">用户管理</a>
+          <ul>
+            <li><a class="title" href="yh-role-view.html">角色管理</a></li>
+            <li><a class="title" href="yh-user-view.html">用户管理</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a class="title" href="javascript:void(0)">部门业务</a>
+          <ul>
+            <li><a class="title" href="yw-scene-case-view.html">策划</a></li>
+            <li><a class="title" href="yw-scene-case-view.html">工程</a></li>
+          </ul>
+        </li>
+        <li class="item-menu unfold">
+          <a class="title" href="javascript:void(0)">仓库系统</a>
+          <ul>
+            <li class="active"><a class="title" href="./ck-prop-view.html">道具管理</a></li>
+            <li><a class="title" href="./ck-material-view.html">物料管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view">
+      <div class="custom-prop-box ">
+        <div class="header">
+          <span>道具详情</span>
+          <div class="ctl-btn-box">
+            <div class="btn ">重置</div>
+            <div class="btn ">保存</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="form-group addon-length-4">
+            <div class="input-group ">
+              <div class="input-group-addon">道具编号</div>
+              <input type="text" class="form-control " placeholder="请输入编号"/>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">道具名称</div>
+              <input type="text" class="form-control " placeholder="请输入名称"/>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">风格</div>
+              <input type="text" class="form-control" placeholder="请输入风格"/>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">色系</div>
+              <input type="text" class="form-control" placeholder="请输入色系"/>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">尺寸</div>
+              <input type="text" class="form-control" placeholder="请输入尺寸"/>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">部门属性</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly placeholder="请选择部门"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-info " data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">工程部</a></li>
+                      <li><a href="javascript:void(0)">花艺部</a></li>
+                      <li><a href="javascript:void(0)">灯光组</a></li>
+                      <li><a href="javascript:void(0)">场景组</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">描述</div>
+              <textarea  class="form-control remark-textarea" placeholder="请输入描述"></textarea>
+            </div>
+          </div>
+          <div class="u-upload-image">
+            <div class="upload-box">
+              <label class="select-btn" for="pic" >选择道具图片</label>
+              <input type="file"  name="pic" id="pic" accept="image/gif, image/jpeg, image/png,"
+                      onChange="$('.file-path')[0].value = this.value.substr(this.value.lastIndexOf('\\')+1);"/>
+              <input class="file-path"  name="file-path" type="text" placeholder="未选择任何图片文件" readonly/>
+              <div class="upload-btn " onclick="$('#preview-img')[0].src = window.URL.createObjectURL($('#pic')[0].files[0]);">上传照片</div>
+            </div>
+            <div class="photo-box">
+              <img id="preview-img" src="" alt="预览图片">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title"> 道具所需物料列表</span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#newModel">新增物料</div>
+          </div>
+        </div>
+        <table class="grid-table ">
+          <thead class="grid-thead">
+          <tr class="row">
+            <th class="col  ">物料编码</th>
+            <th class="col  ">物料名称</th>
+            <th class="col  ">单位</th>
+            <th class="col  ">材质</th>
+            <th class="col  ">尺寸</th>
+            <th class="col  ">部门属性</th>
+            <th class="col  ">成本价</th>
+            <th class="col  ">报价</th>
+            <th class="col  ">操作</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">F0484</span>
+            </td>
+            <td class="col">
+              <span class="col-text">白玫瑰</span>
+            </td>
+            <td class="col">
+              <span class="col-text">QWERTYUIOPLK</span>
+            </td>
+            <td class="col">
+              <span class="col-text">紫</span>
+            </td>
+            <td class="col">
+              <span class="col-text">20cm</span>
+            </td>
+            <td class="col">
+              <span class="col-text">U01234</span>
+            </td>
+            <td class="col">
+              <span class="col-text">U21321</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016-6-6</span>
+            </td>
+            <td class="col">
+              <div class="ctl-btn-box">
+                <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
+                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+              </div>
+            </td>
+          </tr>
+
+
+          </tbody>
+          <!--<tfoot class="grid-tfoot">-->
+          <!--<tr class="row">-->
+            <!--<td colspan="100">-->
+              <!--<div class="u-page-box">-->
+                <!--<div class="page-box">-->
+                  <!--<div class="page-text">-->
+                    <!--<span class="text-warning">共10页,当前第5页</span>-->
+                  <!--</div>-->
+                  <!--<ul class="pagination">-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>-->
+                    <!--<li><a href="#">1</a></li>-->
+                    <!--<li><a href="#">2</a></li>-->
+                    <!--<li><a href="#">3</a></li>-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>-->
+                    <!--<li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>-->
+                  <!--</ul>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</td>-->
+          <!--</tr>-->
+          <!--</tfoot>-->
+        </table>
+      </div>
+      <div class="modal fade bs-example-modal-sm " id="newModel" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+              <h4 class="modal-title">新增物料</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group addon-length-4">
+                <div class="input-group not-null">
+                  <div class="input-group-addon">物料编号</div>
+                  <input type="text" class="form-control " placeholder="请输入编号" />
+                  <div class="input-group-btn">
+                    <div class="btn btn-info">确定</div>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">物料名称</div>
+                  <input type="text" class="form-control " placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">单位</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">风格</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">色系</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">材质</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">部门属性</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">库存量</div>
+                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">尺寸</div>
+                  <input type="text" class="form-control" placeholder="请输入尺寸"/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">成本价</div>
+                  <input type="number" class="form-control" placeholder="请输入成本价"/>
+                </div>
+                <div class="input-group ">
+                  <div class="input-group-addon">报价</div>
+                  <input type="number" class="form-control" placeholder="请输入报价"/>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">保存</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../testjs/readydefault.js"></script>
+
+</body>
+</html>

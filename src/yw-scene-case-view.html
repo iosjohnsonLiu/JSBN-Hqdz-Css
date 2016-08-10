@@ -15,37 +15,10 @@
 <div id="root" class="adaption-auto">
   <div class="g-topnav">
     <nav class="u-topnav">
-      <div class="brand-box">
-        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">订单系统</a>
-      </div>
-      <div class="nav-box">
-        <div class="switch-menu" onclick="$(this).siblings('.top-menu').toggleClass('show')"></div>
-        <ul class="top-menu">
-          <li><a href="javascript:void(0)">刘强</a></li>
-          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
-          <li><a href="javascript:void(0)">退出</a></li>
-        </ul>
-      </div>
     </nav>
   </div>
   <div class="g-mainnav">
     <nav class="u-mainnav">
-      <ul class="main-menu">
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">部门业务</a>
-          <ul>
-            <li class="active"><a href="./scene-case-view.html">策划</a></li>
-            <li ><a href="./scene-case-view.html">工程</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a href="javascript:void(0)">仓库系统</a>
-          <ul>
-            <li ><a href="./ck-prop-view.html">道具管理</a></li>
-            <li ><a href="./ck-material-view.html">物料管理</a></li>
-          </ul>
-        </li>
-      </ul>
     </nav>
   </div>
   <div class="g-content ">
@@ -105,7 +78,7 @@
             </td>
             <td class="col">
               <div class="ctl-btn-box">
-                <span class="ctl-btn modify " onclick="location.href='./scene-case-detail.html'"></span>
+                <span class="ctl-btn modify " onclick="location.href='yw-scene-case-detail.html'"></span>
                 <span class="ctl-btn submit " data-toggle="modal" data-target="#delModel"></span>
                 <span class="ctl-btn photo "  ></span>
               </div>
@@ -122,13 +95,11 @@
                   </div>
                   <ul class="pagination ">
                     <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-backward"></span>x5</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-forward"></span>x5</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
                   </ul>
                 </div>
@@ -138,11 +109,14 @@
           </tfoot>
         </table>
       </div>
+
       <div class="modal fade bs-example-modal-sm " id="newModel" tabindex="-1" role="dialog"  >
         <div class="modal-dialog modal-md-sm"  role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
               <h4 class="modal-title" >密码修改</h4>
             </div>
             <div class="modal-body">
@@ -191,13 +165,14 @@
           </div>
         </div>
       </div>
-
       <div class="modal fade bs-example-modal-sm " id="modPasswd" tabindex="-1" role="dialog"  >
         <div class="modal-dialog "  role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">密码修改</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+              <h4 class="modal-title">密码修改</h4>
             </div>
             <div class="modal-body">
               <div class="form-group">
