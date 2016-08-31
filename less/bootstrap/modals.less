@@ -149,9 +149,11 @@
   .modal-md-sm  { width: @modal-md-sm;}
   .modal-md     { width: @modal-md;   }
   .modal-md-lg  { width: @modal-md-lg;}
-  .modal-lg     { width: @modal-lg;   }
 }
 
 @media (min-width: @screen-md-min) {
   .modal-lg { width: @modal-lg; }
+}
+@media (max-width: @screen-md-min) {
+  .modal-lg { width: 100%;; }
 }

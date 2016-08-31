@@ -52,7 +52,7 @@ function insertMainnav() {
       "  <a class='title' href='javascript:void(0)'>部门业务</a>" +
       "  <ul>" +
       "    <li><a class='title' href='yw-scene-case-view.html'>策划</a></li>" +
-      "    <li><a class='title' href='yw-scene-case-view.html'>工程</a></li>" +
+      "    <li><a class='title' href='yw-case-assign-view.html'>工程</a></li>" +
       "  </ul>" +
       " </li>" +
       " <li class='item-menu unfold'>" +
@@ -62,6 +62,7 @@ function insertMainnav() {
       "    <li><a class='title' href='ck-material-view.html'>物料管理</a></li>" +
       "    <li><a class='title' href='ck-unit-view.html'>物料单位</a></li>" +
       "    <li><a class='title' href='ck-sort-view.html'>物料分类</a></li>" +
+      "    <li><a class='title' href='ck-accessory-view.html'>辅材管理</a></li>" +
       "  </ul>" +
       " </li>" +
       "</ul>";

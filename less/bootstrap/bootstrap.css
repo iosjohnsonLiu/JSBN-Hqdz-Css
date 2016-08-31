@@ -6009,13 +6009,15 @@ button.close {
   .modal-md-lg {
     width: 750px;
   }
-  .modal-lg {
-    width: 900px;
-  }
 }
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px;
+  }
+}
+@media (max-width: 992px) {
+  .modal-lg {
+    width: 100%;
   }
 }
 .tooltip {

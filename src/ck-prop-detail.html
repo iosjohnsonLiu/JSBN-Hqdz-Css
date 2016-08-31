@@ -15,58 +15,16 @@
 <div id="root" class="adaption-auto">
   <div class="g-topnav">
     <nav class="u-topnav">
-      <div class="brand-box">
-        <a class="text" href="javascript:void(0)" onclick="$('.g-mainnav').toggleClass('switch-mainnav');$('.g-content').toggleClass('hide-nav');">
-          订单系统
-        </a>
-      </div>
-      <div class="nav-box">
-        <ul class="top-menu">
-          <li><a href="javascript:void(0)">刘强</a></li>
-          <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modPasswd">修改密码</a></li>
-          <li><a href="javascript:void(0)">退出</a></li>
-        </ul>
-      </div>
+
     </nav>
   </div>
   <div class="g-mainnav">
     <nav class="u-mainnav">
-      <ul class="main-menu">
-        <li class="item-menu unfold">
-          <a class="title" href="javascript:void(0)">系统管理</a>
-          <ul>
-            <li><a class="title" href="xt-menu-view.html">菜单管理</a></li>
-            <li><a class="title" href="xt-city-view.html">城市管理</a></li>
-            <li><a class="title" href="xt-section-view.html">部门管理</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a class="title" href="javascript:void(0)">用户管理</a>
-          <ul>
-            <li><a class="title" href="yh-role-view.html">角色管理</a></li>
-            <li><a class="title" href="yh-user-view.html">用户管理</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a class="title" href="javascript:void(0)">部门业务</a>
-          <ul>
-            <li><a class="title" href="yw-scene-case-view.html">策划</a></li>
-            <li><a class="title" href="yw-scene-case-view.html">工程</a></li>
-          </ul>
-        </li>
-        <li class="item-menu unfold">
-          <a class="title" href="javascript:void(0)">仓库系统</a>
-          <ul>
-            <li class="active"><a class="title" href="./ck-prop-view.html">道具管理</a></li>
-            <li><a class="title" href="./ck-material-view.html">物料管理</a></li>
-          </ul>
-        </li>
-      </ul>
     </nav>
   </div>
   <div class="g-content ">
     <div class="m-view">
-      <div class="custom-prop-box ">
+        <div class="custom-prop-box ">
         <div class="header">
           <span>道具详情</span>
           <div class="ctl-btn-box">
@@ -75,210 +33,562 @@
           </div>
         </div>
         <div class="body">
-          <div class="form-group addon-length-4">
-            <div class="input-group ">
-              <div class="input-group-addon">道具编号</div>
-              <input type="text" class="form-control " placeholder="请输入编号"/>
+          <div class="prop-detail">
+            <div class="form-group  addon-length-4">
+              <div class="input-group ">
+                <div class="input-group-addon">道具编号</div>
+                <input type="text" class="form-control " placeholder="请输入编号"/>
+              </div>
+              <div class="input-group ">
+                <div class="input-group-addon">道具名称</div>
+                <input type="text" class="form-control " placeholder="请输入名称"/>
+              </div>
+              <div class="input-group ">
+                <div class="input-group-addon">风格</div>
+                <input type="text" class="form-control" placeholder="请输入风格"/>
+              </div>
+              <div class="input-group ">
+                <div class="input-group-addon">色系</div>
+                <input type="text" class="form-control" placeholder="请输入色系"/>
+              </div>
+              <div class="input-group ">
+                <div class="input-group-addon">尺寸</div>
+                <input type="text" class="form-control" placeholder="请输入尺寸"/>
+              </div>
+              <div class="textarea-box">
+                <div class="max-box">
+                  <span class="title">备注</span>
+                  <textarea class="form-control" placeholder="请输入备注"></textarea>
+                </div>
+              </div>
+
             </div>
-            <div class="input-group ">
-              <div class="input-group-addon">道具名称</div>
-              <input type="text" class="form-control " placeholder="请输入名称"/>
-            </div>
-            <div class="input-group ">
-              <div class="input-group-addon">风格</div>
-              <input type="text" class="form-control" placeholder="请输入风格"/>
-            </div>
-            <div class="input-group ">
-              <div class="input-group-addon">色系</div>
-              <input type="text" class="form-control" placeholder="请输入色系"/>
-            </div>
-            <div class="input-group ">
-              <div class="input-group-addon">尺寸</div>
-              <input type="text" class="form-control" placeholder="请输入尺寸"/>
-            </div>
-            <div class="input-group ">
-              <div class="input-group-addon">部门属性</div>
-              <div class="form-control-group">
-                <div class="input-group">
-                  <input type="text" class="form-control " readonly placeholder="请选择部门"/>
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-info " data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="javascript:void(0)">工程部</a></li>
-                      <li><a href="javascript:void(0)">花艺部</a></li>
-                      <li><a href="javascript:void(0)">灯光组</a></li>
-                      <li><a href="javascript:void(0)">场景组</a></li>
-                    </ul>
-                  </div>
+            <div class="u-upload-image">
+              <div class="upload-box">
+                <label class="select-btn" for="pic" >选择道具图片</label>
+                <input type="file"  name="pic" id="pic" accept="image/gif, image/jpeg, image/png,"
+                       onChange="$('.file-path')[0].value = this.value.substr(this.value.lastIndexOf('\\')+1);"/>
+                <input class="file-path"  name="file-path" type="text" placeholder="未选择任何图片文件" readonly/>
+                <div class="upload-btn " onclick="$('#preview-img')[0].src = window.URL.createObjectURL($('#pic')[0].files[0]);">上传照片</div>
+              </div>
+              <div class="photo-box">
+                <div class="max-box">
+                  <img id="preview-img" src="" alt="预览图片">
                 </div>
               </div>
             </div>
-            <div class="input-group ">
-              <div class="input-group-addon">描述</div>
-              <textarea  class="form-control remark-textarea" placeholder="请输入描述"></textarea>
-            </div>
           </div>
-          <div class="u-upload-image">
-            <div class="upload-box">
-              <label class="select-btn" for="pic" >选择道具图片</label>
-              <input type="file"  name="pic" id="pic" accept="image/gif, image/jpeg, image/png,"
-                      onChange="$('.file-path')[0].value = this.value.substr(this.value.lastIndexOf('\\')+1);"/>
-              <input class="file-path"  name="file-path" type="text" placeholder="未选择任何图片文件" readonly/>
-              <div class="upload-btn " onclick="$('#preview-img')[0].src = window.URL.createObjectURL($('#pic')[0].files[0]);">上传照片</div>
-            </div>
-            <div class="photo-box">
-              <img id="preview-img" src="" alt="预览图片">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-grid-table ">
-        <div class="grid-top">
-          <span class="grid-title"> 道具所需物料列表</span>
-          <div class="grid-btn-group">
-            <div class="btn btn-info" data-toggle="modal" data-target="#newModel">新增物料</div>
-          </div>
-        </div>
-        <table class="grid-table ">
-          <thead class="grid-thead">
-          <tr class="row">
-            <th class="col  ">物料编码</th>
-            <th class="col  ">物料名称</th>
-            <th class="col  ">单位</th>
-            <th class="col  ">材质</th>
-            <th class="col  ">尺寸</th>
-            <th class="col  ">部门属性</th>
-            <th class="col  ">成本价</th>
-            <th class="col  ">报价</th>
-            <th class="col  ">操作</th>
-          </tr>
-          </thead>
-          <tbody class="grid-tbody">
-          <tr class="row">
-            <td class="col">
-              <span class="col-text">F0484</span>
-            </td>
-            <td class="col">
-              <span class="col-text">白玫瑰</span>
-            </td>
-            <td class="col">
-              <span class="col-text">QWERTYUIOPLK</span>
-            </td>
-            <td class="col">
-              <span class="col-text">紫</span>
-            </td>
-            <td class="col">
-              <span class="col-text">20cm</span>
-            </td>
-            <td class="col">
-              <span class="col-text">U01234</span>
-            </td>
-            <td class="col">
-              <span class="col-text">U21321</span>
-            </td>
-            <td class="col">
-              <span class="col-text">2016-6-6</span>
-            </td>
-            <td class="col">
-              <div class="ctl-btn-box">
-                <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
-                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+          <div class="prop-accessory">
+            <div class="u-grid-table ">
+              <div class="grid-top">
+                <span class="grid-title"> 物料辅材</span>
+                <div class="grid-btn-group">
+                  <div class="btn btn-info" data-toggle="modal" data-target="#newModel">添加辅材</div>
+                </div>
               </div>
-            </td>
-          </tr>
+              <table class="grid-table ">
+                <thead class="grid-thead">
+                <tr class="row">
+                  <th class="col  ">辅材名称</th>
+                  <th class="col  ">单位</th>
+                  <th class="col  ">单价</th>
+                  <th class="col  ">总价</th>
+                  <th class="col  ">数量</th>
+                </tr>
+                </thead>
+                <tbody class="grid-tbody">
+                <tr class="row">
+                  <td class="col">支架</td>
+                  <td class="col">米</td>
+                  <td class="col">15</td>
+                  <td class="col">75</td>
+                  <td class="col"><input class="price" type="number"  value="5" /></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
+          <div class="prop-material">
+            <div class="u-grid-table ">
+              <div class="grid-top">
+                <span class="grid-title">道具所需物料列表</span>
+                <div class="grid-btn-group">
+                  <div class="btn btn-info" data-toggle="modal" data-target="#newModel">添加物料</div>
+                </div>
+              </div>
+              <table class="grid-table ">
+                <thead class="grid-thead">
+                <tr class="row">
+                  <th class="col  ">物料编码</th>
+                  <th class="col  ">物料名称</th>
+                  <th class="col  ">单位</th>
+                  <th class="col  ">类别</th>
+                  <th class="col  ">类型</th>
+                  <th class="col  ">风格</th>
+                  <th class="col  ">色系</th>
+                  <th class="col  ">材质</th>
+                  <th class="col  ">尺寸</th>
+                  <th class="col  ">部门属性</th>
+                  <th class="col  ">子部门属性</th>
+                  <th class="col  ">成本价</th>
+                  <th class="col  ">报价</th>
+                  <th class="col  ">图片</th>
+                  <th class="col  ">数量</th>
+                  <th class="col  ">操作</th>
+                </tr>
+                </thead>
+                <tbody class="grid-tbody">
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row">
+                  <td class="col"><span class="col-text">F0484</span></td>
+                  <td class="col"><span class="col-text">白玫瑰</span></td>
+                  <th class="col"><span class="col-text">枝</span></th>
+                  <th class="col"><span class="col-text">花</span></th>
+                  <th class="col"><span class="col-text">一次性用品</span></th>
+                  <th class="col"><span class="col-text">风格</span></th>
+                  <th class="col"><span class="col-text">色系</span></th>
+                  <td class="col"><span class="col-text">鲜花</span></td>
+                  <td class="col"><span class="col-text">20cm</span></td>
+                  <td class="col"><span class="col-text">花艺部</span></td>
+                  <td class="col"><span class="col-text"></span></td>
+                  <td class="col"><span class="col-text">140</span></td>
+                  <td class="col"><span class="col-text">180</span></td>
+                  <td class="col">
+                    <div class="photo-box">
+                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                    </div>
+                  </td>
+                  <td class="col"><input class="price" type="number" value="80"/></td>
+                  <td class="col">
+                    <div class="ctl-btn-box">
+                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                    </div>
+                  </td>
+                </tr>
 
-          </tbody>
-          <!--<tfoot class="grid-tfoot">-->
-          <!--<tr class="row">-->
-            <!--<td colspan="100">-->
-              <!--<div class="u-page-box">-->
+                </tbody>
+                <!--<tfoot class="grid-tfoot">-->
+                <!--<tr class="row">-->
+                <!--<td colspan="100">-->
+                <!--<div class="u-page-box">-->
                 <!--<div class="page-box">-->
-                  <!--<div class="page-text">-->
-                    <!--<span class="text-warning">共10页,当前第5页</span>-->
-                  <!--</div>-->
-                  <!--<ul class="pagination">-->
-                    <!--<li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>-->
-                    <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>-->
-                    <!--<li><a href="#">1</a></li>-->
-                    <!--<li><a href="#">2</a></li>-->
-                    <!--<li><a href="#">3</a></li>-->
-                    <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>-->
-                    <!--<li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>-->
-                  <!--</ul>-->
+                <!--<div class="page-text">-->
+                <!--<span class="text-warning">共10页,当前第5页</span>-->
                 <!--</div>-->
-              <!--</div>-->
-            <!--</td>-->
-          <!--</tr>-->
-          <!--</tfoot>-->
-        </table>
+                <!--<ul class="pagination">-->
+                <!--<li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>-->
+                <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>-->
+                <!--<li><a href="#">1</a></li>-->
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>-->
+                <!--<li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</td>-->
+                <!--</tr>-->
+                <!--</tfoot>-->
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal fade bs-example-modal-sm " id="newModel" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-md-sm" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span class="glyphicon glyphicon-remove"></span>
               </button>
-              <h4 class="modal-title">新增物料</h4>
+              <h4 class="modal-title">添加物料</h4>
             </div>
             <div class="modal-body">
-              <div class="form-group addon-length-4">
-                <div class="input-group not-null">
-                  <div class="input-group-addon">物料编号</div>
-                  <input type="text" class="form-control " placeholder="请输入编号" />
-                  <div class="input-group-btn">
-                    <div class="btn btn-info">确定</div>
+              <div class="u-item-find">
+                <div class="u-sift-box">
+                  <div class="body">
+                    <div class="form-group form-inline addon-length-4">
+                      <div class="input-group ">
+                        <div class="input-group-addon">
+                          <span>物料编码</span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="请输入筛选条件">
+                      </div>
+                      <div class="input-group ">
+                        <div class="input-group-addon">
+                          <span>名称</span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="请输入筛选条件">
+                      </div>
+                      <div class="ctl-btn-box">
+                        <div class="btn ">重置</div>
+                        <div class="btn ">搜索</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="input-group">
-                  <div class="input-group-addon">物料名称</div>
-                  <input type="text" class="form-control " placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">单位</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">风格</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">色系</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">材质</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">部门属性</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">库存量</div>
-                  <input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">尺寸</div>
-                  <input type="text" class="form-control" placeholder="请输入尺寸"/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">成本价</div>
-                  <input type="number" class="form-control" placeholder="请输入成本价"/>
-                </div>
-                <div class="input-group ">
-                  <div class="input-group-addon">报价</div>
-                  <input type="number" class="form-control" placeholder="请输入报价"/>
+                <div class="u-grid-table ">
+                  <div class="grid-top">
+                    <span class="grid-title">请从列表中选择</span>
+                  </div>
+                  <table class="grid-table ">
+                    <thead class="grid-thead">
+                      <tr class="row">
+                        <th class="col  ">勾选</th>
+                        <th class="col  ">物料编码</th>
+                        <th class="col  ">物料名称</th>
+                        <th class="col  ">单位</th>
+                        <th class="col  ">类别</th>
+                        <th class="col  ">风格</th>
+                        <th class="col  ">色系</th>
+                        <th class="col  ">材质</th>
+                        <th class="col  ">尺寸</th>
+                        <th class="col  ">部门属性</th>
+                        <th class="col  ">子部门属性</th>
+                        <th class="col  ">成本价</th>
+                        <th class="col  ">报价</th>
+                        <th class="col  ">库存量</th>
+
+                    </tr>
+                    </thead>
+                    <tbody class="grid-tbody">
+                      <tr class="row">
+                        <td class="col">
+                          <div class="checked-box" onclick="$(this).toggleClass('checked')">
+                            <span class="checked-state " ></span>
+                          </div>
+                        </td>
+                        <td class="col">
+                        <span class="col-text">Y00022</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">白玫瑰</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">枝</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">花</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">森系</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">白色</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">鲜花</span>
+                      </td>
+                        <td class="col">
+                        <span class="col-text">扎</span>
+                      </td>
+                        <td class="col">
+                          <span class="col-text">花艺部</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">花艺部</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">110</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">130</span>
+                        </td>
+                        <td class="col">
+                        <input class="price" type="number" step="number" max="99" min="0" readonly value="999" />
+                      </td>
+
+                    </tr>
+                      <tr class="row active">
+                        <td class="col">
+                          <div class="checked-box checked" onclick="$(this).toggleClass('checked')">
+                            <span class="checked-state " ></span>
+                          </div>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">Y00022</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">白玫瑰</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">枝</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">花</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">森系</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">白色</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">鲜花</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">扎</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">花艺部</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">花艺部</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">110</span>
+                        </td>
+                        <td class="col">
+                          <span class="col-text">130</span>
+                        </td>
+                        <td class="col">
+                          <input class="price" type="number"  value="999" />
+                        </td>
+
+                      </tr>
+                    </tbody>
+                    <tfoot class="grid-tfoot">
+                    </tfoot>
+                  </table>
                 </div>
               </div>
+
+              <!--<div class="form-group addon-length-4">-->
+                <!--<div class="input-group not-null">-->
+                  <!--<div class="input-group-addon">物料编号</div>-->
+                  <!--<input type="text" class="form-control " placeholder="请输入编号" />-->
+                  <!--<div class="input-group-btn">-->
+                    <!--<div class="btn btn-info">确定</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="input-group">-->
+                  <!--<div class="input-group-addon">物料名称</div>-->
+                  <!--<input type="text" class="form-control " placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">单位</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">风格</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">色系</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">材质</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">部门属性</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">库存量</div>-->
+                  <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">尺寸</div>-->
+                  <!--<input type="text" class="form-control" placeholder="请输入尺寸"/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">成本价</div>-->
+                  <!--<input type="number" class="form-control" placeholder="请输入成本价"/>-->
+                <!--</div>-->
+                <!--<div class="input-group ">-->
+                  <!--<div class="input-group-addon">报价</div>-->
+                  <!--<input type="number" class="form-control" placeholder="请输入报价"/>-->
+                <!--</div>-->
+              <!--</div>-->
             </div>
             <div class="modal-footer">
+              <span class="use-hint">选择要添加的物料</span>
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-              <button type="button" class="btn btn-primary">保存</button>
+              <button type="button" class="btn btn-primary">确定</button>
             </div>
           </div>
         </div>

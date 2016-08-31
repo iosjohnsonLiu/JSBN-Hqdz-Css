@@ -261,6 +261,7 @@
             <th class="col  ">物料名称</th>
             <th class="col  ">单位</th>
             <th class="col  ">类别</th>
+            <th class="col  ">类型</th>
             <th class="col  ">风格</th>
             <th class="col  ">色系</th>
             <th class="col  ">材质</th>
@@ -273,71 +274,82 @@
             <th class="col  ">操作员ID</th>
             <th class="col  ">创建时间</th>
             <th class="col  ">修改时间</th>
+            <th class="col  ">图片</th>
             <th class="col  ">操作</th>
           </tr>
           </thead>
           <tbody class="grid-tbody">
-          <tr class="row">
-            <td class="col">
-              <span class="col-text">Y00022</span>
-            </td>
-            <td class="col">
-              <span class="col-text">白玫瑰</span>
-            </td>
-            <td class="col">
-              <span class="col-text">枝</span>
-            </td>
-            <td class="col">
-              <span class="col-text">花</span>
-            </td>
-            <td class="col">
-              <span class="col-text">森系</span>
-            </td>
-            <td class="col">
-              <span class="col-text">白色</span>
-            </td>
-            <td class="col">
-              <span class="col-text">鲜花</span>
-            </td>
-            <td class="col">
-              <span class="col-text">扎</span>
-            </td>
-            <td class="col">
-              <span class="col-text">花艺部</span>
-            </td>
-            <td class="col">
-              <span class="col-text">0</span>
-            </td>
-            <td class="col">
-              <span class="col-text">120</span>
-            </td>
-            <td class="col">
-              <span class="col-text">180</span>
-            </td>
-            <td class="col">
-              <span class="col-text">U01234</span>
-            </td>
-            <td class="col">
-              <span class="col-text">U21321</span>
-            </td>
-            <td class="col">
-              <span class="col-text">2016-6-6</span>
-            </td>
-            <td class="col">
-              <span class="col-text">2016-7-8</span>
-            </td>
+            <tr class="row">
+              <td class="col">
+                <span class="col-text">Y00022</span>
+              </td>
+              <td class="col">
+                <span class="col-text">白玫瑰</span>
+              </td>
+              <td class="col">
+                <span class="col-text">枝</span>
+              </td>
+              <td class="col">
+                <span class="col-text">花</span>
+              </td>
+              <td class="col">
+                <span class="col-text">一次性</span>
+              </td>
+              <td class="col">
+                <span class="col-text">森系</span>
+              </td>
+              <td class="col">
+                <span class="col-text">白色</span>
+              </td>
+              <td class="col">
+                <span class="col-text">鲜花</span>
+              </td>
+              <td class="col">
+                <span class="col-text">扎</span>
+              </td>
+              <td class="col">
+                <span class="col-text">花艺部</span>
+              </td>
+              <td class="col">
+                <span class="col-text">0</span>
+              </td>
+              <td class="col">
+                <span class="col-text">120</span>
+              </td>
+              <td class="col">
+                <span class="col-text">180</span>
+              </td>
+              <td class="col">
+                <span class="col-text">U01234</span>
+              </td>
+              <td class="col">
+                <span class="col-text">U21321</span>
+              </td>
+              <td class="col">
+                <span class="col-text">2016-6-6</span>
+              </td>
+              <td class="col">
+                <span class="col-text">2016-7-8</span>
+              </td>
+              <td class="col">
+                <div class="photo-box">
+                  <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
+                </div>
+              </td>
 
-            <td class="col">
-              <div class="ctl-btn-box">
-                <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
-                <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-              </div>
-            </td>
-          </tr>
+              <td class="col">
+                <div class="ctl-btn-box">
+                  <span class="ctl-btn modify " data-toggle="modal" data-target="#modModel"></span>
+                  <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                </div>
+              </td>
+            </tr>
+
           </tbody>
-          <tfoot class="grid-tfoot">
+          <tfoot class="grid-tfoot ">
           <tr class="row">
-            <td colspan="100">
+            <!--$(this).parent('table')[0].find('>thead >tr')[0].find('>.col').length-->
+            <td colspan="10" onclick="console.log( $(this).parent('table').length )">
               <div class="u-page-box">
                 <div class="page-box">
                   <div class="page-text">
@@ -487,9 +499,17 @@
                   <div class="input-group-addon">报价</div>
                   <input type="number" class="form-control" placeholder="请输入报价"/>
                 </div>
+                <div class="u-upload-image">
+                  <div class="photo-box">
+                    <div class="max-box">
+                      <img id="preview-img" src="" alt="预览图片">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="modal-footer">
+              <span class="error-hint">物料编码不能为空</span>
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
               <button type="button" class="btn btn-primary">保存</button>
             </div>
