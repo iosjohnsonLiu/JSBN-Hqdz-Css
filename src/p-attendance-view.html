@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>签到表打印</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="g-print a4 ">
+  <div class="print-setup">
+    <div class="form-group pull-right">
+      <div class="input-group">
+        <div class="input-group-btn">打印名单</div>
+        <textarea id="J_Name" class="form-control" style="width: 120mm;height:20mm" placeholder="请输入姓名(使用逗号分隔)">刘强,陈建君,张鑫</textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-btn">日期选择</div>
+        <input id="J_Date" type="month" class="form-control" placeholder="请选择签到表年月">
+      </div>
+    </div>
+
+    <span class="btn btn-info" onclick="create();">生成签到表</span>
+    <span class="btn btn-info" onclick="window.print();">打印</span>
+    <span id="J_Count" class="text-info">打印签到表0张</span>
+  </div>
+
+  <div id="print-preview" class="print-preview">
+
+  </div>
+</div>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="application/javascript">
+  function casePrint(){
+    window.print();
+  }
+</script>
+<script type='text/javascript'>
+  window.onload=function(){
+    console.log($("#J_Date"));
+    var $date=$("#J_Date")[0];
+    var nowDate = new Date();
+    nowDate=nowDate.pattern("yyyy-MM");
+    $date.value=nowDate;
+    console.log($date.value);
+  };
+  Date.prototype.pattern=function(fmt) {
+    var o = {
+      "M+" : this.getMonth()+1, //月份
+      "d+" : this.getDate(), //日
+      "h+" : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时
+      "H+" : this.getHours(), //小时
+      "m+" : this.getMinutes(), //分
+      "s+" : this.getSeconds(), //秒
+      "q+" : Math.floor((this.getMonth()+3)/3), //季度
+      "S" : this.getMilliseconds() //毫秒
+    };
+    var week = {
+      "0" : "/u65e5",
+      "1" : "/u4e00",
+      "2" : "/u4e8c",
+      "3" : "/u4e09",
+      "4" : "/u56db",
+      "5" : "/u4e94",
+      "6" : "/u516d"
+    };
+    if(/(y+)/.test(fmt)){
+      fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    }
+    if(/(E+)/.test(fmt)){
+      fmt=fmt.replace(RegExp.$1, ((RegExp.$1.length>1) ? (RegExp.$1.length>2 ? "/u661f/u671f" : "/u5468") : "")+week[this.getDay()+""]);
+    }
+    for(var k in o){
+      if(new RegExp("("+ k +")").test(fmt)){
+        fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+      }
+    }
+    return fmt;
+  };
+
+  Date.prototype.week= function(){
+    var myDate = this;
+    var partStr ='';
+    var Week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    partStr = Week[myDate.getDay()];
+    return partStr;
+  };
+
+  function create(){
+    var $date=$("#J_Date")[0];
+    var $J_Name=$("#J_Name")[0];
+    var nameString=$J_Name.value;
+    var nameList=new Array();
+    nameList = nameString.split(',');
+    var count = 0;
+    $("#print-preview").empty();
+    for (var i=0;i<nameList.length;i++){
+        name=nameList[i];
+        name=name.replace(/(^\s*)|(\s*$)/g, "");
+        if (name.length>0){
+          insertPage(name,$date.value);
+          count ++;
+        }
+    }
+    var $Count=$("#J_Count");
+    $Count.text("打印签到表"+count+"张");
+  }
+
+  function insertPage(name,date) {
+
+    var pageHead=
+      " <div class='page-box'>      " +
+      "  <div class=' p-attendance' >" +
+      "     <div class='grid-top'>" +
+      "       <span>金色百年婚礼服务集团有限公司</span>" +
+      "     </div>" +
+      "    <table class='grid-table '>" +
+      "       <thead class='grid-thead'>" +
+      "         <tr class='row'>" +
+      "           <th class='col' colspan='6'>签&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp到&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp表</th>" +
+      "         </tr>" +
+      "         <tr class='row'>" +
+      "           <th class='col' colspan='6'>" +
+      "             <ul class='state-list'>" +
+      "               <li>加班情况:</li>" +
+      "               <li>补休情况:</li>" +
+      "               <li>余假情况:</li>" +
+      "             </ul>" +
+      "           </th>" +
+      "         </tr>" +
+      "         <tr class='row'>" +
+      "           <th class='col col-name'>姓名</th>" +
+      "           <th class='col col-date'>日期</th>" +
+      "           <th class='col col-week'>星期</th>" +
+      "           <th class='col col-sign-in-time'>签到时间</th>" +
+      "           <th class='col col-return-time'>签退时间</th>" +
+      "           <th class='col col-remark'>备注</th>" +
+      "         </tr>" +
+      "       </thead>";
+
+    var pageFooter=
+      "    </table>" +
+      "   <div class='grid-buttom'>" +
+      "     <span>备注：考勤汇总表上每月加班补休情况按天/半天计算。</span>" +
+      "   </div>";
+
+    var pageBody= "<tbody class='grid-tbody'>";
+    var setDate =  new Date(date+'-'+'15');
+    var maxDay= getLastDay(setDate.getYear(),setDate.getMonth() + 1);
+
+    for (var i=1;i<=maxDay;i++){
+      var nowDate =  new Date(date + '-' + i);
+      var row="<tr class='row'>";
+      if (i==1){
+        row += "<td id='J_Nmae' class='col name' rowspan=" + maxDay +">" + name + "</td>";
+      }
+      row += "<td class='col '>" + nowDate.pattern('MM月dd日') + "</td>";
+      row += "<td class='col '>" + nowDate.week() + "</td>";
+      row += "<td class='col '></td>" + "<td class='col '></td>" + "<td class='col '></td>";
+      row +="</tr>";
+      pageBody += row;
+    }
+    pageBody +="</tbody>";
+    var page = pageHead + pageBody + pageFooter;
+
+
+    var $preview=$("#print-preview")[0];
+    $(page).prependTo($preview);
+  }
+
+  //获取某月的最大天数
+  function getLastDay(year,month){
+    var new_year = year;  //取当前的年份
+    var new_month = month++;//取下一个月的第一天，方便计算（最后一天不固定）
+    if(month>12)      //如果当前大于12月，则年份转到下一年
+    {
+      new_month -=12;    //月份减
+      new_year++;      //年份增
+    }
+    var new_date = new Date(new_year,new_month,1);//取当年当月中的第一天
+    return (new Date(new_date.getTime()-1000*60*60*24)).getDate();//获取当月最后一天日期
+  }
+
+  //+---------------------------------------------------
+  //| 取得日期数据信息
+  //| 参数 interval 表示数据类型
+  //| y 年 m月 d日 w星期 ww周 h时 n分 s秒
+  //+---------------------------------------------------
+
+</script>
+</body>
+</html>

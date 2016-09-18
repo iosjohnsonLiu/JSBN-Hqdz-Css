@@ -53,6 +53,7 @@ function insertMainnav() {
       "  <ul>" +
       "    <li><a class='title' href='yw-scene-case-view.html'>策划</a></li>" +
       "    <li><a class='title' href='yw-case-assign-view.html'>工程</a></li>" +
+      "    <li><a class='title' href='yw-cashier-view.html'>收银</a></li>" +
       "  </ul>" +
       " </li>" +
       " <li class='item-menu unfold'>" +
@@ -66,6 +67,7 @@ function insertMainnav() {
       "  </ul>" +
       " </li>" +
       "</ul>";
+
     $(insertMainnav).prependTo($mainNav);
     var pathNmae = window.location.pathname;
     var fileName = pathNmae.substring(pathNmae.lastIndexOf('/') + 1, pathNmae.length);

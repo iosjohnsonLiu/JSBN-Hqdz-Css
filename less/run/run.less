@@ -1,20 +1,19 @@
 
 .full_w_h{height: 100%;width: 100%};
 #J_Main{height: 100%};
-.adaption-auto{height: 100%;overflow: hidden;}
+.adaption-auto{height: 100%;overflow: hidden;
+  @media print {
+    display: none;
+    .g-topnav {display: none;}
+    .g-mainnav{display: none;}
+    .g-content{display: none;}
+  }
+}
 img{width: 100%}
 html{width: 100%;height: 100%;}
 body{width: 100%;height: 100%;}
 
-@media print {
-  //html{height:inherit !important;}
-  //body{height:inherit !important;}
-  //#J_Main{height:inherit !important;};
-  //.adaption-auto{height:inherit !important;overflow: inherit!important;}
-  //.g-topnav{display: none!important;};
-  //.g-mainnav{display: none!important;};
-  //.g-content{height: auto!important;margin: 0!important;padding: 0!important;width: 100%!important;};
-}
+
 
 
 
@@ -52,6 +51,8 @@ body{width: 100%;height: 100%;}
 .custom-prop-box{.custom-prop-box();}
 //3D方案部分分类.
 .custom-case-assign{.custom-case-assign();}
+//收银详情
+.custom-cashier-edit{.custom-cashier-edit();}
 //-----------定制模块-----------end
 
 

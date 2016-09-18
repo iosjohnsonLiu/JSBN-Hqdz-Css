@@ -9,6 +9,40 @@
   <!-- Bootstrap -->
   <link href="../dist/css/bootstrap.css" rel="stylesheet">
   <link href="../dist/css/app.css" rel="stylesheet">
+  <script language="JavaScript">
+    var hkey_root,hkey_path,hkey_key;
+    hkey_root="HKEY_CURRENT_USER";
+    hkey_path="\\Software\\Microsoft\\Internet Explorer\\PageSetup\\";
+
+    // 设置网页打印的页眉页脚为空
+    function pagesetup_null()
+    {
+      try{
+        var RegWsh = new ActiveXObject("WScript.Shell");
+        hkey_key="header";
+        RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"");
+        hkey_key="footer";
+        RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"");
+      }catch(e){ alert(e); }
+    }
+
+    // 设置网页打印的页眉页脚为默认值
+    function pagesetup_default()
+    {
+      try{
+        var RegWsh = new ActiveXObject("WScript.Shell");
+        hkey_key="header";
+        RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&w&b页码，&p/&P");
+        hkey_key="footer";
+        RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&u&b&d");
+      }catch(e){ alert(e); }
+    }
+
+    function printMethod(){
+      pagesetup_default();
+      window.print();
+    }
+  </script>
 </head>
 
 <body>
@@ -27,7 +61,6 @@
         <div class="case-detail-box">
           <div class="header">
             <span>场景方案详情</span>
-
           </div>
           <div class="body">
             <div class="case-info-list">
@@ -35,6 +68,10 @@
                 <div class="input-group">
                   <div class="input-group-addon">订单号</div>
                   <input type="text" class="form-control" value="cd123456" readonly/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">全案名称</div>
+                  <input type="text" class="form-control" value="套系" readonly/>
                 </div>
                 <div class="input-group">
                   <div class="input-group-addon">新郎名</div>
@@ -52,7 +89,6 @@
                   <div class="input-group-addon">婚期</div>
                   <input type="text" class="form-control" value="2016月10日10" readonly/>
                 </div>
-
                 <div class="input-group">
                   <div class="input-group-addon">酒店</div>
                   <input type="text" class="form-control" value="芭菲家宴3号厅" readonly/>
@@ -69,50 +105,38 @@
                   <div class="input-group-addon">提交状态</div>
                   <input type="text" class="form-control" value="等待提交" readonly/>
                 </div>
-              </div>
-              <div class="textarea-box">
-                <div class="max-box">
-                  <span class="title">备注</span>
-                  <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
+                <div class="textarea-box remark-box">
+                  <div class="max-box">
+                    <span class="title">主题</span>
+                    <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
+                  </div>
+                </div>
+                <div class="textarea-box theme-box">
+                  <div class="max-box">
+                    <span class="title">备注</span>
+                    <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
+                  </div>
                 </div>
               </div>
               <div class="total-prices-box">
                 <div class="header">
-                  <div class="title-box">
-                    <span class="title">总价清单</span>
-                  </div>
-                  <div class="column-name">
-                    <span class="name">项目名</span>
-                    <span class="original-price">原价</span>
-                    <span class="price">售价</span>
-                  </div>
+                  <div class="title-box"><span class="title">总价清单</span></div>
+                  <div class="column-name"><span class="name">项目名</span><span class="original-price">原价</span><span
+                    class="price">实收款</span></div>
                 </div>
                 <div class="body">
                   <ul>
-                    <li>
-                      <span class="name">道具</span>
-                      <span class="original-price">8000</span>
-                      <span class="price">8000</span>
+                    <li><span class="name">道具</span><span class="original-price">3008.9</span><span class="price">2107.12</span>
                     </li>
-                    <li>
-                      <span class="name">附加项目</span>
-                      <span class="original-price">3120</span>
-                      <span class="price">3100</span>
-
+                    <li><span class="name">附加项目</span><span class="original-price">10368</span><span class="price">9839.60</span>
                     </li>
-                    <li>
-                      <span class="name">特殊物品</span>
-                      <span class="original-price">620</span>
-                      <span class="price">620</span>
-                    </li>
+                    <li><span class="name">特殊物品</span><span class="original-price">1212</span><span
+                      class="price">1212</span></li>
                   </ul>
                 </div>
                 <div class="footer">
-                  <div class="total-box">
-                    <span class="name">合计</span>
-                    <span class="original-price">11740</span>
-                    <span class="price">11720</span>
-                  </div>
+                  <div class="total-box"><span class="name">合计</span><span class="original-price"></span><span
+                    class="price">13158.72</span></div>
                 </div>
               </div>
             </div>
@@ -155,12 +179,20 @@
             </div>
           </div>
         </div>
+
         <div class="workaround-box">
           <div class="header">
             <span>道具清单</span>
           </div>
           <div class="body">
             <div class="item-list-box">
+              <div class="header">
+                <ul class="u-nav-tab">
+                  <li class="active" onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">全案清单</li>
+                  <li onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">增加道具</li>
+                  <li onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">删除道具</li>
+                </ul>
+              </div>
               <div class="body">
                 <div class="menu-select">
                   <ul class="main-menu">
@@ -226,6 +258,17 @@
                       <div class="input-group">
                         <div class="input-group-addon">数量</div>
                         <input type="number" class="form-control" value="1"/>
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-addon">赠送道具</span>
+                        <div class="form-control radio-group">
+                          <label>
+                            <input type="radio" name="discount" disabled>可赠送
+                          </label>
+                          <label>
+                            <input type="radio" name="discount" disabled checked>不可赠送
+                          </label>
+                        </div>
                       </div>
                       <div class="input-group">
                         <div class="input-group-addon">所属位置</div>
@@ -456,55 +499,6 @@
                               </div>
                             </div>
 
-                            <!--<div class="form-group addon-length-4">-->
-                            <!--<div class="input-group not-null">-->
-                            <!--<div class="input-group-addon">物料编号</div>-->
-                            <!--<input type="text" class="form-control " placeholder="请输入编号" />-->
-                            <!--<div class="input-group-btn">-->
-                            <!--<div class="btn btn-info">确定</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="input-group">-->
-                            <!--<div class="input-group-addon">物料名称</div>-->
-                            <!--<input type="text" class="form-control " placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">单位</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">风格</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">色系</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">材质</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">部门属性</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">库存量</div>-->
-                            <!--<input type="text" class="form-control "  placeholder="通过编号获取信息" readonly/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">尺寸</div>-->
-                            <!--<input type="text" class="form-control" placeholder="请输入尺寸"/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">成本价</div>-->
-                            <!--<input type="number" class="form-control" placeholder="请输入成本价"/>-->
-                            <!--</div>-->
-                            <!--<div class="input-group ">-->
-                            <!--<div class="input-group-addon">报价</div>-->
-                            <!--<input type="number" class="form-control" placeholder="请输入报价"/>-->
-                            <!--</div>-->
-                            <!--</div>-->
                           </div>
                           <div class="modal-footer">
                             <span class="use-hint">选择要添加的物料</span>
@@ -729,7 +723,7 @@
           <div class="goods-box">
             <div class="u-grid-table ">
               <div class="grid-top">
-                <span class="grid-title">特殊物品列表</span>
+                <span class="grid-title">特殊项目列表</span>
                 <div class="grid-btn-group">
                   <div class="btn btn-info glyphicon glyphicon-plus" data-toggle="modal" data-target="#newGoodModel">
                     新建物品
@@ -861,13 +855,14 @@
             </div>
           </div>
         </div>
-
-
-
         <div class="case-ctl-box">
-          <a class="btn " href="print-case-list.html" target="_blank">打印清单</a>
+          <!--<a class="btn " href="print-case-list.html" target="_blank">打印清单</a>-->
+          <div class="btn " onclick="$('#print').removeClass('hide')">打印清单</div>
           <div class="btn " data-toggle="modal" data-target="#saveCaseModel">保存</div>
-          <div class="btn ">提交</div>
+          <div class="case-submit">
+            <span class="btn-hint">提交后就不能修改清单</span>
+            <div class="btn ">提交</div>
+          </div>
         </div>
       </div>
 
@@ -1357,7 +1352,7 @@
         </div>
       </div>
       <div class="modal  fade bs-example-modal-sm " id="saveCaseModel" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-dialog " role="document">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -1372,38 +1367,72 @@
                     <span class="title">总价清单</span>
                   </div>
                   <div class="column-name">
-                    <span class="name">项目名</span>
-                    <span class="original-price">原价</span>
-                    <span class="price">售价</span>
+                    <span >项目名</span>
+                    <span >原价</span>
+                    <span >折扣</span>
+                    <span >减免</span>
+                    <span >售价</span>
                   </div>
                 </div>
                 <div class="body">
                   <ul>
                     <li>
-                      <span class="name">道具</span>
+                      <span class="name">套内道具</span>
                       <span class="original-price">8000</span>
-                      <span class="price"><input type="number" value="8000"/></span>
+                      <span class="discount"><input type="number" value="1"/></span>
+                      <span class="derate"><input type="number" value="0"/></span>
+                      <span class="price">8000</span>
                     </li>
+                    <li>
+                      <span class="name">添加道具</span>
+                      <span class="original-price">2000</span>
+                      <span class="discount"><input type="number" value="1"/></span>
+                      <span class="derate"><input type="number" value="0"/></span>
+                      <span class="price">2000</span>
+                    </li>
+                    <li>
+                      <span class="name">移除道具</span>
+                      <span class="original-price">2000</span>
+                      <span class="discount"><input type="number" value="1"/></span>
+                      <span class="derate"><input type="number" value="0"/></span>
+                      <span class="price">2000</span>
+                    </li>
+                    <li class="sum-price">
+                      <span class="name">道具合计</span>
+                      <span class="discount"></span>
+                      <span class="derate"></span>
+                      <span class="price">11120</span>
+                    </li>
+
                     <li>
                       <span class="name">附加项目</span>
                       <span class="original-price">3120</span>
-                      <span class="price"><input type="number" value="3100"/></span>
-
+                      <span class="discount"><input type="number" value="1"/></span>
+                      <span class="derate"><input type="number" value="0"/></span>
+                      <span class="price">3120</span>
+                    </li>
+                    <li class="sum-price">
+                      <span class="name">小计</span>
+                      <span class="discount"></span>
+                      <span class="derate"></span>
+                      <span class="price">11120</span>
                     </li>
                     <li>
-                      <span class="name">特殊物品</span>
+                      <span class="name">特殊项目</span>
                       <span class="original-price">620</span>
-                      <span class="price"><input type="number" value="620"/></span>
+                      <span class="discount"><input type="number" value="1"/></span>
+                      <span class="derate"><input type="number" value="0"/></span>
+                      <span class="price">620</span>
+                    </li>
+                    <li class="sum-price">
+                      <span class="name">合计</span>
+                      <span class="discount"></span>
+                      <span class="derate"></span>
+                      <span class="price">11740</span>
                     </li>
                   </ul>
                 </div>
-                <div class="footer">
-                  <div class="total-box">
-                    <span class="name">合计</span>
-                    <span class="original-price">11740</span>
-                    <span class="price">11720</span>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div class="modal-footer">
@@ -1479,6 +1508,477 @@
   </div>
 </div>
 
+<div id="print" class="hide">
+  <div class="g-print a4 ">
+    <div class="print-setup">
+      <span class="btn btn-info" onclick="window.print();">打印</span>
+      <span class="btn btn-info" onclick="pagesetup_default();">设置页眉页脚</span>
+      <span class="btn btn-info" onclick="pagesetup_null();">清空页眉页脚</span>
+      <span class="btn btn-info pull-right" onclick="$('#print').addClass('hide')">关闭</span>
+    </div>
+    <div class="print-preview">
+      <div class="page-box">
+        <div class="info-header-box">
+          <ul>
+            <li>
+              <span class="title">订单号</span>
+              <span class="text">cd123456</span>
+            </li>
+            <li>
+              <span class="title">新郎名</span>
+              <span class="text">小胖</span>
+            </li>
+            <li>
+              <span class="title">新娘名</span>
+              <span class="text">如花</span>
+            </li>
+            <li>
+              <span class="title">联系方式</span>
+              <span class="text">13656788888</span>
+            </li>
+            <li>
+              <span class="title">婚期</span>
+              <span class="text">2016月10日10</span>
+            </li>
+            <li>
+              <span class="title">酒店</span>
+              <span class="text">芭菲家宴3号厅</span>
+            </li>
+          </ul>
+        </div>
+        <div class="p-prices-box">
+          <div class="header">
+            <div class="title-box">
+              <span class="title">总价清单</span>
+            </div>
+            <div class="column-name">
+              <span >项目名</span>
+              <span >原价</span>
+              <span >折扣</span>
+              <span >减免</span>
+              <span >售价</span>
+            </div>
+          </div>
+          <div class="body">
+            <ul>
+              <li>
+                <span class="name ">道具清单</span>
+                <span class="original-price">8000</span>
+                <span class="discount"></span>
+                <span class="derate">0</span>
+                <span class="price">8000</span>
+                <ul>
+                  <li>
+                    <span class="name glyphicon glyphicon-plus">全案清单</span>
+                    <span class="original-price">8000</span>
+                    <span class="discount"></span>
+                    <span class="derate">0</span>
+                    <span class="price">8000</span>
+                  </li>
+                  <li>
+                    <span class="name glyphicon glyphicon-plus">增加道具</span>
+                    <span class="original-price">8000</span>
+                    <span class="discount"></span>
+                    <span class="derate">0</span>
+                    <span class="price">8000</span>
+                  </li>
+                  <li>
+                    <span class="name glyphicon glyphicon-minus">删除道具</span>
+                    <span class="original-price">8000</span>
+                    <span class="discount"></span>
+                    <span class="derate">0</span>
+                    <span class="price">8000</span>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li>
+                <span class="name">附加项目</span>
+                <span class="original-price">3120</span>
+                <span class="discount"></span>
+                <span class="derate">0</span>
+                <span class="price">3120</span>
+              </li>
+              <li class="sum-price">
+                <span class="name">小计</span>
+                <span class="discount"></span>
+                <span class="derate"></span>
+                <span class="price">11120</span>
+              </li>
+              <li>
+                <span class="name">特殊项目</span>
+                <span class="original-price">620</span>
+                <span class="discount"></span>
+                <span class="derate">0</span>
+                <span class="price">620</span>
+              </li>
+              <li class="sum-price">
+                <span class="name">合计</span>
+                <span class="discount"></span>
+                <span class="derate"></span>
+                <span class="price">11740</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="p-grid-table" >
+          <table class="grid-table ">
+            <thead class="grid-thead">
+            <tr class="row text-center">
+              <th class="col  ">道具名称</th>
+              <th class="col  ">物料名称</th>
+              <th class="col  ">规格</th>
+              <th class="col  ">单价</th>
+              <th class="col  ">数量</th>
+              <th class="col  ">总价</th>
+              <th class="col  ">备注</th>
+            </tr>
+            </thead>
+
+            <tbody class="grid-tbody">
+              <tr class="row area-row">
+                <td class="col" colspan="7">签到区</td>
+              </tr>
+              <tr class="row item-top">
+                <td class="col" rowspan="6">签到台</td>
+                <td class="col">签到台背景喷绘</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">18</td>
+                <td class="col">396</td>
+                <td class="col"><input type="text" value="输入自定义备注"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">签到台桁架</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">12</td>
+                <td class="col">540</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">纸花</td>
+                <td class="col">朵</td>
+                <td class="col">5</td>
+                <td class="col">20</td>
+                <td class="col">100</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">装饰桁架</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">11</td>
+                <td class="col">242</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">装饰桁架KT板</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">10</td>
+                <td class="col">450</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">桁架悬吊纸花</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row item-top">
+                <td class="col" rowspan="8">留影台</td>
+                <td class="col">喷绘桁架</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">18</td>
+                <td class="col">396</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">喷绘</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">12</td>
+                <td class="col">540</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">地排灯</td>
+                <td class="col">朵</td>
+                <td class="col">5</td>
+                <td class="col">20</td>
+                <td class="col">100</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">留影区KT板</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">11</td>
+                <td class="col">242</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">留影区雪纺花艺造型</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">10</td>
+                <td class="col">450</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">亚克力路引</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">30CM玻璃瓶</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">仿真花艺</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row sum-price">
+                <td class="col" colspan="5">小计</td>
+                <td class="col">6666</td>
+                <td class="col">备注</td>
+              </tr>
+
+              <tr class="row area-row f-page-next">
+                <td class="col" colspan="7">仪式舞台区</td>
+              </tr>
+              <tr class="row item-top">
+                <td class="col" rowspan="15">仪式舞台</td>
+                <td class="col">舞台背景桁架</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">18</td>
+                <td class="col">396</td>
+                <td class="col">高5M*宽6.5M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">背景布幔（6*8M）</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">12</td>
+                <td class="col">540</td>
+                <td class="col">6*8M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">网纱</td>
+                <td class="col">朵</td>
+                <td class="col">5</td>
+                <td class="col">20</td>
+                <td class="col">100</td>
+                <td class="col">幅宽1.5M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">龙珠路引灯</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">11</td>
+                <td class="col">242</td>
+                <td class="col">长1.2M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">洗墙灯</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">10</td>
+                <td class="col">450</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">LED包屏桁架</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col">高2.75*宽5M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">包屏桁架KT板</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col">高5M*宽6M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">KT板装饰雪纱</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">LED串灯</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">舞台包白</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">镜面T台</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">太空棉</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">雪纱</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">灯带</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">泡泡灯</td>
+                <td class="col">朵</td>
+                <td class="col">22</td>
+                <td class="col">10</td>
+                <td class="col">220</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row sum-price">
+                <td class="col" colspan="5">小计</td>
+                <td class="col">6666</td>
+                <td class="col">备注</td>
+              </tr>
+
+              <tr class="row area-row f-page-next">
+                <td class="col" colspan="7">其他</td>
+              </tr>
+              <tr class="row item-top">
+                <td class="col" rowspan="4">附加项目</td>
+                <td class="col">督导</td>
+                <td class="col">名</td>
+                <td class="col">480</td>
+                <td class="col">2</td>
+                <td class="col">980</td>
+                <td class="col">现场布置监督、协调、统筹安排</td>
+              </tr>
+              <tr class="row">
+                <td class="col">婚礼行程管家</td>
+                <td class="col">名</td>
+                <td class="col">480</td>
+                <td class="col">1</td>
+                <td class="col">480</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">现场VJ师</td>
+                <td class="col">名</td>
+                <td class="col">160</td>
+                <td class="col">1</td>
+                <td class="col">160</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row">
+                <td class="col">现场DJ师</td>
+                <td class="col">名</td>
+                <td class="col">160</td>
+                <td class="col">1</td>
+                <td class="col">160</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row item-top">
+                <td class="col" rowspan="3">特殊项目</td>
+                <td class="col">舞台背景桁架</td>
+                <td class="col">米</td>
+                <td class="col">22</td>
+                <td class="col">18</td>
+                <td class="col">396</td>
+                <td class="col">高5M*宽6.5M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">背景布幔（6*8M）</td>
+                <td class="col">平方</td>
+                <td class="col">45</td>
+                <td class="col">12</td>
+                <td class="col">540</td>
+                <td class="col">6*8M</td>
+              </tr>
+              <tr class="row">
+                <td class="col">网纱</td>
+                <td class="col">朵</td>
+                <td class="col">5</td>
+                <td class="col">20</td>
+                <td class="col">100</td>
+                <td class="col">幅宽1.5M</td>
+              </tr>
+              <tr class="row sum-price">
+                <td class="col" colspan="5">小计</td>
+                <td class="col">6666</td>
+                <td class="col">备注</td>
+              </tr>
+
+              <tr class="row sum-price">
+                <td class="col" colspan="5">合计</td>
+                <td class="col">99999</td>
+                <td class="col"></td>
+              </tr>
+              <tr class="row sum-price">
+              <td class="col" colspan="5">折后价</td>
+              <td class="col">90000</td>
+              <td class="col"></td>
+            </tr>
+
+            </tbody>
+
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="../dist/js/bootstrap.js"></script>
 <script src="../testjs/readydefault.js"></script>

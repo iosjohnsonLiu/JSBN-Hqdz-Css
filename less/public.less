@@ -1,6 +1,13 @@
 @g-topnav-h:50px;
 @g-mainnav-w:200px;
-
+.textAlignJustify(){
+  text-align: justify;
+  &:after{
+    content: "";
+    display: inline-block;
+    padding-left: 100%;
+  }
+}
 .u-header-body(){
   //.displayFlex();
   //.flexDirectionColumn();
@@ -58,13 +65,31 @@
 
 .p-noprint  { display: none;}
 .p-page-next{ page-break-before: always;}
+.u-barcode{
+  margin: 6px auto 0;
+}
 .g-print(){
+  position: absolute;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+
   &.a4 .print-preview{
     width: 210mm;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    .page-box{
+      min-height: 297mm;
+    }
   }
 
   .print-preview{
+    .page-box{
+      page-break-after: always;
+    }
     .info-header-box{
       margin-bottom: 10px;
       ul{
@@ -75,7 +100,7 @@
         li{
           .clearfix();
           display: inline-block;
-          padding: 6px 8px;
+          padding: 8px;
           width: 33.33%;
           border: 1px solid @btn-default-border;
           border-left-style: none;
@@ -84,7 +109,7 @@
           &:nth-child( -n + 3){border-top-style: solid;}
 
 
-          span{font-size: @font-size-h6;line-height: @font-size-h5;}
+          span{font-size: @font-size-h5;line-height: @font-size-h4;}
           .title{
             color: #999;
             float: left;
@@ -92,7 +117,7 @@
           }
           .text{
             float: right;
-            font-size: @font-size-h5;
+            font-size: @font-size-h4;
           }
 
         }
@@ -159,7 +184,82 @@
         }
       }
     }
+    .p-prices-box{
+      padding: 10px 0 10px 60mm;
+      margin: 20px auto;
+      text-align: center;
+      position: relative;
+      border: 1px solid @btn-default-border;
+      >.header>.column-name,
+      >.body>ul li{
+        .displayFlex();
+        margin: 4px 0;
+        padding: 4px 0;
 
+        span{
+          height: 30px;
+          .flex(1);
+          overflow: hidden;
+          text-align: center;
+          .displayFlex();
+          .justifyContentCenter();
+          .alignItemsCenter();
+        }
+        &.sum-price{
+          border-top: 1px solid @btn-default-border;
+          .name{
+            .flex(2);
+            font-size: @font-size-h4;
+          }
+        }
+      }
+      >.header{
+        height: auto;
+        border-bottom: 1px solid @btn-default-border;
+        .title-box{
+          position: absolute;
+          left: 20mm;
+          top: 50%;
+          margin-top: -20px;
+        }
+        .title{
+          font-size: @font-size-h3;
+          line-height: 40px;
+          display: block;
+          text-align: center;
+        }
+        .column-name{
+          span{
+            font-size: @font-size-h5;
+          }
+        }
+      }
+      >.body{
+        ul{
+          li{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            span{
+              font-size: @font-size-h5;
+            }
+            .flexWrapWrap();
+            ul{
+              width: 100%;
+              .flex(auto);
+              border: 1px dotted @table-border-color;
+              li{
+                margin: 0;
+                .glyphicon{
+                  text-align: left;
+                }
+              }
+              margin: 10px 10px 20px 30px;
+            }
+
+          }
+        }
+      }
+    }
     .p-grid-table{
       //表格样式和线条
       table{
@@ -199,7 +299,7 @@
         }
         // Account for multiple tbody instances
         > tbody + tbody {
-          border-top: 2px solid @table-border-color;
+          //border-top: 2px solid @table-border-color;
         }
 
         // Nesting
@@ -220,6 +320,9 @@
             .col{
               vertical-align: middle;
               height: auto;
+              input{
+                .square(100%);
+              }
             }
           }
           .area-row{
@@ -253,7 +356,124 @@
         }
       }
     }
+    .p-attendance{
 
+      table{
+        @border-color:#000;
+        @color:#000;
+        //border: 1px solid @table-border-color;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: @line-height-computed;
+        // Cells
+        > thead,
+        > tbody,
+        > tfoot {
+          > tr {
+            > th,
+            > td {
+              padding: 2px;
+              line-height: @line-height-base;
+              vertical-align: middle;
+              border: 1px solid @border-color;
+              color: @color;
+
+            }
+          }
+        }
+        // Bottom align for column headings
+        > thead > tr > th {
+          vertical-align: bottom;
+          border-bottom: 1px solid @border-color;
+        }
+        // Remove top border from thead by default
+        > caption + thead,
+        > colgroup + thead,
+        > thead:first-child {
+          > tr:first-child {
+            > th,
+            > td {
+              //border-top: 0;
+            }
+          }
+        }
+        // Account for multiple tbody instances
+        > tbody + tbody {
+          //border-top: 2px solid @table-border-color;
+        }
+
+        // Nesting
+        .table {
+          background-color: @body-bg;
+        }
+      }
+
+      .grid-top{
+        text-align: center;
+        margin-bottom: 10px;
+        span{
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 40px;
+        }
+      }
+      .grid-table{
+        margin: 0;
+        .grid-thead{
+          .row:nth-child(1){
+            .col{
+              font-size: 28px;
+              font-weight: bold;
+              line-height: 30px;
+            }
+          }
+          .row:nth-child(2){
+            .state-list{
+              .displayFlex();
+              li{
+                text-align: left;
+                padding: 4px 12px;
+                font-size: 24px;
+                line-height: 26px;
+                .flex(1);
+              }
+            }
+          }
+          .row:nth-child(3){
+            .col-name{width: 6%;}
+            .col-date{width: 11%;}
+            .col-week{width: 9%;}
+            .col-sign-in-time{width: 11%;}
+            .col-return-time{width: 11%;}
+            .col-remark{width: 52%;}
+            .col{
+              font-size: 18px;
+              line-height: 20px;
+            }
+          }
+        }
+        .row .col{
+          text-align: center;
+          font-size: 16px;
+          line-height: 16px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          &.name{
+            font-size: 28px;
+            font-weight: bold;
+            padding: 6px;
+            line-height: 40px;
+          }
+        }
+      }
+      .grid-buttom{
+        span{
+          padding: 4px;
+          font-size: 16px;
+        }
+      }
+    }
   }
   @media screen {
     .print-setup{
@@ -267,8 +487,7 @@
     .print-preview{
       margin: 0;
       padding:0;
-      //border: 1px solid @brand-info;
-      //border-radius: 4px;
+      margin-bottom: 60px;
     }
   }
   @media print {
@@ -281,7 +500,6 @@
     }
 
   }
-
 }
 
 .g-mainnav(){
@@ -774,6 +992,16 @@
         .btn-danger();
         .glyphicon();
         &:before {content: "\e013";}
+      }
+      &.back{
+        .btn-danger();
+        .glyphicon();
+        &:before {
+          content: "退";
+          font-weight: 900;
+          top: -1px;
+          position: relative;
+        }
       }
     }
   }
@@ -1271,6 +1499,11 @@
       min-width: (@default-w + @font-size * @length);
     }
   }
+  .textarea-box{
+    .title{
+      min-width: (@default-w + @font-size * @length);
+    }
+  }
 }
 //文本框调整
 &{
@@ -1538,3 +1771,13 @@
   }
 }
 
+.photo-box{
+  .displayFlex();
+  .justifyContentCenter();
+  .alignItemsCenter();
+  .square(100%);
+  img{
+    .max-square(100%);
+    .square(auto);
+  }
+}
