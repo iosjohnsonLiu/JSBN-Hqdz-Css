@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+  <script src="../testjs/insetHtml.js"></script>
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+      <div class="u-sift-box">
+        <div class="header">
+          <span> 筛选</span>
+          <div class="ctl-btn-box">
+            <div class="btn ">重置</div>
+            <div class="btn ">搜索</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="form-group form-inline addon-length-5">
+            <div class="input-group ">
+              <div class="input-group-addon"><span>订单号</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>姓名</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>婚期</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon">状态</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly placeholder="请选择期数">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-info" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">未收银</a></li>
+                      <li><a href="#">收银中</a></li>
+                      <li><a href="#">收银完成</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-group ">
+              <div class="input-group-addon"><span>预付款日期</span></div>
+              <input type="text" class="form-control"  placeholder="请输入筛选条件">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="u-grid-table ">
+        <div class="grid-top">
+          <span class="grid-title">
+            方案清单列表
+          </span>
+          <div class="grid-btn-group">
+            <div class="btn btn-info" data-toggle="modal" data-target="#">导出报表</div>
+          </div>
+        </div>
+        <table class="grid-table text-center">
+          <thead class="grid-thead">
+            <tr class="row">
+              <td class="col  " rowspan="2">序号</td>
+              <td class="col  " rowspan="2">婚期</td>
+              <td class="col  " rowspan="2">姓名</td>
+              <td class="col  " rowspan="2">店/厅</td>
+              <td class="col  " colspan="4" >营业收入</td>
+              <td class="col  " rowspan="2">合计实收</td>
+              <td class="col  " rowspan="2">策划师</td>
+              <td class="col  " rowspan="2">婚庆类型</td>
+              <td class="col  " rowspan="2">备注</td>
+            </tr>
+            <tr class="row">
+              <td class="col  " >预付款</td>
+              <td class="col  " >二期款</td>
+              <td class="col  " >增加款</td>
+              <td class="col  " >尾款  </td>
+            </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">1</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016年11月11日</span>
+            </td>
+            <td class="col">
+              <span class="col-text">新郎、新娘</span>
+            </td>
+            <td class="col">
+              <span class="col-text">九滨店2号厅</span>
+            </td>
+            <td class="col">
+              <span class="col-text">4000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">1000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">6000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">策划师</span>
+            </td>
+            <td class="col">
+              <span class="col-text">套系名称</span>
+            </td>
+            <td class="col">
+              <span class="col-text">备注</span>
+            </td>
+
+          </tr>
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">1</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016年11月11日</span>
+            </td>
+            <td class="col">
+              <span class="col-text">新郎、新娘</span>
+            </td>
+            <td class="col">
+              <span class="col-text">九滨店2号厅</span>
+            </td>
+            <td class="col">
+              <span class="col-text">4000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">1000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">6000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">策划师</span>
+            </td>
+            <td class="col">
+              <span class="col-text">套系名称</span>
+            </td>
+            <td class="col">
+              <span class="col-text">备注</span>
+            </td>
+
+          </tr>
+          <tr class="row">
+            <td class="col">
+              <span class="col-text">1</span>
+            </td>
+            <td class="col">
+              <span class="col-text">2016年11月11日</span>
+            </td>
+            <td class="col">
+              <span class="col-text">新郎、新娘</span>
+            </td>
+            <td class="col">
+              <span class="col-text">九滨店2号厅</span>
+            </td>
+            <td class="col">
+              <span class="col-text">4000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">1000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">500</span>
+            </td>
+            <td class="col">
+              <span class="col-text">6000</span>
+            </td>
+            <td class="col">
+              <span class="col-text">策划师</span>
+            </td>
+            <td class="col">
+              <span class="col-text">套系名称</span>
+            </td>
+            <td class="col">
+              <span class="col-text">备注</span>
+            </td>
+
+          </tr>
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="100">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text">
+                    <span class="text-warning">共10页,当前第5页</span>
+                  </div>
+                  <ul class="pagination ">
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  //  var video = document.getElementById("video");
+  //  var context = canvas.getContext("2d");
+  //  var errocb = function () {
+  //    console.log('sth wrong!');
+  //  };
+  //  if (navigator.getUserMedia) { // 标准的API
+  //    navigator.getUserMedia({ "video": true }, function (stream) {
+  //      video.src = stream;
+  //      video.play();
+  //    }, errocb);
+  //  } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+  //    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+  //      video.src = window.webkitURL.createObjectURL(stream);
+  //      video.play();
+  //    }, errocb);
+  //  }
+  //
+  //  $(document).ready(function(){
+  //
+  //  });
+</script>
+</body>
+</html>

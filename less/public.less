@@ -965,37 +965,47 @@
     .ctl-btn{
       .btn();
       margin: 1%;
+      .glyphicon();
+      top:0;
+      min-width: 40px;
+
+      &:hover{color: #fff;}
+
       &:last-child{
         margin-right: 0;
       }
+      &.work{
+        .btn-info();
+        padding: 4px 6px 8px 6px;
+
+      }
       &.modify{
         .btn-info();
-        .glyphicon();
         .glyphicon-pencil();
+      }
+      &.download{
+        .btn-info();
+        .glyphicon-pencil();
+        &:before {content: "\e026";}
       }
       &.delete{
         .btn-danger();
-        .glyphicon();
         .glyphicon-trash();
       }
       &.detail{
         .btn-info();
-        .glyphicon();
         &:before {content: "\e105";}
       }
       &.photo{
         .btn-info();
-        .glyphicon();
         &:before {content: "\e060";}
       }
       &.submit{
         .btn-danger();
-        .glyphicon();
         &:before {content: "\e013";}
       }
       &.back{
         .btn-danger();
-        .glyphicon();
         &:before {
           content: "退";
           font-weight: 900;
@@ -1781,3 +1791,32 @@
     .square(auto);
   }
 }
+
+
+
+//.scale-box{
+//  height: 100%;
+//  .displayFlex();
+//  background-color: @default-bg;
+//  .title{
+//    font-size: @font-size-h5;
+//    padding: 6px 12px 6px 6px;
+//  }
+//  .content{
+//    font-size: @font-size-h5;
+//    padding: 6px 0 6px 6px;
+//    .flex(1);
+//    width: 50px;
+//    text-align: right;
+//    &:hover{
+//      border: 1px solid @brand-info;
+//    }
+//
+//  }
+//  >*{
+//    border: 1px solid @btn-default-border;
+//    border-left-color: transparent;
+//  }
+//  >*:last-child{ .border-right-radius(4px);}
+//
+//}

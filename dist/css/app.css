@@ -2176,126 +2176,216 @@ fieldset[disabled] .case-detail-box .header .ctl-btn-box .btn.active {
   -webkit-flex: 1;
   flex: 1;
 }
-.detailed-preview > .cashier-table {
+.detailed-preview > .cashier-table,
+.detailed-preview .payment-table {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #000000;
 }
-.detailed-preview > .cashier-table table {
+.detailed-preview > .cashier-table .table-title,
+.detailed-preview .payment-table .table-title {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 6px;
+}
+.detailed-preview > .cashier-table table,
+.detailed-preview .payment-table table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
 }
 .detailed-preview > .cashier-table table > thead > tr > th,
+.detailed-preview .payment-table table > thead > tr > th,
 .detailed-preview > .cashier-table table > tbody > tr > th,
+.detailed-preview .payment-table table > tbody > tr > th,
 .detailed-preview > .cashier-table table > tfoot > tr > th,
+.detailed-preview .payment-table table > tfoot > tr > th,
 .detailed-preview > .cashier-table table > thead > tr > td,
+.detailed-preview .payment-table table > thead > tr > td,
 .detailed-preview > .cashier-table table > tbody > tr > td,
-.detailed-preview > .cashier-table table > tfoot > tr > td {
+.detailed-preview .payment-table table > tbody > tr > td,
+.detailed-preview > .cashier-table table > tfoot > tr > td,
+.detailed-preview .payment-table table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
   border-bottom: 1px solid #999999;
 }
 .detailed-preview > .cashier-table table > thead > tr.area-row > th,
+.detailed-preview .payment-table table > thead > tr.area-row > th,
 .detailed-preview > .cashier-table table > tbody > tr.area-row > th,
+.detailed-preview .payment-table table > tbody > tr.area-row > th,
 .detailed-preview > .cashier-table table > tfoot > tr.area-row > th,
+.detailed-preview .payment-table table > tfoot > tr.area-row > th,
 .detailed-preview > .cashier-table table > thead > tr.sum-price > th,
+.detailed-preview .payment-table table > thead > tr.sum-price > th,
 .detailed-preview > .cashier-table table > tbody > tr.sum-price > th,
+.detailed-preview .payment-table table > tbody > tr.sum-price > th,
 .detailed-preview > .cashier-table table > tfoot > tr.sum-price > th,
+.detailed-preview .payment-table table > tfoot > tr.sum-price > th,
 .detailed-preview > .cashier-table table > thead > tr.area-row > td,
+.detailed-preview .payment-table table > thead > tr.area-row > td,
 .detailed-preview > .cashier-table table > tbody > tr.area-row > td,
+.detailed-preview .payment-table table > tbody > tr.area-row > td,
 .detailed-preview > .cashier-table table > tfoot > tr.area-row > td,
+.detailed-preview .payment-table table > tfoot > tr.area-row > td,
 .detailed-preview > .cashier-table table > thead > tr.sum-price > td,
+.detailed-preview .payment-table table > thead > tr.sum-price > td,
 .detailed-preview > .cashier-table table > tbody > tr.sum-price > td,
-.detailed-preview > .cashier-table table > tfoot > tr.sum-price > td {
+.detailed-preview .payment-table table > tbody > tr.sum-price > td,
+.detailed-preview > .cashier-table table > tfoot > tr.sum-price > td,
+.detailed-preview .payment-table table > tfoot > tr.sum-price > td {
   border-bottom-color: transparent;
 }
-.detailed-preview > .cashier-table table > thead > tr > th {
+.detailed-preview > .cashier-table table > thead > tr > th,
+.detailed-preview .payment-table table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 1px solid #000000;
 }
 .detailed-preview > .cashier-table table > caption + thead > tr:first-child > th,
+.detailed-preview .payment-table table > caption + thead > tr:first-child > th,
 .detailed-preview > .cashier-table table > colgroup + thead > tr:first-child > th,
+.detailed-preview .payment-table table > colgroup + thead > tr:first-child > th,
 .detailed-preview > .cashier-table table > thead:first-child > tr:first-child > th,
+.detailed-preview .payment-table table > thead:first-child > tr:first-child > th,
 .detailed-preview > .cashier-table table > caption + thead > tr:first-child > td,
+.detailed-preview .payment-table table > caption + thead > tr:first-child > td,
 .detailed-preview > .cashier-table table > colgroup + thead > tr:first-child > td,
-.detailed-preview > .cashier-table table > thead:first-child > tr:first-child > td {
+.detailed-preview .payment-table table > colgroup + thead > tr:first-child > td,
+.detailed-preview > .cashier-table table > thead:first-child > tr:first-child > td,
+.detailed-preview .payment-table table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-.detailed-preview > .cashier-table table > tfoot {
+.detailed-preview > .cashier-table table > tfoot,
+.detailed-preview .payment-table table > tfoot {
   border-top: 1px solid #000000;
 }
-.detailed-preview > .cashier-table table .table {
+.detailed-preview > .cashier-table table .table,
+.detailed-preview .payment-table table .table {
   background-color: #ffffff;
 }
-.detailed-preview > .cashier-table table .area-row td {
+.detailed-preview > .cashier-table table .area-row td,
+.detailed-preview .payment-table table .area-row td {
   text-align: center;
 }
 .detailed-preview > .cashier-table table .area-row td:before,
-.detailed-preview > .cashier-table table .area-row td:after {
+.detailed-preview .payment-table table .area-row td:before,
+.detailed-preview > .cashier-table table .area-row td:after,
+.detailed-preview .payment-table table .area-row td:after {
   content: " ";
   display: table;
 }
-.detailed-preview > .cashier-table table .area-row td:after {
+.detailed-preview > .cashier-table table .area-row td:after,
+.detailed-preview .payment-table table .area-row td:after {
   clear: both;
 }
-.detailed-preview > .cashier-table table .area-row td .area-name {
+.detailed-preview > .cashier-table table .area-row td .area-name,
+.detailed-preview .payment-table table .area-row td .area-name {
   letter-spacing: 30px;
   font-size: 20px;
   line-height: 30px;
 }
-.detailed-preview > .cashier-table table .area-row td .super-name {
+.detailed-preview > .cashier-table table .area-row td .super-name,
+.detailed-preview .payment-table table .area-row td .super-name {
   font-size: 16px;
   float: left;
   line-height: 30px;
   padding: 0 12px;
 }
-.detailed-preview > .cashier-table table .sum-price td:nth-child(1) {
+.detailed-preview > .cashier-table table .sum-price td:nth-child(1),
+.detailed-preview .payment-table table .sum-price td:nth-child(1) {
   text-align: right;
   font-size: 18px;
   padding-right: 40px;
   letter-spacing: 10px;
 }
-.detailed-preview > .cashier-table table .sum-price td:nth-child(1):after {
+.detailed-preview > .cashier-table table .sum-price td:nth-child(1):after,
+.detailed-preview .payment-table table .sum-price td:nth-child(1):after {
   content: ":";
   position: relative;
   left: -8px;
 }
+.detailed-preview > .cashier-table table .sum-price td:last-child,
+.detailed-preview .payment-table table .sum-price td:last-child {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .detailed-preview > .cashier-state {
-  border-bottom: 1px solid #000000;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.detailed-preview > .cashier-state .item-box {
+.detailed-preview > .cashier-state .item-box,
+.detailed-preview > .cashier-state .group-item-box {
   display: -webkit-flex;
   /*webkit*/
   display: flex;
 }
-.detailed-preview > .cashier-state .item-box .title {
-  min-width: 80px;
-  margin-right: 5px;
-  padding: 6px;
+.detailed-preview > .cashier-state .item-box .title,
+.detailed-preview > .cashier-state .group-item-box .title {
+  text-align: justify;
+  min-width: 75px;
+  padding: 6px 0 6px 6px;
 }
-.detailed-preview > .cashier-state .item-box .content {
+.detailed-preview > .cashier-state .item-box .text,
+.detailed-preview > .cashier-state .group-item-box .text {
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.detailed-preview .payment-table {
+  border-bottom-style: none;
+}
+.detailed-preview .payment-table table {
+  margin: auto;
+}
+.detailed-preview .payment-table table th,
+.detailed-preview .payment-table table td {
+  text-align: center;
+}
+.detailed-preview .payment-table .payment-sum td {
+  border-bottom-style: none;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+.detailed-preview .payment-table .payment-sum td:first-child {
+  text-align: right;
+}
+.detailed-preview .sign-box {
+  display: -webkit-flex;
+  /*webkit*/
+  display: flex;
+  padding: 20px 20px 10px;
+  -webkit-box-pack: justify;
+  -moz-justify-content: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.detailed-preview .sign-box .left-box,
+.detailed-preview .sign-box .right-box {
+  width: 30%;
+  display: -webkit-flex;
+  /*webkit*/
+  display: flex;
+}
+.detailed-preview .sign-box .left-box .name,
+.detailed-preview .sign-box .right-box .name {
+  font-size: 16px;
+}
+.detailed-preview .sign-box .left-box .sign-area,
+.detailed-preview .sign-box .right-box .sign-area {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   /*Firefox*/
   -webkit-flex: 1;
   flex: 1;
+  border-bottom: 1px solid #000000;
 }
-.detailed-preview > .cashier-state .item-box .content > ul {
-  width: 100%;
-  display: -webkit-flex;
-  /*webkit*/
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-}
-.detailed-preview > .cashier-state .item-box .content > ul > li {
-  width: 33.33%;
-  padding: 6px;
+.detailed-preview > .contact-way {
+  border-top: 1px solid #000000;
 }
 .detailed-preview > .contact-way ul {
   padding: 0 10px;
@@ -3536,9 +3626,7 @@ body {
   background-color: #ffffff;
 }
 .u-grid-table .ctl-btn-box .ctl-btn {
-  display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -3555,6 +3643,17 @@ body {
   -ms-user-select: none;
   user-select: none;
   margin: 1%;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  top: 0;
+  min-width: 40px;
 }
 .u-grid-table .ctl-btn-box .ctl-btn:focus,
 .u-grid-table .ctl-btn-box .ctl-btn:active:focus,
@@ -3627,23 +3726,145 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn {
 a.u-grid-table .ctl-btn-box .ctl-btn.disabled,
 fieldset[disabled] a.u-grid-table .ctl-btn-box .ctl-btn {
   pointer-events: none;
+}
+.u-grid-table .ctl-btn-box .ctl-btn:hover {
+  color: #fff;
 }
 .u-grid-table .ctl-btn-box .ctl-btn:last-child {
   margin-right: 0;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  padding: 4px 6px 8px 6px;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active:hover,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work:active:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active:focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work:active.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active.focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work {
+  background-image: none;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled],
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:hover,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled].focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled.active,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled].active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active:hover,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work:active:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active:focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work:active.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active.focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.work {
+  background-image: none;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled],
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:hover,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled].focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled]:active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work:active,
+.u-grid-table .ctl-btn-box .ctl-btn.work.disabled.active,
+.u-grid-table .ctl-btn-box .ctl-btn.work[disabled].active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.work.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.work .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.modify {
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.modify.focus {
@@ -3772,20 +3993,147 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.modify.active {
 }
 .u-grid-table .ctl-btn-box .ctl-btn.modify:before {
   content: "\270f";
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active:hover,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download:active:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active:focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download:active.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active.focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download {
+  background-image: none;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled],
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:hover,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled].focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled.active,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled].active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active:hover,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download:active:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active:focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download:active.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active.focus,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.active,
+.open > .dropdown-toggle.u-grid-table .ctl-btn-box .ctl-btn.download {
+  background-image: none;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled],
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:hover,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:hover,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled].focus,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download.focus,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled]:active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download:active,
+.u-grid-table .ctl-btn-box .ctl-btn.download.disabled.active,
+.u-grid-table .ctl-btn-box .ctl-btn.download[disabled].active,
+fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.download.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:before {
+  content: "\270f";
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:before {
+  content: "\270f";
+}
+.u-grid-table .ctl-btn-box .ctl-btn.download:before {
+  content: "\e026";
 }
 .u-grid-table .ctl-btn-box .ctl-btn.delete {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.delete:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.delete.focus {
@@ -3919,15 +4267,6 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.delete.active {
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.detail:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.detail.focus {
@@ -4058,15 +4397,6 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.detail.active {
   color: #ffffff;
   background-color: #5bc0de;
   border-color: #46b8da;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.photo:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.photo.focus {
@@ -4197,15 +4527,6 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.photo.active {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.submit:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.submit.focus {
@@ -4336,15 +4657,6 @@ fieldset[disabled] .u-grid-table .ctl-btn-box .ctl-btn.submit.active {
   color: #ffffff;
   background-color: #d9534f;
   border-color: #d43f3a;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .u-grid-table .ctl-btn-box .ctl-btn.back:focus,
 .u-grid-table .ctl-btn-box .ctl-btn.back.focus {
@@ -6771,21 +7083,25 @@ fieldset[disabled] .custom-case-edit .case-ctl-box .case-submit .btn.active {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
 }
+.custom-case-edit .extend-region-box .default-detail-box > .u-grid-table,
 .custom-case-edit .extend-region-box .goods-box > .u-grid-table,
 .custom-case-edit .extend-region-box .material-box > .u-grid-table,
 .custom-case-edit .extend-region-box .case-remark-box {
   border: 1px solid #a3a3a3;
 }
+.custom-case-edit .extend-region-box .default-detail-box > .u-grid-table .grid-table .row,
 .custom-case-edit .extend-region-box .goods-box > .u-grid-table .grid-table .row,
 .custom-case-edit .extend-region-box .material-box > .u-grid-table .grid-table .row,
 .custom-case-edit .extend-region-box .case-remark-box .grid-table .row {
   background-color: #f0f0f0;
 }
+.custom-case-edit .extend-region-box .default-detail-box > .u-grid-table .grid-table .row .col,
 .custom-case-edit .extend-region-box .goods-box > .u-grid-table .grid-table .row .col,
 .custom-case-edit .extend-region-box .material-box > .u-grid-table .grid-table .row .col,
 .custom-case-edit .extend-region-box .case-remark-box .grid-table .row .col {
   position: relative;
 }
+.custom-case-edit .extend-region-box .default-detail-box > .u-grid-table .grid-table .row .col input,
 .custom-case-edit .extend-region-box .goods-box > .u-grid-table .grid-table .row .col input,
 .custom-case-edit .extend-region-box .material-box > .u-grid-table .grid-table .row .col input,
 .custom-case-edit .extend-region-box .case-remark-box .grid-table .row .col input {
@@ -6799,6 +7115,7 @@ fieldset[disabled] .custom-case-edit .case-ctl-box .case-submit .btn.active {
   min-width: 50px;
   background-color: #ffffff;
 }
+.custom-case-edit .extend-region-box .default-detail-box > .u-grid-table .grid-table .row .col input[readonly],
 .custom-case-edit .extend-region-box .goods-box > .u-grid-table .grid-table .row .col input[readonly],
 .custom-case-edit .extend-region-box .material-box > .u-grid-table .grid-table .row .col input[readonly],
 .custom-case-edit .extend-region-box .case-remark-box .grid-table .row .col input[readonly] {
@@ -6828,6 +7145,9 @@ fieldset[disabled] .custom-case-edit .case-ctl-box .case-submit .btn.active {
 .custom-case-edit .extend-region-box .material-box,
 .custom-case-edit .extend-region-box .case-remark-box,
 .custom-case-edit .extend-region-box .goods-box {
+  width: 100%;
+}
+.custom-case-edit .extend-region-box .default-detail-box {
   width: 100%;
 }
 .custom-prop-box {
@@ -8708,7 +9028,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   overflow: auto;
 }
 .custom-cashier-edit {
-  min-width: 900px;
+  min-width: 1000px;
   margin-bottom: 100px;
   background-color: #fff;
 }
@@ -8783,13 +9103,11 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   height: 40px;
   border-top: 1px solid #cccccc;
 }
-.custom-cashier-edit > * {
-  margin-bottom: 20px;
-}
 .custom-cashier-edit .basic-info-box {
   height: auto;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border: 1px solid #a3a3a3;
+  border-bottom-style: none;
 }
 .custom-cashier-edit .basic-info-box .body {
   display: -webkit-flex;
@@ -8835,7 +9153,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   display: inline-block;
 }
 .custom-cashier-edit .basic-info-box .body .case-info-list ul li .title {
-  width: 60px;
+  width: 85px;
   height: 20px;
   text-align: justify;
   margin-right: 10px;
@@ -8865,7 +9183,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   flex: 1;
 }
 .custom-cashier-edit .case-total-prices-box {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   width: 100%;
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -8880,18 +9198,46 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
 .custom-cashier-edit .case-total-prices-box .body {
   padding: 0 20px;
 }
+.custom-cashier-edit .case-total-prices-box .body ul li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.custom-cashier-edit .case-total-prices-box .body ul li span {
+  height: auto;
+}
 .custom-cashier-edit .case-total-prices-box .body ul li input {
   background-color: #fff;
 }
 .custom-cashier-edit .case-total-prices-box .body ul li input[readonly] {
   background-color: transparent;
 }
+.custom-cashier-edit .case-total-prices-box .body ul li.sum-price .name {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  /*Firefox*/
+  -webkit-flex: 1;
+  flex: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.custom-cashier-edit .case-total-prices-box .body ul li.sum-price:last-child .name {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  /*Firefox*/
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 24px;
+  line-height: 30px;
+}
+.custom-cashier-edit .case-total-prices-box .body ul li.sum-price:last-child span {
+  font-weight: bold;
+}
 .custom-cashier-edit .cashier-box {
   height: 700px;
   display: -webkit-flex;
   /*webkit*/
   display: flex;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border: 1px solid #a3a3a3;
 }
 .custom-cashier-edit .cashier-box .goods-box {
@@ -8914,7 +9260,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   width: 90px;
   font-size: 14px;
   line-height: 22px;
-  padding: 4px 8px;
+  padding: 8px 8px;
 }
 .custom-cashier-edit .cashier-box .goods-box .column-title .name {
   -webkit-box-flex: 1;
@@ -8926,6 +9272,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
 }
 .custom-cashier-edit .cashier-box .goods-box .column-title .prop-name {
   width: 100px;
+  text-align: center;
 }
 .custom-cashier-edit .cashier-box .goods-box .goods-scroll {
   height: calc(100% - (30px + 1px));
@@ -8970,6 +9317,7 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   width: 100px;
 }
 .custom-cashier-edit .cashier-box .goods-box .goods-group ul.prop-list > li .prop-info span {
+  text-align: center;
   font-size: 18px;
   font-weight: 24px;
 }
@@ -9005,16 +9353,13 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   width: auto;
 }
 .custom-cashier-edit .cashier-box .price-box {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  /*Firefox*/
-  -webkit-flex: 1;
-  flex: 1;
+  width: 600px;
   height: 100%;
+  overflow: auto;
 }
 .custom-cashier-edit .cashier-box .price-box .charge-box {
-  text-align: center;
-  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #a3a3a3;
 }
 .custom-cashier-edit .cashier-box .price-box .charge-box .column-title,
 .custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li {
@@ -9031,22 +9376,202 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
   flex: 1;
   padding: 6px 4px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 23px;
 }
-.custom-cashier-edit .cashier-box .price-box .charge-box .column-title .ctl-btn-box,
-.custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li .ctl-btn-box {
+.custom-cashier-edit .cashier-box .price-box .charge-box .column-title > .date,
+.custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li > .date,
+.custom-cashier-edit .cashier-box .price-box .charge-box .column-title > .season-name,
+.custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li > .season-name {
+  width: 100px;
+  -webkit-box-flex: inherit;
+  -moz-box-flex: inherit;
+  /*Firefox*/
+  -webkit-flex: inherit;
+  flex: inherit;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .column-title > .ctl-btn-box,
+.custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li > .ctl-btn-box {
+  text-align: left;
   width: 120px;
+  -webkit-box-flex: inherit;
+  -moz-box-flex: inherit;
+  /*Firefox*/
+  -webkit-flex: inherit;
+  flex: inherit;
+  display: inline-block;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .column-title > .ctl-btn-box .btn,
+.custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li > .ctl-btn-box .btn {
+  padding: 6px 6px 3px;
+  margin: 3px;
+  font-size: 12px;
 }
 .custom-cashier-edit .cashier-box .price-box .charge-box .column-title {
   border-bottom: 1px solid #cccccc;
-  padding-top: 5px;
-  padding-bottom: 5px;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .column-title span {
+  font-size: 13px;
 }
 .custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li {
   border-bottom: 1px solid #cccccc;
 }
 .custom-cashier-edit .cashier-box .price-box .charge-box .charge-info > li:last-child {
   border-bottom-style: none;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-title:before {
+  content: "";
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box {
+  min-width: 90px;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active:hover,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active:focus,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active.focus,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus {
+  color: #ffffff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify {
+  background-image: none;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled],
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:hover,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:focus,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled].focus,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:active,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled.active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled].active,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active:hover,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active:focus,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active.focus,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus {
+  color: #ffffff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active,
+.open > .dropdown-toggle.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify {
+  background-image: none;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled],
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:hover,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:hover,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:focus,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled].focus,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.focus,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled]:active,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify:active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.disabled.active,
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify[disabled].active,
+fieldset[disabled] .custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .ctl-btn-box .ctl-btn.modify .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .grid-tfoot .cashier-sum-price {
+  padding: 12px;
+  text-align: center;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .grid-tfoot .cashier-sum-price .paid-title {
+  font-size: 14px;
+  color: #666;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .grid-tfoot .cashier-sum-price .paid-money {
+  margin-right: 60px;
+  font-size: 18px;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .grid-tfoot .cashier-sum-price .unpaid-title {
+  font-size: 12px;
+  color: #666;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .grid-tfoot .cashier-sum-price .unpaid-money {
+  font-size: 14px;
+}
+.custom-cashier-edit .cashier-box .price-box .charge-box .u-grid-table .grid-table .col {
+  text-align: center;
 }
 .custom-cashier-edit .cashier-box .price-box .cashier-ctl-box {
   margin: 20px auto;
@@ -9064,5 +9589,16 @@ fieldset[disabled] .custom-case-assign .assign-box .assign-control-box .btn.acti
 .custom-cashier-edit .cashier-box .price-box .cashier-ctl-box .btn {
   min-width: 100px;
   margin: 10px 5px;
+}
+.custom-cashier-edit .basic-info-box .header,
+.custom-cashier-edit .case-total-prices-box > .header .title-box,
+.custom-cashier-edit .goods-box .column-title {
+  height: 40px;
+  border-bottom: 1px solid #cccccc;
+  background-color: #eee;
+}
+.custom-cashier-edit .case-total-prices-box > .header .column-name {
+  background-color: #eee;
+  margin: 0;
 }
 /*# sourceMappingURL=app.css.map */
