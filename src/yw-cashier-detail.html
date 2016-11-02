@@ -349,61 +349,58 @@
                 </ul>
               </div>
             </div>
-
-
             <div class="charge-box">
-              <div class="u-grid-table ">
-                <div class="grid-top">
-                  <span class="grid-title">收银明细</span>
-                  <div class="grid-btn-group">
-                    <div class="btn btn-info" data-toggle="modal" data-target="#create">添加收银款</div>
+              <div class="header">
+                  <span>收银明细</span>
+                  <div class="ctl-btn-box">
+                    <div class="btn" data-toggle="modal" data-target="#create">添加收银款</div>
                   </div>
                 </div>
-                <table class="grid-table ">
-                  <thead class="grid-thead">
-                  <tr class="row">
-                    <th class="col  ">款项名称</th>
-                    <th class="col  ">付款金额</th>
-                    <th class="col  ">付款日期</th>
-                    <th class="col  ">收银人员</th>
-                    <th class="col  ">操作</th>
-                  </tr>
-                  </thead>
-                  <tbody class="grid-tbody">
-                  <tr class="row">
-                    <td class="col">预付款</td>
-                    <td class="col">9000</td>
-                    <td class="col">2016-9-10</td>
-                    <td class="col">小金</td>
-                    <td class="col">
-                      <div class="ctl-btn-box">
-                        <span class="ctl-btn detail " data-toggle="modal" data-target="#detail"></span>
-                        <span class="ctl-btn modify " data-toggle="modal" data-target="#edit"></span>
-                      </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                  <tfoot class="grid-tfoot">
-                    <tr>
-                      <td class="col cashier-sum-price" colspan="6">
-                          <span class="paid-title">已付总额:</span>
-                          <span class="paid-money">9000</span>
-                          <span class="unpaid-title">未付金额:</span>
-                          <span class="unpaid-money">2700</span>
+              <div class="body">
+                <div class="u-grid-table ">
+                  <table class="grid-table ">
+                    <thead class="grid-thead">
+                    <tr class="row">
+                      <th class="col  ">款项名称</th>
+                      <th class="col  ">付款金额</th>
+                      <th class="col  ">付款日期</th>
+                      <th class="col  ">收银人员</th>
+                      <th class="col  ">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="grid-tbody">
+                    <tr class="row">
+                      <td class="col">预付款</td>
+                      <td class="col">9000</td>
+                      <td class="col">2016-9-10</td>
+                      <td class="col">小金</td>
+                      <td class="col">
+                        <div class="ctl-btn-box">
+                          <span class="ctl-btn detail " data-toggle="modal" data-target="#detail"></span>
+                          <span class="ctl-btn modify " data-toggle="modal" data-target="#edit"></span>
+                        </div>
                       </td>
                     </tr>
-                  </tfoot>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="footer">
+                <div class="cashier-sum-price"  >
+                  <span class="paid-title">已付总额:</span>
+                  <span class="paid-money">9000</span>
+                  <span class="unpaid-title">未付金额:</span>
+                  <span class="unpaid-money">2700</span>
+                  <div class="cashier-ctl-box">
+                    <span class="btn btn-info" onclick="$('#print').removeClass('hide')">打印清单</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="cashier-ctl-box">
-              <div class="btn btn-info" onclick="$('#print').removeClass('hide')">打印清单</div>
-              <div class="btn btn-danger">退单</div>
-            </div>
+
           </div>
 
         </div>
-
       </div>
 
       <div class="modal  fade bs-example-modal-sm " id="create" tabindex="-1" role="dialog">

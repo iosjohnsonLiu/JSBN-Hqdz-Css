@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+  <script src="../testjs/insetHtml.js"></script>
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+
+      <div class="custom-history-bill">
+        <div class="u-attribute-box">
+          <div class="attibute-title">账单信息</div>
+          <ul class="attibute-list">
+                <li>
+                  <span class="title">订单号</span>
+                  <span class="text">cd123456</span>
+                </li>
+                <li>
+                  <span class="title">新郎名</span>
+                  <span class="text">小胖</span>
+                </li>
+                <li>
+                  <span class="title">新娘名</span>
+                  <span class="text">如花</span>
+                </li>
+                <li>
+                  <span class="title">联系方式</span>
+                  <span class="text">13650</span>
+                </li>
+                <li>
+                  <span class="title">婚期</span>
+                  <span class="text">2016月10日10</span>
+                </li>
+                <li>
+                  <span class="title">酒店</span>
+                  <span class="text">芭菲家宴3号厅</span>
+                </li>
+                <li>
+                  <span class="title">风格</span>
+                  <span class="text">森系</span>
+                </li>
+                <li>
+                  <span class="title">色系</span>
+                  <span class="text">红,紫</span>
+                </li>
+                <li>
+                  <span class="title">当前状态</span>
+                  <span class="text">等待提交</span>
+                </li>
+              </ul>
+        </div>
+
+        <div class="u-grid-table ">
+          <div class="grid-top">
+          <span class="grid-title">
+            历史方案列表
+          </span>
+          </div>
+          <table class="grid-table ">
+            <thead class="grid-thead">
+            <tr class="row">
+              <th class="col  ">提交时间</th>
+              <th class="col  ">账单总价	</th>
+              <th class="col  ">已收款</th>
+              <th class="col  ">未收款</th>
+              <th class="col  ">备注</th>
+              <th class="col  ">操作</th>
+            </tr>
+            </thead>
+            <tbody class="grid-tbody">
+            <tr class="row">
+              <td class="col">
+                <span class="col-text">2016-10-10 11:50</span>
+              </td>
+              <td class="col">
+                <span class="col-text">26086</span>
+              </td>
+              <td class="col">
+                <span class="col-text">20000</span>
+              </td>
+              <td class="col">
+                <span class="col-text">6086</span>
+              </td>
+              <td class="col">
+                <span class="col-text">策划师界面提交的备注信息</span>
+              </td>
+              <td class="col">
+                <div class="ctl-btn-box">
+                  <span class="ctl-btn detail " onclick="location.href='yw-cashier-detail.html'"></span>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+            <tfoot class="grid-tfoot">
+            <tr class="row">
+              <td colspan="100">
+                <div class="u-page-box">
+                  <div class="page-box">
+                    <div class="page-text">
+                      <span class="text-warning">共10页,当前第5页</span>
+                    </div>
+                    <ul class="pagination ">
+                      <li><a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  //  var video = document.getElementById("video");
+  //  var context = canvas.getContext("2d");
+  //  var errocb = function () {
+  //    console.log('sth wrong!');
+  //  };
+  //  if (navigator.getUserMedia) { // 标准的API
+  //    navigator.getUserMedia({ "video": true }, function (stream) {
+  //      video.src = stream;
+  //      video.play();
+  //    }, errocb);
+  //  } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+  //    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+  //      video.src = window.webkitURL.createObjectURL(stream);
+  //      video.play();
+  //    }, errocb);
+  //  }
+  //
+  //  $(document).ready(function(){
+  //
+  //  });
+</script>
+</body>
+</html>

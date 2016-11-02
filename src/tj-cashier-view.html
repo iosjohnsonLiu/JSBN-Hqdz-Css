@@ -79,7 +79,7 @@
             方案清单列表
           </span>
           <div class="grid-btn-group">
-            <div class="btn btn-info" data-toggle="modal" data-target="#">导出报表</div>
+            <div class="btn btn-info" data-toggle="modal" data-target="#export">导出报表</div>
           </div>
         </div>
         <table class="grid-table text-center">
@@ -246,7 +246,76 @@
         </table>
       </div>
 
+      <div class="modal  fade bs-example-modal-sm " id="export" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-download" role="document">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove"></span>
+              </button>
+              <h4 class="modal-title">收银</h4>
+            </div>
+            <div class="modal-body">
+              <div class="u-download-box">
+                <div class="toolbar-box">
+                  <div class="option-group-box">
+                    <ul class="option-group">
+                      <li class="option active">全部</li>
+                      <li class="option">下载完成</li>
+                      <li class="option">正在下载</li>
+                    </ul>
 
+                  </div>
+                  <div class="ctl-box">
+                    <div class="refresh-btn"></div>
+                    <div class="search-box">
+                      <input type="text" placeholder="文件名搜索">
+                      <span class="search-btn"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-box">
+                  <ul>
+                    <li>
+                      <div class="file-info">
+                        <span class="file-name">文件默认名称</span>
+                        <span class="file-size">150KB</span>
+                        <span class="create-time">2016-10-10</span>
+                        <span class="file-source">收银</span>
+                        <span class="download-count">5次下载</span>
+                      </div>
+                      <div class="btn-group">
+                        <span class="exporting"></span>
+                        <span class="edit"></span>
+                        <span class="delete"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="file-info">
+                        <span class="file-name">文件默认名称</span>
+                        <span class="file-size">150KB</span>
+                        <span class="create-time">2016-10-10</span>
+                        <span class="file-source">收银</span>
+                        <span class="download-count">5次下载</span>
+                      </div>
+                      <div class="btn-group">
+                        <span class="download"></span>
+                        <span class="edit"></span>
+                        <span class="delete"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -4,6 +4,7 @@ $(document).ready(function () {
   insertMainnav();
   insertToNav();
   insertToContent();
+  barcode();
 
   if ($(".u-mainnav").length > 0) {
     $(".u-mainnav li>.title").bind("click", function () {
@@ -29,6 +30,30 @@ $(document).ready(function () {
 
 });
 
+
+
+
+function barcode() {
+  var $barcodeList = $("[data-toggle=barcode]");
+  $barcodeList.html("");
+  if ($barcodeList.length > 0) {
+    for (var i = 0; i < $barcodeList.length; i++) {
+      var $barcode = $barcodeList[i];
+      var value = $($barcode).attr("data-barcode");
+      var btype = "code128";
+      var renderer = "css";
+      var settings = {
+        output: renderer,
+        bgColor: "#FFFFFF",
+        color: "#000000",
+        barWidth: "1",
+        barHeight: "15"
+      };
+      $($barcode).barcode(value, btype, settings);
+    }
+  }
+}
+
 function insertMainnav() {
   if ($(".g-mainnav > .u-mainnav").length > 0) {
     var $mainNav = $(".g-mainnav > .u-mainnav")[0];
@@ -49,12 +74,13 @@ function insertMainnav() {
       "    <li><a class='title' href='yh-user-view.html'>用户管理</a></li>" +
       "  </ul>" +
       " </li>" +
-      " <li class='item-menu unfoldt'>" +
+      " <li class='item-menu '>" +
       "  <a class='title' href='javascript:void(0)'>部门业务</a>" +
       "  <ul>" +
       "    <li><a class='title' href='yw-scene-case-view.html'>策划</a></li>" +
       "    <li><a class='title' href='yw-case-assign-view.html'>工程</a></li>" +
       "    <li><a class='title' href='yw-cashier-view.html'>收银</a></li>" +
+      "    <li><a class='title' href='yw-case-history-view.html'>历史账单</a></li>" +
       "  </ul>" +
       " </li>" +
       " <li class='item-menu '>" +
@@ -67,7 +93,7 @@ function insertMainnav() {
       "    <li><a class='title' href='ck-accessory-view.html'>辅材管理</a></li>" +
       "  </ul>" +
       " </li>" +
-      " <li class='item-menu unfold'>" +
+      " <li class='item-menu'>" +
       "  <a class='title' href='javascript:void(0)'>统计报表</a>" +
       "  <ul>" +
       "    <li><a class='title' href='tj-cashier-view.html'>收银统计</a></li>" +
@@ -80,8 +106,15 @@ function insertMainnav() {
     var fileName = pathNmae.substring(pathNmae.lastIndexOf('/') + 1, pathNmae.length);
     $($mainNav).find("li.active").removeClass("active");
     $($mainNav).find("li>.title[href='" + fileName + "']").parent().addClass("active");
+
+    if ($($mainNav).find("li.active").length>0){
+      var $active=$($mainNav).find("li.active")[0];
+      $($active).parentsUntil(".main-menu").filter(".item-menu").addClass("unfold");
+    }
+
   }
 }
+
 function insertToNav() {
   if ($(".g-topnav > .u-topnav").length > 0) {
     var $topNav = $(".g-topnav > .u-topnav")[0];

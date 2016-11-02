@@ -39,11 +39,7 @@
               <input type="text" class="form-control"  placeholder="请输入筛选条件">
             </div>
             <div class="input-group ">
-              <div class="input-group-addon"><span>新郎姓名</span></div>
-              <input type="text" class="form-control"  placeholder="请输入筛选条件">
-            </div>
-            <div class="input-group ">
-              <div class="input-group-addon"><span>新娘姓名</span></div>
+              <div class="input-group-addon"><span>姓名</span></div>
               <input type="text" class="form-control"  placeholder="请输入筛选条件">
             </div>
             <div class="input-group ">
@@ -51,26 +47,26 @@
               <input type="text" class="form-control"  placeholder="请输入筛选条件">
             </div>
             <div class="input-group ">
-              <div class="input-group-addon">分单状态</div>
+              <div class="input-group-addon">状态</div>
               <div class="form-control-group">
                 <div class="input-group">
-                  <input type="text" class="form-control " readonly placeholder="请选择状态">
+                  <input type="text" class="form-control " readonly placeholder="请选择期数">
                   <div class="input-group-btn">
                     <button type="button" class="btn btn-info" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a href="#">分单中</a></li>
-                      <li><a href="#">等待分单</a></li>
-                      <li><a href="#">分单完成</a></li>
+                      <li><a href="#">未收银</a></li>
+                      <li><a href="#">收银中</a></li>
+                      <li><a href="#">收银完成</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="input-group ">
-              <div class="input-group-addon"><span>婚庆日期</span></div>
+              <div class="input-group-addon"><span>预付款日期</span></div>
               <input type="text" class="form-control"  placeholder="请输入筛选条件">
             </div>
           </div>
@@ -86,14 +82,18 @@
         <table class="grid-table ">
           <thead class="grid-thead">
           <tr class="row">
-            <th class="col  ">工单号</th>
+            <th class="col  ">订单号</th>
+            <th class="col  ">提交时间</th>
             <th class="col  ">婚期</th>
             <th class="col  ">新郎名</th>
             <th class="col  ">新娘名</th>
             <th class="col  ">酒店</th>
-            <th class="col  ">工单状态</th>
-            <th class="col  ">工单类型</th>
+            <th class="col  ">提交状态</th>
             <th class="col  ">策划师</th>
+            <th class="col  ">总价</th>
+            <th class="col  ">应付款</th>
+            <th class="col  ">已付款</th>
+            <th class="col  ">未付款</th>
             <th class="col  ">备注</th>
             <th class="col  ">操作</th>
           </tr>
@@ -104,44 +104,51 @@
               <span class="col-text">ASDSD</span>
             </td>
             <td class="col">
+              <span class="col-text">2016年10月10日 12时24分</span>
+            </td>
+            <td class="col">
+              <span class="col-text">小金</span>
+            </td>
+            <td class="col">
+              <span class="col-text">小金</span>
+            </td>
+            <td class="col">
               <span class="col-text">2016年10月10日</span>
             </td>
-            <td class="col">
-              <span class="col-text">小金</span>
-            </td>
-            <td class="col">
-              <span class="col-text">小金</span>
-            </td>
-
             <td class="col">
               <span class="col-text">芭菲家宴3号厅</span>
             </td>
             <td class="col">
-              <span class="col-text">分单中</span>
-            </td>
-            <td class="col">
-              <span class="col-text">主工单</span>
+              <span class="col-text">未收银</span>
             </td>
             <td class="col">
               <span class="col-text">小金</span>
+            </td>
+            <td class="col">
+              <span class="col-text">26086</span>
+            </td>
+            <td class="col">
+              <span class="col-text">26086</span>
+            </td>
+            <td class="col">
+              <span class="col-text">26086</span>
+            </td>
+            <td class="col">
+              <span class="col-text">26000</span>
             </td>
             <td class="col">
               <span class="col-text">策划师界面提交的备注信息</span>
             </td>
             <td class="col">
               <div class="ctl-btn-box">
-                <span class="ctl-btn detail " onclick="location.href='yw-case-assign-detail.html'"></span>
-                <span class="ctl-btn modify " onclick="location.href='yw-case-assign-detail.html'"></span>
-                <span class="ctl-btn work" onclick="location.href='yw-case-assign-delegate.html'">分单</span>
-                <span class="ctl-btn work-red" onclick="location.href='yw-case-assign-delegate.html'">打回</span>
-                <span class="ctl-btn work-red" onclick="location.href='yw-case-assign-delegate.html'">提交</span>
+                <span class="ctl-btn detail " onclick="location.href='yw-cashier-detail.html'"></span>
               </div>
             </td>
           </tr>
           </tbody>
           <tfoot class="grid-tfoot">
           <tr class="row">
-            <td colspan="100">
+            <td colspan="14">
               <div class="u-page-box">
                 <div class="page-box">
                   <div class="page-text">
