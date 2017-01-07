@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view">
+      <div class="u-form-type u-sift-box">
+
+          <div class="form-group form-inline">
+            <div class="input-group ">
+              <div class="input-group-addon">报表格式</div>
+              <div class="form-control-group">
+                <div class="input-group">
+                  <input type="text" class="form-control " readonly="" placeholder="请选择报表格式">
+                  <div class="input-group-btn open">
+                    <button type="button" class="btn btn-info " data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">收入报表</a></li>
+                      <li><a href="javascript:void(0)">合同报表</a></li>
+                      <li><a href="javascript:void(0)">添加款报表</a></li>
+                      <li><a href="javascript:void(0)">四大人员报表</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="u-sift-box">
+        <div class="header"><span>筛选</span>
+          <div class="ctl-btn-box">
+            <div class="btn glyphicon glyphicon-repeat">重置</div>
+            <div class="btn glyphicon glyphicon-search">搜索</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="form-group form-inline addon-length-4">
+            <div class="input-group">
+              <div class="form-control-group">
+                <div class="input-group">
+                  <div class="input-group-addon"><span>创建日期</span></div>
+                  <input type="text" class="form-control " readonly="" placeholder="请选择日期" value="">
+                  <div class="input-group-btn">
+                    <button class="btn btn-info dropdown-toggle btn-right-angle"><span
+                      class="size-base glyphicon glyphicon-calendar"></span></button><!-- react-empty: 37 --></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-grid-table">
+        <div class="grid-top"><span class="grid-title">导出列表</span></div>
+        <table class="grid-table multi-line">
+          <thead class="grid-thead ">
+          <tr class="row">
+            <th rowspan="2" class="col">婚期</th>
+            <th rowspan="2" class="col">新郎</th>
+            <th rowspan="2" class="col">新娘</th>
+            <th rowspan="2" class="col">婚宴酒店</th>
+            <th colspan="4" class="col">营业收入</th>
+            <th rowspan="2" class="col">合计实收</th>
+          </tr>
+          <tr class="row">
+            <th class="col">预付款</th>
+            <th class="col">二次款</th>
+            <th class="col">增加款</th>
+            <th class="col">尾款</th>
+          </tr>
+          </thead>
+          <tbody class="grid-tbody">
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          <tr class="row">
+            <td class="col">2017-05-12</td>
+            <td class="col">小鑫</td>
+            <td class="col">小胖</td>
+            <td class="col">九龙滨江五号厅</td>
+            <td class="col">5000</td>
+            <td class="col">3000</td>
+            <td class="col">0</td>
+            <td class="col">2000</td>
+            <td class="col">1000</td>
+          </tr>
+          </tbody>
+          <tfoot class="grid-tfoot">
+          <tr class="row">
+            <td colspan="9">
+              <div class="u-page-box">
+                <div class="page-box">
+                  <div class="page-text"><span class="text-warning"><!-- react-text: 64 -->共<!-- /react-text -->
+                    <!-- react-text: 65 -->8<!-- /react-text --><!-- react-text: 66 -->条数据,当前第<!-- /react-text -->
+                    <!-- react-text: 67 -->1<!-- /react-text --><!-- react-text: 68 -->页<!-- /react-text --></span>
+                  </div>
+                  <ul class="pagination">
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-backward"></span></a></li>
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+                    <li class="active"><a href="javascript:void(0)">1</a></li>
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-forward"></span></a></li>
+                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-fast-forward"></span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+
+<script src="../testjs/readydefault.js"></script>
+</body>
+</html>

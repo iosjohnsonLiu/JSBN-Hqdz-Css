@@ -81,6 +81,7 @@ function insertMainnav() {
       "    <li><a class='title' href='yw-case-assign-view.html'>工程</a></li>" +
       "    <li><a class='title' href='yw-cashier-view.html'>收银</a></li>" +
       "    <li><a class='title' href='yw-case-history-view.html'>历史账单</a></li>" +
+      "    <li><a class='title' href='yw-purchase-view.html'>采购单</a></li>" +
       "  </ul>" +
       " </li>" +
       " <li class='item-menu '>" +

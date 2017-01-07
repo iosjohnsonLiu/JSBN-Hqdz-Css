@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">w
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+  <script src="../testjs/insetHtml.js"></script>
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view">
+      <div class="public-bill-info">
+        <div class="bill-info-box">
+          <div class="header"><span>出库单详情</span>
+            <div class="ctl-btn-box">
+              <div class="btn">打印出库单</div>
+              <div class="btn">物料出库提交</div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="info-list">
+              <ul>
+                <li><span class="title">工单ID</span><span class="text">37</span></li>
+                <li><span class="title">方案Id</span><span class="text">110102</span></li>
+                <li><span class="title">所属门店</span><span class="text">重庆</span></li>
+                <li><span class="title">策划师</span><span class="text">策划师</span></li>
+                <li><span class="title">婚宴酒店</span><span class="text">巴菲二郎（3号宴会厅）</span></li>
+                <li><span class="title">婚期</span><span class="text">2017-01-02</span></li>
+                <li><span class="title">备注</span><span class="text">测试备注</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="output-list">
+          <div class="list-box">
+            <div class="header"><span>出库物料列表</span></div>
+            <div class="body">
+              <div class="u-grid-table ">
+                <table class="grid-table">
+                  <thead class="grid-thead">
+                  <tr class="row">
+                    <th class="col">物料编号</th>
+                    <th class="col">物料名称</th>
+                    <th class="col">消耗类型</th>
+                    <th class="col">部门属性</th>
+                    <th class="col">物料状态</th>
+                    <th class="col">数量</th>
+                    <th class="col">出库数量</th>
+                    <th class="col">出库备注</th>
+                  </tr>
+                  </thead>
+                  <tbody class="grid-tbody">
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0001</span></td>
+                    <td class="col"><span class="col-text">1号物料</span></td>
+                    <td class="col"><span class="col-text">库存用品</span></td>
+                    <td class="col"><span class="col-text">场地</span></td>
+                    <td class="col"><span class="col-text">已出库</span></td>
+                    <td class="col"><span class="col-text">6</span></td>
+                    <td class="col"><span class="col-text">6</span></td>
+                    <td class="col"><span class="col-text">已经从北城仓库出库</span></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0002</span></td>
+                    <td class="col"><span class="col-text">2号物料</span></td>
+                    <td class="col"><span class="col-text">库存用品</span></td>
+                    <td class="col"><span class="col-text">花艺</span></td>
+                    <td class="col"><span class="col-text">已出库</span></td>
+                    <td class="col"><span class="col-text">4</span></td>
+                    <td class="col"><span class="col-text">4</span></td>
+                    <td class="col"><span class="col-text">已经从北城仓库出库</span></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0003</span></td>
+                    <td class="col"><span class="col-text">3号物料</span></td>
+                    <td class="col"><span class="col-text">库存用品</span></td>
+                    <td class="col"><span class="col-text">灯光</span></td>
+                    <td class="col"><span class="col-text">已出库</span></td>
+                    <td class="col"><span class="col-text">6</span></td>
+                    <td class="col"><span class="col-text">6</span></td>
+                    <td class="col"><span class="col-text">已经从北城仓库出库</span></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0004</span></td>
+                    <td class="col"><span class="col-text">4号物料</span></td>
+                    <td class="col"><span class="col-text">即性用品</span></td>
+                    <td class="col"><span class="col-text">场地</span></td>
+                    <td class="col"><span class="col-text">已出库</span></td>
+                    <td class="col"><span class="col-text">2</span></td>
+                    <td class="col"><span class="col-text">2</span></td>
+                    <td class="col"><span class="col-text">已经从北城仓库出库</span></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0005</span></td>
+                    <td class="col"><span class="col-text">5号物料</span></td>
+                    <td class="col"><span class="col-text">一次性用品</span></td>
+                    <td class="col"><span class="col-text">花艺</span></td>
+                    <td class="col"><span class="col-text">已出库</span></td>
+                    <td class="col"><span class="col-text">2</span></td>
+                    <td class="col"><span class="col-text">2</span></td>
+                    <td class="col"><span class="col-text">已经从北城仓库出库</span></td>
+                  </tr>
+                  </tbody>
+                  <tfoot class="grid-tfoot">
+                  <tr class="row">
+                    <td colspan="8">
+                      <div class="u-page-box"></div>
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add-output-list">
+          <div class="list-box">
+            <div class="header"><span>新增出库物料列表</span>
+              <div class="ctl-btn-box"><span class="btn">新增出库物料</span></div>
+            </div>
+            <div class="body">
+              <div class="u-grid-table ">
+                <table class="grid-table">
+                  <thead class="grid-thead">
+                  <tr class="row">
+                    <th class="col">物料编号</th>
+                    <th class="col">物料名称</th>
+                    <th class="col">消耗类型</th>
+                    <th class="col">部门属性</th>
+                    <th class="col">物料状态</th>
+                    <th class="col">数量</th>
+                    <th class="col">出库数量</th>
+                    <th class="col">出库备注</th>
+                    <th class="col">操作</th>
+                  </tr>
+                  </thead>
+                  <tbody class="grid-tbody">
+                  <tr class="row">
+                    <td class="col"><span class="col-text">M0004</span></td>
+                    <td class="col"><span class="col-text">4号物料</span></td>
+                    <td class="col"><span class="col-text">即性用品</span></td>
+                    <td class="col"><span class="col-text"></span></td>
+                    <td class="col">
+                      <div class="form-group" style="max-width: 240px;">
+                        <div class="form-control-group">
+                          <div class="input-group"><input type="text" class="form-control" readonly="" placeholder=""
+                                                          value="待出库">
+                            <div class="input-group-btn ">
+                              <button type="button" class="btn btn-info"><span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0)">待出库</a></li>
+                                <li><a href="javascript:void(0)">已出库</a></li>
+                                <li><a href="javascript:void(0)">不出库</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col"><span class="col-text">6</span></td>
+                    <td class="col"><input type="number" class="price" placeholder="" value="0"></td>
+                    <td class="col"><input type="text" class="price" placeholder="" value=""></td>
+                    <td class="col">
+                      <div class="ctl-btn-box"><span class="ctl-btn delete"></span></div>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot class="grid-tfoot">
+                  <tr class="row">
+                    <td colspan="9">
+                      <div class="u-page-box"></div>
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div><!-- react-empty: 298 --></div>
+        <div class="bill-remark-box">
+          <div class="header"><span>清单备注</span>
+            <div class="ctl-btn-box"></div>
+          </div>
+          <div class="body">
+            <textarea placeholder="暂无清单备注"></textarea>
+          </div>
+        </div>
+
+      </div>
+      <a class="btn btn-info" href="../images/login-bg.jpg" download="文件名字">下载图片</a>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  //  var video = document.getElementById("video");
+  //  var context = canvas.getContext("2d");
+  //  var errocb = function () {
+  //    console.log('sth wrong!');
+  //  };
+  //  if (navigator.getUserMedia) { // 标准的API
+  //    navigator.getUserMedia({ "video": true }, function (stream) {
+  //      video.src = stream;
+  //      video.play();
+  //    }, errocb);
+  //  } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+  //    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+  //      video.src = window.webkitURL.createObjectURL(stream);
+  //      video.play();
+  //    }, errocb);
+  //  }
+  //
+</script>
+</body>
+</html>

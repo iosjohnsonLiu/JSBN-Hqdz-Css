@@ -592,149 +592,119 @@
             </div>
           </div>
         </div>
+
         <div class="extend-region-box">
           <div class="goods-box">
-            <div class="u-grid-table ">
-              <div class="grid-top">
-                <span class="grid-title">特殊项目列表</span>
-                <div class="grid-btn-group">
-                  <div class="btn btn-info glyphicon glyphicon-plus" data-toggle="modal" data-target="#newGoodModel">新建物品</div>
-                </div>
+            <div class="list-box">
+              <div class="header"><span>附加项目列表</span>
+                <div class="ctl-btn-box"><span class="btn btn-info  glyphicon glyphicon-plus">添加</span></div>
               </div>
-              <table class="grid-table ">
-                <thead class="grid-thead">
-                <tr class="row">
-                  <th class="col  ">名称</th>
-                  <th class="col  ">单价</th>
-                  <th class="col  ">数量</th>
-                  <th class="col  ">备注</th>
-                  <th class="col  ">操作</th>
-                </tr>
-                </thead>
-                <tbody class="grid-tbody">
-                <tr class="row">
-                  <td class="col">投影仪</td>
-                  <td class="col">400</td>
-                  <td class="col"><input type="number" value="1"/></td>
-                  <td class="col">单价为租用费用按天,</td>
-                  <td class="col">
-                    <div class="ctl-btn-box">
-                      <span class="ctl-btn modify"></span>
-                      <span class="ctl-btn work btn-danger">文字</span>
-                      <span class="ctl-btn delete" data-toggle="modal" data-target="#delModel"></span>
-                    </div>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="material-box">
-            <div class="u-grid-table ">
-              <div class="grid-top">
-                <span class="grid-title">附加项目</span>
-                <div class="grid-btn-group">
-                  <div class="btn btn-info glyphicon glyphicon-plus" data-toggle="modal" data-target="#newGoodModel">添加项目</div>
-                </div>
+              <div class="body">
+                <div class="u-grid-table ">
+                  <table class="grid-table">
+                    <thead class="grid-thead">
+                    <tr class="row">
+                      <th class="col">附加项目ID</th>
+                      <th class="col">附加项目名称</th>
+                      <th class="col">售价</th>
+                      <th class="col">数量</th>
+                      <th class="col">折扣</th>
+                      <th class="col">浮动价格</th>
+                      <th class="col">备注</th>
+                      <th class="col">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="grid-tbody">
+                    <tr class="row">
+                      <td class="col"><span class="col-text">5</span></td>
+                      <td class="col"><span class="col-text">测试附加项目</span></td>
+                      <td class="col"><span class="col-text">100</span></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value="1"></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value=""></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value=""></td>
+                      <td class="col"><span class="col-text">备注</span></td>
+                      <td class="col">
+                        <div class="ctl-btn-box"><span class="ctl-btn delete"></span></div>
+                      </td>
+                    </tr>
+                    <tr class="row">
+                      <td class="col"><span class="col-text">10</span></td>
+                      <td class="col"><span class="col-text">附加项目一</span></td>
+                      <td class="col"><span class="col-text">300</span></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value="1"></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value=""></td>
+                      <td class="col"><input type="number" class="price" placeholder="" value=""></td>
+                      <td class="col"><span class="col-text"></span></td>
+                      <td class="col">
+                        <div class="ctl-btn-box"><span class="ctl-btn delete"></span></div>
+                      </td>
+                    </tr>
+                    </tbody>
+                    <tfoot class="grid-tfoot">
+                    <tr class="row">
+                      <td colspan="8">
+                        <div class="u-page-box"></div>
+                      </td>
+                    </tr>
+                    </tfoot><!-- react-empty: 233 --></table><!-- react-empty: 234 --></div>
               </div>
-              <table class="grid-table ">
-                <thead class="grid-thead">
-                <tr class="row">
-                  <th class="col  ">项目名称</th>
-                  <th class="col  ">名称</th>
-                  <th class="col  ">尺寸</th>
-                  <th class="col  ">材质</th>
-                  <th class="col  ">成本价</th>
-                  <th class="col  ">报价</th>
-                  <th class="col  ">图片</th>
-                  <th class="col  ">数量</th>
-                  <th class="col  ">操作</th>
-                </tr>
-                </thead>
-                <tbody class="grid-tbody">
-                <tr class="row">
-                  <td class="col">B004</td>
-                  <td class="col">水母灯</td>
-                  <td class="col">80*120</td>
-                  <td class="col">铁艺+蕾丝</td>
-                  <td class="col">10</td>
-                  <td class="col">15</td>
-                  <td class="col">
-                    <div class="photo-box">
-                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
-                    </div>
-                  </td>
-                  <td class="col"><input class="price" type="number" value="999"/></td>
-                  <td class="col">
-                    <div class="ctl-btn-box">
-                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="row">
-                  <td class="col">B004</td>
-                  <td class="col">水母灯</td>
-                  <td class="col">80*120</td>
-                  <td class="col">铁艺+蕾丝</td>
-                  <td class="col">10</td>
-                  <td class="col">15</td>
-                  <td class="col">
-                    <div class="photo-box">
-                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
-                    </div>
-                  </td>
-                  <td class="col"><input class="price" type="number" value="999"/></td>
-                  <td class="col">
-                    <div class="ctl-btn-box">
-                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="row">
-                  <td class="col">B004</td>
-                  <td class="col">水母灯</td>
-                  <td class="col">80*120</td>
-                  <td class="col">铁艺+蕾丝</td>
-                  <td class="col">10</td>
-                  <td class="col">15</td>
-                  <td class="col">
-                    <div class="photo-box">
-                      <img src="http://img0.imgtn.bdimg.com/it/u=4090961411,3003362963&fm=21&gp=0.jpg" alt="">
-                    </div>
-                  </td>
-                  <td class="col"><input class="price" type="number" value="999"/></td>
-                  <td class="col">
-                    <div class="ctl-btn-box">
-                      <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                    </div>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
             </div>
           </div>
 
-          <div class="case-remark-box">
-            <div class="header">
-              <span>清单备注</span>
-              <div class="ctl-btn-box">
-                <!--<div class="btn ">提交</div>-->
+          <div class="other-and-remark">
+            <div class="material-box">
+              <div class="u-grid-table">
+                <div class="grid-top"><span class="grid-title">特殊项目列表</span>
+                  <div class="grid-btn-group">
+                    <div class="btn btn-info glyphicon glyphicon-plus">添加</div>
+                  </div>
+                </div>
+                <table class="grid-table">
+                  <thead class="grid-thead">
+                  <tr class="row">
+                    <th class="col">项目名称</th>
+                    <th class="col">价格</th>
+                    <th class="col">数量</th>
+                    <th class="col">描述</th>
+                    <th class="col">操作</th>
+                  </tr>
+                  </thead>
+                  <tbody class="grid-tbody">
+                  <tr class="row">
+                    <td class="col"><span class="col-text">除尘费</span></td>
+                    <td class="col"><span class="col-text">200</span></td>
+                    <td class="col"><span class="col-text">1</span></td>
+                    <td class="col"><span class="col-text">婚礼当天费用</span></td>
+                    <td class="col">
+                      <div class="ctl-btn-box"><span class="ctl-btn modify"></span><span class="ctl-btn delete"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col"><span class="col-text">刨冰机</span></td>
+                    <td class="col"><span class="col-text">1</span></td>
+                    <td class="col"><span class="col-text">100</span></td>
+                    <td class="col"><span class="col-text"></span></td>
+                    <td class="col">
+                      <div class="ctl-btn-box"><span class="ctl-btn modify"></span><span class="ctl-btn delete"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div><!-- react-empty: 250 --><!-- react-empty: 251 --></div>
+            <div class="case-remark-box">
+              <div class="header"><span>清单备注</span>
+                <div class="ctl-btn-box"></div>
               </div>
-            </div>
-            <div class="body">
-              <textarea placeholder="暂无清单备注"></textarea>
+              <div class="body"><textarea placeholder="暂无清单备注">策划师备注</textarea></div>
             </div>
           </div>
         </div>
-
         <div class="case-ctl-box">
           <!--<a class="btn " href="print-case-list.html" target="_blank">打印清单</a>-->
           <div class="btn " onclick="$('#print').removeClass('hide')">打印清单</div>
           <div class="btn " data-toggle="modal" data-target="#saveCaseModel">保存</div>
-          <div class="case-submit">
-            <span class="btn-hint">提交后就不能修改清单</span>
-            <div class="btn ">提交</div>
-          </div>
         </div>
       </div>
 

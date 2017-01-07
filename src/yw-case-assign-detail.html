@@ -30,13 +30,12 @@
             <ul>
               <li class="active" data-index="1">方案基本信息</li>
               <li data-index="2">道具编辑</li>
-              <li data-index="3">附加物料管理</li>
               <li data-index="4">出采租管理</li>
               <li data-index="5">执行人管理</li>
             </ul>
             <div class="btn-box">
-              <span class="btn ">保存</span>
               <span class="btn work-red">提交</span>
+              <span class="btn work" onclick={$('#print').removeClass('hide')}>打印</span>
             </div>
           </div>
 
@@ -152,18 +151,6 @@
               </li>
               <li data-index="2">
 
-                <!--<div class="tab-child-page-nav">-->
-                  <!--<ul>-->
-                    <!--<li data-index="1">道具编辑</li>-->
-                    <!--<li data-index="2">附加物料管理</li>-->
-                  <!--</ul>-->
-                  <!--<div class="btn-box">-->
-                    <!--<span class="btn ">保存</span>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div class="tab-child-page-content">-->
-
-                <!--</div>-->
                 <div class="auxiliary-conversion-box">
                   <div class="header">
                     <span>道具管理</span>
@@ -172,501 +159,355 @@
                     </div>
                   </div>
                   <div class="body">
-                        <div class="prop-list-box">
-                          <div class="header">
-                            <ul class="u-nav-tab">
-                              <!--<li class="active"-->
-                                  <!--onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">辅料列表-->
-                              <!--</li>-->
-                              <li class="active" onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">道具列表
-                              </li>
-                            </ul>
+                    <div class="prop-list-box">
+                      <div class="header">
+                        <ul class="u-nav-tab">
+                          <!--<li class="active"-->
+                          <!--onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">辅料列表-->
+                          <!--</li>-->
+                          <li class="active"
+                              onclick="$('.u-nav-tab .active').removeClass('active');$(this).addClass('active')">道具列表
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="body">
+                        <div class="menu-select">
+                          <ul class="main-menu">
+                            <li class="warn-hint">
+                              <span class="title">门把花</span>
+                            </li>
+                            <li>
+                              <span class="title">门把花</span>
+                            </li>
+                            <li class="warn-hint">
+                              <span class="title">香槟塔</span>
+                            </li>
+                            <li>
+                              <span class="title">香槟塔</span>
+                            </li>
+                            <li>
+                              <span class="title">香槟塔</span>
+                            </li>
+                            <li>
+                              <span class="title">香槟塔</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prop-detail-box">
+                      <div class="header">
+                        <span>道具详情</span>
+                      </div>
+                      <div class="body">
+                        <div class="combo-box">
+                          <div class="prop-info-box">
+                            <div class="info-box">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-addon">编号</div>
+                                  <input type="text" class="form-control" value="cd123456" readonly/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">名称</div>
+                                  <input type="text" class="form-control" value="水母塔" readonly/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">风格</div>
+                                  <input type="text" class="form-control" value="RP" readonly/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">色系</div>
+                                  <input type="text" class="form-control" value="白色" readonly/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">尺寸</div>
+                                  <input type="text" class="form-control" value="80*30"/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">报价</div>
+                                  <input type="text" class="form-control" value="16" readonly/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">数量</div>
+                                  <input type="number" class="form-control" value="1"/>
+                                </div>
+                                <div class="input-group">
+                                  <div class="input-group-addon">所属位置</div>
+                                  <input type="text" class="form-control" value="签到区" readonly/>
+                                </div>
+                              </div>
+                              <div class="textarea-box">
+                                <span class="title">道具描述</span>
+                                <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
+                              </div>
+                              <div class="u-upload-image">
+                                <div class="photo-box">
+                                  <div class="max-box">
+                                    <img
+                                      src="http://img2.jsbn.com/venus/cases/20160615/14659827667118718_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10"
+                                      alt="预览图片">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="body">
-                            <div class="menu-select">
-                              <ul class="main-menu">
-                                <li class="warn-hint">
-                                  <span class="title">门把花</span>
-                                </li>
-                                <li>
-                                  <span class="title">门把花</span>
-                                </li>
-                                <li class="warn-hint">
-                                  <span class="title">香槟塔</span>
-                                </li>
-                                <li>
-                                  <span class="title">香槟塔</span>
-                                </li>
-                                <li>
-                                  <span class="title">香槟塔</span>
-                                </li>
-                                <li>
-                                  <span class="title">香槟塔</span>
-                                </li>
-                              </ul>
+                          <div class="prop-material-box">
+                            <div class="list-box ">
+                              <div class="header">
+                                <span>物料列表</span>
+                                <div class="ctl-btn-box">
+                                  <span class="btn btn-info  glyphicon glyphicon-plus">物料</span>
+                                </div>
+                              </div>
+                              <div class="body">
+                                <div class="u-grid-table ">
+                                  <table class="grid-table ">
+                                    <thead class="grid-thead">
+                                    <tr class="row">
+                                      <th class="col  ">编号</th>
+                                      <th class="col  ">名称</th>
+                                      <th class="col  ">尺寸</th>
+                                      <th class="col  ">材质</th>
+                                      <th class="col  ">数量</th>
+                                      <th class="col  ">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="grid-tbody">
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯水母灯水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class="prop-detail-box">
-                          <div class="header">
-                            <span>道具详情</span>
-                          </div>
-                          <div class="body">
-                            <div class="combo-box">
-                              <div class="prop-info-box">
-                                <div class="info-box">
-                                  <div class="form-group">
-                                    <div class="input-group">
-                                      <div class="input-group-addon">编号</div>
-                                      <input type="text" class="form-control" value="cd123456" readonly/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">名称</div>
-                                      <input type="text" class="form-control" value="水母塔" readonly/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">风格</div>
-                                      <input type="text" class="form-control" value="RP" readonly/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">色系</div>
-                                      <input type="text" class="form-control" value="白色" readonly/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">尺寸</div>
-                                      <input type="text" class="form-control" value="80*30"/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">报价</div>
-                                      <input type="text" class="form-control" value="16" readonly/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">数量</div>
-                                      <input type="number" class="form-control" value="1"/>
-                                    </div>
-                                    <div class="input-group">
-                                      <div class="input-group-addon">所属位置</div>
-                                      <input type="text" class="form-control" value="签到区" readonly/>
-                                    </div>
-                                  </div>
-                                  <div class="textarea-box">
-                                    <span class="title">道具描述</span>
-                                    <textarea class="form-control" readonly>功能描述功能描述功能描述功能描述功能描述</textarea>
-                                  </div>
-                                  <div class="u-upload-image">
-                                    <div class="photo-box">
-                                      <div class="max-box">
-                                        <img
-                                          src="http://img2.jsbn.com/venus/cases/20160615/14659827667118718_1200x800.jpg@95q%7Cwatermark=1&object=c2h1aXlpbi5wbmc&t=80&p=5&y=10&x=10"
-                                          alt="预览图片">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="prop-material-box">
-                                <div class="list-box ">
-                                  <div class="header">
-                                    <span>物料列表</span>
-                                    <div class="ctl-btn-box">
-                                      <span class="btn btn-info  glyphicon glyphicon-plus">物料</span>
-                                    </div>
-                                  </div>
-                                  <div class="body">
-                                    <div class="u-grid-table ">
-                                      <table class="grid-table ">
-                                        <thead class="grid-thead">
-                                        <tr class="row">
-                                          <th class="col  ">编号</th>
-                                          <th class="col  ">名称</th>
-                                          <th class="col  ">尺寸</th>
-                                          <th class="col  ">材质</th>
-                                          <th class="col  ">数量</th>
-                                          <th class="col  ">操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody class="grid-tbody">
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯水母灯水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="combo-box">
-                              <div class="prop-auxiliary-box">
-                                <div class="list-box ">
-                                  <div class="header">
-                                    <span>辅材列表</span>
-                                    <div class="ctl-btn-box">
+                        <div class="combo-box">
+                          <div class="prop-auxiliary-box">
+                            <div class="list-box ">
+                              <div class="header">
+                                <span>辅材列表</span>
+                                <div class="ctl-btn-box">
                                       <span class="btn btn-info  glyphicon glyphicon-plus"
                                             data-toggle="modal" data-target="#addAuxiliary">辅材</span>
-                                    </div>
-                                  </div>
-                                  <div class="body">
-                                    <div class="u-grid-table ">
-                                      <table class="grid-table ">
-                                        <thead class="grid-thead">
-                                        <tr class="row">
-                                          <th class="col  ">辅材名称</th>
-                                          <th class="col  ">单位</th>
-                                          <th class="col  ">部门属性</th>
-                                          <th class="col  ">数量</th>
-                                          <th class="col  ">操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody class="grid-tbody">
-                                        <tr class="row active">
-                                          <td class="col">支架支架支架支架支架支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row ">
-                                          <td class="col">支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row ">
-                                          <td class="col">支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row ">
-                                          <td class="col">支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row ">
-                                          <td class="col">支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row ">
-                                          <td class="col">支架</td>
-                                          <td class="col">米</td>
-                                          <td class="col">场地</td>
-                                          <td class="col"><input class="count" type="number" value="5"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div>
                                 </div>
                               </div>
-                              <div class="prop-auxiliary-material-box">
-                                <div class="list-box ">
-                                  <div class="header">
-                                    <span>辅材转换物料列表</span>
-                                    <span>-</span>
-                                    <span class="select-name">支架</span>
-                                    <div class="ctl-btn-box">
-                                      <span class="btn btn-info  ">转换确认</span>
-                                      <span class="btn btn-info  glyphicon glyphicon-plus">物料</span>
-                                    </div>
-                                  </div>
-                                  <div class="body">
-                                    <div class="u-grid-table ">
-                                      <table class="grid-table ">
-                                        <thead class="grid-thead">
-                                        <tr class="row">
-                                          <th class="col  ">编号</th>
-                                          <th class="col  ">名称</th>
-                                          <th class="col  ">尺寸</th>
-                                          <th class="col  ">材质</th>
-                                          <th class="col  ">数量</th>
-                                          <th class="col  ">操作</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody class="grid-tbody">
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯水母灯水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                              <div class="body">
+                                <div class="u-grid-table ">
+                                  <table class="grid-table ">
+                                    <thead class="grid-thead">
+                                    <tr class="row">
+                                      <th class="col  ">辅材名称</th>
+                                      <th class="col  ">单位</th>
+                                      <th class="col  ">部门属性</th>
+                                      <th class="col  ">数量</th>
+                                      <th class="col  ">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="grid-tbody">
+                                    <tr class="row active">
+                                      <td class="col">支架支架支架支架支架支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row ">
+                                      <td class="col">支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
 
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row ">
+                                      <td class="col">支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
 
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        <tr class="row">
-                                          <td class="col">B004</td>
-                                          <td class="col">水母灯</td>
-                                          <td class="col">80*120</td>
-                                          <td class="col">铁艺+蕾丝</td>
-                                          <td class="col"><input class="count" type="number" value="15"/></td>
-                                          <td class="col">
-                                            <div class="ctl-btn-box">
-                                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row ">
+                                      <td class="col">支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
 
-                                            </div>
-                                          </td>
-                                        </tr>
-                                        </tbody>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row ">
+                                      <td class="col">支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
 
-                                      </table>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="confirm-box">
-                                  <span class="btn btn-info">转换完成确认</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row ">
+                                      <td class="col">支架</td>
+                                      <td class="col">米</td>
+                                      <td class="col">场地</td>
+                                      <td class="col"><input class="count" type="number" value="5"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <div class="prop-auxiliary-material-box">
+                            <div class="list-box ">
+                              <div class="header">
+                                <span>辅材转换物料列表</span>
+                                <span>-</span>
+                                <span class="select-name">支架</span>
+                                <div class="ctl-btn-box">
+                                  <span class="btn btn-info  ">转换确认</span>
+                                  <span class="btn btn-info  glyphicon glyphicon-plus">物料</span>
+                                </div>
+                              </div>
+                              <div class="body">
+                                <div class="u-grid-table ">
+                                  <table class="grid-table ">
+                                    <thead class="grid-thead">
+                                    <tr class="row">
+                                      <th class="col  ">编号</th>
+                                      <th class="col  ">名称</th>
+                                      <th class="col  ">尺寸</th>
+                                      <th class="col  ">材质</th>
+                                      <th class="col  ">数量</th>
+                                      <th class="col  ">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="grid-tbody">
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯水母灯水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="row">
+                                      <td class="col">B004</td>
+                                      <td class="col">水母灯</td>
+                                      <td class="col">80*120</td>
+                                      <td class="col">铁艺+蕾丝</td>
+                                      <td class="col"><input class="count" type="number" value="15"/></td>
+                                      <td class="col">
+                                        <div class="ctl-btn-box">
+                                          <span class="ctl-btn delete " data-toggle="modal"
+                                                data-target="#delModel"></span>
+
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="confirm-box">
+                              <span class="btn btn-info">转换完成确认</span>
+                            </div>
+                          </div>
                         </div>
-                  </div>
-                </div>
-              </li>
-              <li data-index="3">
-                <div class="append-material-box">
-                  <div class="header">
-                    <span>附加物料列表</span>
-                    <div class="ctl-btn-box">
-                      <span class="btn">添加物料</span>
-                    </div>
-                  </div>
-                  <div class="body">
-                    <div class="u-grid-table ">
-                      <table class="grid-table ">
-                        <thead class="grid-thead">
-                        <tr class="row">
-                          <th class="col  ">编号</th>
-                          <th class="col  ">名称</th>
-                          <th class="col  ">尺寸</th>
-                          <th class="col  ">材质</th>
-                          <th class="col  ">报价</th>
-                          <th class="col  ">数量</th>
-                          <th class="col  ">创建人</th>
-                          <th class="col  ">创建时间</th>
-                          <th class="col  ">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">水母灯水母灯水母灯</td>
-                          <td class="col">80*120</td>
-                          <td class="col">铁艺+蕾丝</td>
-                          <td class="col">150</td>
-                          <td class="col"><input type="number" value="5"/></td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn delete " data-toggle="modal" data-target="#delModel"></span>
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#delModel"></span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -698,456 +539,6 @@
                           <th class="col  ">操作</th>
                         </tr>
                         </thead>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <th class="col" rowspan="4">香槟塔</th>
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">B004</td>
-                          <td class="col">物料名称</td>
-                          <td class="col">80*120</td>
-                          <td class="col">材质</td>
-                          <td class="col">场地部</td>
-                          <td class="col">20</td>
-                          <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
 
                         <tbody class="grid-tbody">
                         <tr class="row">
@@ -1159,9 +550,28 @@
                           <td class="col">场地部</td>
                           <td class="col">20</td>
                           <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row warn">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
                           <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
                           <td class="col">
                             <div class="ctl-btn-box">
                               <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
@@ -1178,9 +588,9 @@
                           <td class="col">场地部</td>
                           <td class="col">20</td>
                           <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
                           <td class="col">
                             <div class="ctl-btn-box">
                               <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
@@ -1197,9 +607,9 @@
                           <td class="col">场地部</td>
                           <td class="col">20</td>
                           <td class="col">10</td>
-                          <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
                           <td class="col">
                             <div class="ctl-btn-box">
                               <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
@@ -1216,9 +626,104 @@
                           <td class="col">场地部</td>
                           <td class="col">20</td>
                           <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row warn">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
                           <td class="col">10</td>
-                          <td class="col">0</td>
-                          <td class="col">0</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
+                          <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
+                          <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
+                          <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col">
+                            <div class="ctl-btn-box">
+                              <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
+                              <span class="ctl-btn work " data-toggle="modal" data-target="#queryStock">库存</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="row">
+                          <td class="col"></td>
+                          <td class="col">B004</td>
+                          <td class="col">水母灯水母灯水母灯</td>
+                          <td class="col">80*120</td>
+                          <td class="col">材质</td>
+                          <td class="col">场地部</td>
+                          <td class="col">20</td>
+                          <td class="col">10</td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
+                          <td class="col"><input type="number" class="price" value="5"></td>
                           <td class="col">
                             <div class="ctl-btn-box">
                               <span class="ctl-btn modify " data-toggle="modal" data-target="#assignMaterial"></span>
@@ -1232,116 +737,73 @@
                   </div>
                 </div>
               </li>
+
               <li data-index="5">
                 <div class="operator-manage-box">
                   <div class="header">
-                    <span>执行人员列表</span>
-                    <!--<div class="ctl-btn-box">-->
-                      <!--<span class="btn">设置执行人员</span>-->
-                    <!--</div>-->
+                    <span>子工单管理</span>
+                    <div class="ctl-btn-box">
+                    </div>
                   </div>
                   <div class="body">
-                    <div class="u-grid-table ">
-                      <table class="grid-table ">
-                        <thead class="grid-thead">
-                        <tr class="row">
-                          <th class="col  ">职位</th>
-                          <th class="col  ">用户ID</th>
-                          <th class="col  ">用户名称</th>
-                          <th class="col  ">所属角色</th>
-                          <th class="col  ">部门属性</th>
-                          <th class="col  ">创建人</th>
-                          <th class="col  ">创建时间</th>
-                          <th class="col  ">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody class="grid-tbody">
-                        <tr class="row">
-                          <td class="col">场地部负责人</td>
-                          <td class="col">U10010</td>
-                          <td class="col">小胖</td>
-                          <td class="col">工程部组长</td>
-                          <td class="col">场地部</td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
+                    <div class="dept-detail-box">
+                      <div class="header">
+                        <span>场地部</span>
+                      </div>
+                      <div class="body">
+                        <div class="form-group addon-length-4">
+                          <div class="input-group ">
+                            <div class="input-group-addon">操作人员</div>
+                            <div class="form-control-group">
+                              <div class="input-group">
+                                <input type="text" class="form-control " readonly="" placeholder="请选择状态">
+                                <div class="input-group-btn">
+                                  <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">分单中</a></li>
+                                    <li><a href="#">等待分单</a></li>
+                                    <li><a href="#">分单完成</a></li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">场地部执行人</td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
+                            <div class="input-group-btn"><span class="btn btn-info">保存</span></div>
+                          </div>
+                          <div class="input-group ">
+                            <div class="input-group-addon">执行人员</div>
+                            <div class="form-control-group">
+                              <div class="input-group">
+                                <input type="text" class="form-control " readonly="" placeholder="请选择状态">
+                                <div class="input-group-btn">
+                                  <button type="button" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">分单中</a></li>
+                                    <li><a href="#">等待分单</a></li>
+                                    <li><a href="#">分单完成</a></li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">灯光部负责人</td>
-                          <td class="col">U10010</td>
-                          <td class="col">小胖</td>
-                          <td class="col">工程部组长</td>
-                          <td class="col">场地部</td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
+                            <div class="input-group-btn"><span class="btn btn-info">保存</span></div>
+                          </div>
+                          <div class="input-group ">
+                            <div class="input-group-addon">状态</div>
+                            <input type="text" class="form-control " readonly value="等待确认">
+                            <div class="input-group-btn">
+                              <div class="ctl-btn-box">
+                                <div class="btn btn-info">确认</div>
+                                <div class="btn btn-danger">打回</div>
+                              </div>
                             </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">灯光部执行人</td>
-                          <td class="col">U10010</td>
-                          <td class="col">小金</td>
-                          <td class="col">工程部组员</td>
-                          <td class="col">场地部</td>
-                          <td class="col">小胖</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">花艺部负责人</td>
-                          <td class="col">U10010</td>
-                          <td class="col">小胖</td>
-                          <td class="col">工程部组长</td>
-                          <td class="col">场地部</td>
-                          <td class="col">曹经理</td>
-                          <td class="col">2016-11-11 16:00</td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="row">
-                          <td class="col">花艺部执行人</td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col"></td>
-                          <td class="col">
-                            <div class="ctl-btn-box">
-                              <span class="ctl-btn work " data-toggle="modal" data-target="#delModel">设置</span>
-                            </div>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </table>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1409,7 +871,7 @@
                     </tr>
                     </thead>
                     <tbody class="grid-tbody">
-                    <tr class="row">
+                    <tr class="row ">
                       <td class="col">
                         <div class="checked-box" onclick="$(this).toggleClass('checked')">
                           <span class="checked-state "></span>
@@ -1997,6 +1459,541 @@
   </div>
 </div>
 
+
+<div id="print" class="">
+  <div class="g-print a4 ">
+    <div class="print-setup">
+      <span class="btn btn-info" onclick="window.print();">打印</span>
+      <span class="btn btn-info pull-right" onclick="$('#print').addClass('hide')">关闭</span>
+    </div>
+    <div class="print-preview">
+      <div class="page-box">
+        <div class="detailed-preview">
+          <div class="title-box">
+            <h2>金色百年婚礼服务集团有限公司</h2>
+            <h4>布置开单</h4>
+          </div>
+          <div class="info-list">
+            <ul>
+              <li>
+                <label>订单号</label>
+                <i>:</i>
+                <span>cd123456</span>
+              </li>
+              <li>
+                <label>婚期</label>
+                <i>:</i>
+                <span>2016-8-27</span>
+              </li>
+              <li>
+                <label>新郎名</label>
+                <i>:</i>
+                <span>小金</span>
+              </li>
+              <li>
+                <label>新娘名</label>
+                <i>:</i>
+                <span>如花</span>
+              </li>
+              <li>
+                <label>联系方式</label>
+                <i>:</i>
+                <span>13626626226</span>
+              </li>
+              <li>
+                <label>婚庆地点</label>
+                <i>:</i>
+                <span>芭菲九滨店2号厅</span>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div class="decorate-preview">
+            <div class="case-img-list">
+              <ul>
+                <li><img src="../images/prop.jpg" alt="道具图片"></li>
+                <li><img src="../images/prop.jpg" alt="道具图片"></li>
+                <li><img src="../images/prop.jpg" alt="道具图片"></li>
+              </ul>
+            </div>
+            <div class="prop-list">
+              <div class="prop-list-name">套系道具</div>
+              <ul>
+                <li class="area-box">
+                  <div class="area-name">区域名字</div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr>
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="area-box">
+                  <div class="area-name">舞台区</div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr>
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr>
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="area-box">
+                  <div class="area-name">交接区</div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr>
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prop-box">
+                    <div class="prop-info">
+                      <ul>
+                        <li>
+                          <label>道具名称</label>
+                          <i>:</i>
+                          <span>cd123456</span>
+                        </li>
+                        <li>
+                          <label>数量</label>
+                          <i>:</i>
+                          <span>2</span>
+                        </li>
+                        <li>
+                          <label>尺寸</label>
+                          <i>:</i>
+                          <span>20x20</span>
+                        </li>
+                      </ul>
+                      <div class="text-remark">
+                        <label>备注</label>
+                        <i>:</i>
+                        <span>道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注道具备注</span>
+                      </div>
+                    </div>
+                    <div class="prop-detail">
+                      <div class="prop-img">
+                        <img src="../images/prop.jpg" alt="道具图片">
+                      </div>
+
+                      <div class="auxiliary-material-list">
+                        <table>
+                          <thead>
+                          <tr>
+                            <th>材料名称</th>
+                            <th>数量</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr class="active">
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          <tr>
+                            <td>kt板材(新)</td>
+                            <td>30.00平米</td>
+                          </tr>
+                          <tr>
+                            <td>标准散插花20朵(直径35cm花量20朵)(新)</td>
+                            <td>4个</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!--<div class="cashier-state">-->
+          <!--<div class="sign-box">-->
+          <!--<div class="left-box">-->
+          <!--<span class="name">统筹师签字:</span>-->
+          <!--<span class="sign-area"></span>-->
+          <!--</div>-->
+          <!--<div class="right-box">-->
+          <!--<span class="name">客户签字:</span>-->
+          <!--<span class="sign-area"></span>-->
+          <!--</div>-->
+          <!--</div>-->
+          <!--</div>-->
+          <!--<div class="contact-way">-->
+          <!--<ul>-->
+          <!--<li>-->
+          <!--<label>公司地址</label>-->
+          <!--<i>:</i>-->
+          <!--<span>九龙坡区九滨路9号九龙滨江商业广场7号楼金色百年</span>-->
+          <!--</li>-->
+          <!--<li>-->
+          <!--<label>咨询电话</label>-->
+          <!--<i>:</i>-->
+          <!--<span>400-015-9999</span>-->
+          <!--</li>-->
+          <!--</ul>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="../dist/js/bootstrap.js"></script>
 <script src="../testjs/readydefault.js"></script>
@@ -2014,12 +2011,12 @@
       var path = ".tab-page-box ul>li[data-index=" + $(this).attr("data-index") + "]";
       $(path).addClass('active');
     });
-    $(".case-photo-group ul>li").bind("click",function(){
-      var imgSrc=$(this).find('img').attr('src');
+    $(".case-photo-group ul>li").bind("click", function () {
+      var imgSrc = $(this).find('img').attr('src');
       $(".case-photo-group ul>li.active").removeClass('active');
       $(this).addClass('active');
       console.log(imgSrc);
-      $(".case-photo-group .large-photo-box img").attr('src',imgSrc);
+      $(".case-photo-group .large-photo-box img").attr('src', imgSrc);
     });
   })
 </script>

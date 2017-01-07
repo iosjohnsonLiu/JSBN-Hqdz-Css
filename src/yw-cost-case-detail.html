@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>金色百年订单管理系统</title>
+  <!-- Bootstrap -->
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/app.css" rel="stylesheet">
+  <script src="../testjs/insetHtml.js"></script>
+</head>
+
+<body>
+<div id="root" class="adaption-auto">
+  <div class="g-topnav">
+    <nav class="u-topnav">
+    </nav>
+  </div>
+  <div class="g-mainnav">
+    <nav class="u-mainnav">
+    </nav>
+  </div>
+  <div class="g-content ">
+    <div class="m-view ">
+      <div class="custom-finance-cost-scheme-info">
+        <div class="detail-info-box">
+          <div class="header"><span>成本详情</span>
+            <div class="ctl-btn-box">
+              <div class="btn">保存</div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="info-list">
+              <ul>
+                <li><span class="title">方案Id</span><span class="text">10106</span></li>
+                <li><span class="title">方案名称</span><span class="text">水晶之恋</span></li>
+                <li><span class="title">婚宴酒店</span><span class="text">巴菲二郎（3号宴会厅）</span></li>
+                <li><span class="title">主题名称</span><span class="text">测试主题</span></li>
+                <li><span class="title">主题诠释</span><span class="text">主题诠释-</span></li>
+                <li><span class="title">备注</span><span class="text">测试备注</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="prop-list">
+          <div class="list-box">
+            <div class="header"><span>道具列表</span></div>
+            <div class="body">
+              <div class="u-grid-table ">
+                <table class="grid-table ">
+                  <thead class="grid-thead">
+                  <tr class="row text-center">
+                    <th class="col">道具名称</th>
+                    <th class="col">物料名称</th>
+                    <th class="col">规格</th>
+                    <th class="col">成本价</th>
+                    <th class="col">使用年限</th>
+                    <th class="col">折损率</th>
+                    <th class="col">实际成本</th>
+                    <th class="col">售价</th>
+                    <th class="col">数量</th>
+                    <th class="col">总成本价</th>
+                    <th class="col">总售价</th>
+                    <th class="col">备注</th>
+                  </tr>
+                  </thead>
+                  <tbody class="grid-tbody">
+                  <tr class="row item-top">
+                    <td class="col" rowspan="9">1号道具</td>
+                    <td class="col">1号物料</td>
+                    <td class="col">个</td>
+                    <td class="col">200</td>
+                    <td class="col">3</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="10"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 159 -->10<!-- /react-text --><!-- react-text: 160 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">2号物料</td>
+                    <td class="col">扎</td>
+                    <td class="col">100</td>
+                    <td class="col">3</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="5"></td>
+                    <td class="col">300</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 174 -->5<!-- /react-text --><!-- react-text: 175 -->
+                      <!-- /react-text --></td>
+                    <td class="col">300</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">3号物料</td>
+                    <td class="col">朵</td>
+                    <td class="col">300</td>
+                    <td class="col">5</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="15"></td>
+                    <td class="col">600</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 189 -->15<!-- /react-text --><!-- react-text: 190 -->
+                      <!-- /react-text --></td>
+                    <td class="col">600</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">4号物料</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col">5</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="10"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 204 -->10<!-- /react-text --><!-- react-text: 205 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">5号物料</td>
+                    <td class="col">个</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 219 -->200<!-- /react-text --><!-- react-text: 220 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">航架(辅材未转化)</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 234 -->200<!-- /react-text --><!-- react-text: 235 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">KT板(辅材未转化)</td>
+                    <td class="col">个</td>
+                    <td class="col">100</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="100"></td>
+                    <td class="col">200</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 249 -->100<!-- /react-text --><!-- react-text: 250 -->
+                      <!-- /react-text --></td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">鲜花(辅材未转化)</td>
+                    <td class="col">扎</td>
+                    <td class="col">100</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="100"></td>
+                    <td class="col">200</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 264 -->100<!-- /react-text --><!-- react-text: 265 -->
+                      <!-- /react-text --></td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">LED灯条(辅材未转化)</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">300</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 279 -->200<!-- /react-text --><!-- react-text: 280 -->
+                      <!-- /react-text --></td>
+                    <td class="col">300</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row item-top">
+                    <td class="col" rowspan="9">2号道具</td>
+                    <td class="col">1号物料</td>
+                    <td class="col">个</td>
+                    <td class="col">200</td>
+                    <td class="col">3</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="10"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 295 -->10<!-- /react-text --><!-- react-text: 296 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">2号物料</td>
+                    <td class="col">扎</td>
+                    <td class="col">100</td>
+                    <td class="col">3</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="5"></td>
+                    <td class="col">300</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 310 -->5<!-- /react-text --><!-- react-text: 311 -->
+                      <!-- /react-text --></td>
+                    <td class="col">300</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">3号物料</td>
+                    <td class="col">朵</td>
+                    <td class="col">300</td>
+                    <td class="col">5</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="15"></td>
+                    <td class="col">600</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 325 -->15<!-- /react-text --><!-- react-text: 326 -->
+                      <!-- /react-text --></td>
+                    <td class="col">600</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">4号物料</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col">5</td>
+                    <td class="col">5</td>
+                    <td class="col"><input type="number" placeholder="" value="10"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 340 -->10<!-- /react-text --><!-- react-text: 341 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">5号物料</td>
+                    <td class="col">个</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 355 -->200<!-- /react-text --><!-- react-text: 356 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">航架(辅材未转化)</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">500</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 370 -->200<!-- /react-text --><!-- react-text: 371 -->
+                      <!-- /react-text --></td>
+                    <td class="col">500</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">KT板(辅材未转化)</td>
+                    <td class="col">个</td>
+                    <td class="col">100</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="100"></td>
+                    <td class="col">200</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 385 -->100<!-- /react-text --><!-- react-text: 386 -->
+                      <!-- /react-text --></td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">鲜花(辅材未转化)</td>
+                    <td class="col">扎</td>
+                    <td class="col">100</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="100"></td>
+                    <td class="col">200</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 400 -->100<!-- /react-text --><!-- react-text: 401 -->
+                      <!-- /react-text --></td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                  </tr>
+                  <tr class="row">
+                    <td class="col">LED灯条(辅材未转化)</td>
+                    <td class="col">米</td>
+                    <td class="col">200</td>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="col"><input type="number" placeholder="" value="200"></td>
+                    <td class="col">300</td>
+                    <td class="col">1</td>
+                    <td class="col"><!-- react-text: 415 -->200<!-- /react-text --><!-- react-text: 416 -->
+                      <!-- /react-text --></td>
+                    <td class="col">300</td>
+                    <td class="col"></td>
+                  </tr>
+                  </tbody>
+                  <tfoot class="grid-tfoot grid-tbody">
+                  <tr class="row item-top">
+                    <th class="col text-cente">合计</th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col"></th>
+                    <th class="col">18</th>
+                    <th class="col">1680</th>
+                    <th class="col">7200</th>
+                    <th class="col"></th>
+                  </tr>
+                  <tr>
+                    <th colspan="12"></th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="output-list">
+          <div class="list-box">
+            <div class="header"><span>物品列表</span>
+              <div class="ctl-btn-box"><span class="btn">添加物品</span></div>
+            </div>
+            <div class="body">
+              <div class="u-grid-table ">
+                <table class="grid-table">
+                  <thead class="grid-thead">
+                  <tr class="row">
+                    <th class="col">项目名称</th>
+                    <th class="col">成本价格</th>
+                    <th class="col">价格</th>
+                    <th class="col">数量</th>
+                    <th class="col">描述</th>
+                    <th class="col">操作</th>
+                  </tr>
+                  </thead>
+                  <tbody class="grid-tbody"></tbody>
+                  <tfoot class="grid-tfoot">
+                  <tr class="row">
+                    <td colspan="6">
+                      <div class="u-page-box"></div>
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="total-prices-box">
+          <div style="width: 300px; margin: 20px auto; display: block; height: 30px; padding: 5px;">
+            <div class="col-lg-6"><!-- react-text: 460 -->方案成本总计:<!-- /react-text --><!-- react-text: 461 -->1680
+              <!-- /react-text --></div>
+            <div class="col-lg-6"><!-- react-text: 463 -->方案售价总计:<!-- /react-text --><!-- react-text: 464 -->7200
+              <!-- /react-text --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../testjs/readydefault.js"></script>
+<script type="application/javascript">
+  //  var video = document.getElementById("video");
+  //  var context = canvas.getContext("2d");
+  //  var errocb = function () {
+  //    console.log('sth wrong!');
+  //  };
+  //  if (navigator.getUserMedia) { // 标准的API
+  //    navigator.getUserMedia({ "video": true }, function (stream) {
+  //      video.src = stream;
+  //      video.play();
+  //    }, errocb);
+  //  } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+  //    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+  //      video.src = window.webkitURL.createObjectURL(stream);
+  //      video.play();
+  //    }, errocb);
+  //  }
+  //
+  //  $(document).ready(function(){
+  //
+  //  });
+</script>
+</body>
+</html>
+
