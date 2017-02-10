@@ -1442,7 +1442,7 @@ a:visited {
 .loading-shade-box .loading-ico {
   width: 60px;
   height: 60px;
-  background: url("../images/loading.gif") center center no-repeat;
+  background: url("../../BF-CMS-Css/app/images/loading.gif") center center no-repeat;
   background-size: contain;
 }
 .loading-shade-box.lg-img .loading-ico {
@@ -1746,7 +1746,7 @@ a:visited {
 }
 .img-loading img,
 .img-loading {
-  background: url("../images/loading.gif") center center no-repeat;
+  background: url("../../BF-CMS-Css/app/images/loading.gif") center center no-repeat;
   background-size: contain;
   -webkit-background-size: 60px;
   background-size: 60px;

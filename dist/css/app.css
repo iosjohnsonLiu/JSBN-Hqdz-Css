@@ -1709,34 +1709,34 @@ fieldset[disabled] .form-control {
   width: 1%;
 }
 .addon-length-6 .input-group .input-group-addon {
-  min-width: 109px;
+  min-width: calc(25px + (1em * 6));
 }
 .addon-length-6 .textarea-box .title {
-  min-width: 109px;
+  min-width: calc(25px + (1em * 6));
 }
 .addon-length-5 .input-group .input-group-addon {
-  min-width: 95px;
+  min-width: calc(25px + (1em * 5));
 }
 .addon-length-5 .textarea-box .title {
-  min-width: 95px;
+  min-width: calc(25px + (1em * 5));
 }
 .addon-length-4 .input-group .input-group-addon {
-  min-width: 81px;
+  min-width: calc(25px + (1em * 4));
 }
 .addon-length-4 .textarea-box .title {
-  min-width: 81px;
+  min-width: calc(25px + (1em * 4));
 }
 .addon-length-3 .input-group .input-group-addon {
-  min-width: 67px;
+  min-width: calc(25px + (1em * 3));
 }
 .addon-length-3 .textarea-box .title {
-  min-width: 67px;
+  min-width: calc(25px + (1em * 3));
 }
 .addon-length-2 .input-group .input-group-addon {
-  min-width: 53px;
+  min-width: calc(25px + (1em * 2));
 }
 .addon-length-2 .textarea-box .title {
-  min-width: 53px;
+  min-width: calc(25px + (1em * 2));
 }
 .size-base {
   font-size: 14px;
@@ -3403,6 +3403,92 @@ body {
 .g-print .print-preview .p-print-model > .model-table table .table {
   background-color: #ffffff;
 }
+.g-print .print-preview .p-print-model .material-list {
+  border: 1px solid #000000;
+  display: -webkit-flex;
+  /*webkit*/
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.g-print .print-preview .p-print-model .material-list > li {
+  position: relative;
+  width: 50%;
+  border-bottom: 1px solid #666666;
+  display: -webkit-flex;
+  /*webkit*/
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.g-print .print-preview .p-print-model .material-list > li:nth-child(2n + 1) {
+  border-right: 1px solid #666666;
+}
+.g-print .print-preview .p-print-model .material-list > li:nth-last-child( -n + 2) {
+  border-bottom: transparent;
+}
+.g-print .print-preview .p-print-model .material-list > li:last-child::before {
+  content: '';
+  display: block;
+  width: 300%;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 1;
+  border-top: 1px solid #666666;
+}
+.g-print .print-preview .p-print-model .material-list > li .image-box {
+  padding: 4px;
+  height: 100%;
+  min-height: 200px;
+  width: 50%;
+  border-right: 1px solid #999999;
+  display: -webkit-flex;
+  /*webkit*/
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.g-print .print-preview .p-print-model .material-list > li .info-box {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  /*Firefox*/
+  -webkit-flex: 1;
+  flex: 1;
+  width: 50%;
+}
+.g-print .print-preview .p-print-model .material-list > li .info-box li {
+  width: 100%;
+  padding: 4px 7px;
+  text-align: right;
+  overflow: hidden;
+}
+.g-print .print-preview .p-print-model .material-list > li .info-box li span {
+  font-size: 12px;
+  color: #000;
+}
+.g-print .print-preview .p-print-model .material-list > li .info-box li .title {
+  float: left;
+  padding-top: 3px;
+  color: #999999;
+}
 .g-print .print-preview .detailed-preview > .title-box {
   text-align: center;
   padding-bottom: 10px;
@@ -4232,6 +4318,9 @@ fieldset[disabled] .u-grid-table .grid-top .grid-btn-group .btn.active {
 }
 .u-grid-table .grid-table.multi-line > .grid-thead .col:last-child {
   border-right-style: none;
+}
+.u-grid-table .grid-table.multi-line > .grid-tbody .col {
+  text-align: center;
 }
 .u-grid-table .grid-table .row {
   border-bottom: 1px solid #e1e6eb;
@@ -8684,7 +8773,7 @@ fieldset[disabled] .custom-prop-box .header .ctl-btn-box .btn.active {
 }
 .custom-prop-box .body .prop-detail {
   float: left;
-  width: 350px;
+  width: 380px;
   position: relative;
   -webkit-box-ordinal-group: 11;
   -moz-order: 11;
@@ -8794,13 +8883,13 @@ fieldset[disabled] .custom-prop-box .header .ctl-btn-box .btn.active {
   padding: 2px;
 }
 .custom-prop-box .body .prop-material {
-  width: calc(100% - 350px - 20px);
+  width: calc(100% - 380px - 20px);
   float: right;
   margin-top: 20px;
 }
 .custom-prop-box .body .prop-accessory {
   float: right;
-  width: calc(100% - 350px - 20px);
+  width: calc(100% - 380px - 20px);
 }
 .custom-prop-box .form-group > .input-group,
 .custom-prop-box .form-group > fieldset > .input-group {

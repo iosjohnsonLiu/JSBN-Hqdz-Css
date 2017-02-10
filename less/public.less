@@ -506,6 +506,7 @@
     }
     .p-print-model{
       @m-border:1px solid #000;
+      @m-p-border:1px solid #666;
       @p-border:1px solid #999;
       .setSpace(){
         padding-bottom: 5px;
@@ -604,6 +605,66 @@
           }
         }
         .setSpace();
+      }
+      .material-list{
+        border: @m-border;
+        .displayFlex();
+        .flexDirectionRow();
+        .flexWrapWrap();
+        overflow: hidden;
+        margin-bottom: 20px;
+        >li{
+          position: relative;
+          width: 50%;
+          border-bottom: @m-p-border;
+          &:nth-child(2n + 1){ border-right: @m-p-border;}
+          &:nth-last-child( -n + 2){border-bottom:transparent;}
+          &:last-child{
+            &::before{
+              content: '';
+              display: block;
+              width: 300%;
+              position: absolute;
+              top: -1px;
+              left: 0;
+              z-index: 1;
+              border-top: @m-p-border;
+            }
+          }
+
+          .displayFlex();
+          .flexDirectionRow();
+          .image-box{
+            padding: 4px;
+            height: 100%;
+            min-height: 200px;
+            width: 50%;
+            border-right: @p-border;
+            .displayFlex();
+            .justifyContentCenter();
+            .alignItemsCenter();
+          }
+          .info-box{
+            .flex(1);
+            width: 50%;
+            li{
+              width: 100%;
+              padding: 4px 7px;
+              text-align: right;
+              overflow: hidden;
+              span{
+                font-size: @font-size-h6;
+                color: #000;
+              }
+              .title{
+                float: left;
+                padding-top: 3px;
+                color: #999999;
+              }
+            }
+          }
+
+        }
       }
     }
     //收银明细打印清单
@@ -1034,6 +1095,11 @@
             text-align: center;
           }
         }
+        > .grid-tbody{
+          .col {
+            text-align: center;
+          }
+        }
       }
       .row {
         border-bottom: 1px solid @theme-table-border-color;
@@ -1377,9 +1443,6 @@
       overflow: hidden;
     }
     .modal-body {
-      //max-height: calc(100vh - 180px);
-      //overflow-y: auto;
-      //overflow-x: hidden;
       .form-group {
         > .input-group, > fieldset > .input-group {
           margin-top: 5px;
@@ -1790,15 +1853,15 @@
 
 .addon-length(@length;) {
   @default-w: 25px;
-  @font-size: 14px;
+  @font-size: 1em;
   .input-group {
     .input-group-addon {
-      min-width: (@default-w + @font-size * @length);
+      min-width: calc(@default-w + (@font-size * @length));
     }
   }
   .textarea-box {
     .title {
-      min-width: (@default-w + @font-size * @length);
+      min-width: calc(@default-w + (@font-size * @length));
     }
   }
 }
